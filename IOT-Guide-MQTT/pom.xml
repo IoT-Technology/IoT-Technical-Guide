@@ -19,17 +19,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>IOT Technical Guide</artifactId>
+        <artifactId>IOT-Guide</artifactId>
         <groupId>com.sanshengshui</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>IOT Technical Guide :: Gateway</artifactId>
+    <artifactId>IOT-Guide-MQTT</artifactId>
     <packaging>jar</packaging>
 
     <url>https://sanshengshui.github.io/</url>
-    <description>IOT技术指南-走进万物互联的时代之网关</description>
+    <description>IOT技术指南-走进万物互联的时代之Mqtt协议</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
