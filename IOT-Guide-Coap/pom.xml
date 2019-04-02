@@ -25,6 +25,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <name>IOT Technology Guide :: Coap</name>
     <artifactId>IOT-Guide-Coap</artifactId>
     <packaging>jar</packaging>
 

@@ -25,6 +25,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <name>IOT Technology Guide :: MQTT</name>
     <artifactId>IOT-Guide-MQTT</artifactId>
     <packaging>jar</packaging>
 

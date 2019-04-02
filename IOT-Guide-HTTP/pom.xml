@@ -25,6 +25,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <name>IOT Technology Guide :: HTTP</name>
     <artifactId>IOT-Guide-HTTP</artifactId>
     <packaging>jar</packaging>
 
