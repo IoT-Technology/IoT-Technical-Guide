@@ -27,6 +27,10 @@
 
     <modules>
         <module>IOT Technical Guide :: Coap</module>
+        <module>IOT Technical Guide :: MQTT</module>
+        <module>IOT Technical Guide :: HTTP</module>
+        <module>IOT Technical Guide :: Gateway</module>
+        <module>IOT Technical Guide :: TSL</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
@@ -43,6 +47,7 @@
         <logback.version>1.2.3</logback.version>
         <junit.version>4.12</junit.version>
         <mockito.version>1.9.5</mockito.version>
+        <gson.version>2.6.2</gson.version>
     </properties>
 
     <dependencyManagement>
@@ -114,6 +119,11 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
