@@ -30,7 +30,7 @@
     <packaging>jar</packaging>
 
     <url>https://sanshengshui.github.io/</url>
-    <description>IOT技术指南-走进万物互联的时代之Mqtt协议</description>
+    <description>IOT Technical Guide - MQTT protocol of the era of the Internet of Everything</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
