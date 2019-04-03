@@ -32,6 +32,12 @@
         <module>IOT-Guide-HTTP</module>
         <module>IOT-Guide-Gateway</module>
         <module>IOT-Guide-TSL</module>
+        <module>IOT-Guide-MultiTenant</module>
+        <module>IOT-Guide-Token</module>
+        <module>IOT-Guide-Msa</module>
+        <module>IOT-Guide-RuleEngine</module>
+        <module>IOT-Guide-DB</module>
+        <module>IOT-Guide-RealTime</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
