@@ -7,11 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Version 1.0
  */
 @SpringBootApplication(scanBasePackages = {"com.sanshengshui.http"})
-public class IOTHttpApp {
+public class IOTHttpServer {
     /**
      * @param args
      */
     public static void main(String[] args) {
-        SpringApplication.run(IOTHttpApp.class);
+        SpringApplication.run(IOTHttpServer.class);
     }
 }
