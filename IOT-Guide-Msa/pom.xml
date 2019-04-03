@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>IOT-Guide</artifactId>
+        <groupId>com.sanshengshui</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <name>IOT Technology Guide :: MicroService</name>
+    <artifactId>IOT-Guide-Msa</artifactId>
+    <packaging>jar</packaging>
+
+    <url>https:://sanshengshui.github.io</url>
+    <description>IOT Technical Guide - MicroService of the era of the Internet of Everything</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
