@@ -50,6 +50,7 @@
         <mockito.version>1.9.5</mockito.version>
         <gson.version>2.6.2</gson.version>
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
+        <netty-all.version>4.1.6.Final</netty-all.version>
         <lombok.version>1.16.18</lombok.version>
     </properties>
 
@@ -150,6 +151,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty-all.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
