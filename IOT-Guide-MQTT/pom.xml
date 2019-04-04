@@ -43,6 +43,11 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.sanshengshui</groupId>
+            <artifactId>IOT-Guide-TSL</artifactId>
+        </dependency>
     </dependencies>
 
 
