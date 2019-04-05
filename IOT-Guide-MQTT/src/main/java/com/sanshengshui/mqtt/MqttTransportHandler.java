@@ -9,11 +9,15 @@ import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 
 import java.net.InetSocketAddress;
+import java.util.ArrayList;
+import java.util.List;
 
+import static com.sanshengshui.mqtt.MqttTopics.DEVICE_ATTRIBUTES_TOPIC;
 import static com.sanshengshui.tsl.session.SessionMsgType.POST_ATTRIBUTES_REQUEST;
 import static com.sanshengshui.tsl.session.SessionMsgType.POST_TELEMETRY_REQUEST;
 import static io.netty.handler.codec.mqtt.MqttMessageType.CONNACK;
-import static io.netty.handler.codec.mqtt.MqttQoS.AT_MOST_ONCE;
+import static io.netty.handler.codec.mqtt.MqttMessageType.SUBACK;
+import static io.netty.handler.codec.mqtt.MqttQoS.*;
 
 /**
  * @Author: 穆书伟
@@ -50,6 +54,10 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
             case PUBLISH:
                 processPublish(ctx, (MqttPublishMessage) msg);
                 break;
+            case SUBSCRIBE:
+                processSubscribe(ctx, (MqttSubscribeMessage) msg);
+                break;
+
         }
     }
 
@@ -69,13 +77,37 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
         try {
             if (topicName.equals(MqttTopics.DEVICE_TELEMETRY_TOPIC)) {
                 JsonMqttAdaptor.convertToMsg(POST_TELEMETRY_REQUEST, mqttMsg);
-            } else if(topicName.equals(MqttTopics.DEVICE_ATTRIBUTES_TOPIC)) {
+            } else if(topicName.equals(DEVICE_ATTRIBUTES_TOPIC)) {
                 JsonMqttAdaptor.convertToMsg(POST_ATTRIBUTES_REQUEST, mqttMsg);
             }
         } catch (AdaptorException e) {
 
         }
 
+    }
+
+    private void processSubscribe(ChannelHandlerContext ctx, MqttSubscribeMessage mqttMsg) {
+        if (!checkConnected(ctx)) {
+            return;
+        }
+        List<Integer> grantedQoSList = new ArrayList<>();
+        for (MqttTopicSubscription subscription : mqttMsg.payload().topicSubscriptions()) {
+            String topicName = subscription.topicName();
+            //TODO: handle this qos level.
+            MqttQoS reqQoS = subscription.qualityOfService();
+            if (topicName.equals(DEVICE_ATTRIBUTES_TOPIC)) {
+
+            }
+        }
+        ctx.writeAndFlush(createSubAckMessage(mqttMsg.variableHeader().messageId(), grantedQoSList));
+    }
+
+    private static MqttSubAckMessage createSubAckMessage(Integer msgId, List<Integer> grantedQoSList) {
+        MqttFixedHeader mqttFixedHeader =
+                new MqttFixedHeader(SUBACK, false, AT_LEAST_ONCE, false, 0);
+        MqttMessageIdVariableHeader mqttMessageIdVariableHeader = MqttMessageIdVariableHeader.from(msgId);
+        MqttSubAckPayload mqttSubAckPayload = new MqttSubAckPayload(grantedQoSList);
+        return new MqttSubAckMessage(mqttFixedHeader, mqttMessageIdVariableHeader, mqttSubAckPayload);
     }
 
     private void processDisconnect(ChannelHandlerContext ctx) {
