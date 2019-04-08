@@ -11,12 +11,13 @@ import io.netty.util.concurrent.GenericFutureListener;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import static com.sanshengshui.mqtt.MqttTopics.DEVICE_ATTRIBUTES_TOPIC;
 import static com.sanshengshui.tsl.session.SessionMsgType.POST_ATTRIBUTES_REQUEST;
 import static com.sanshengshui.tsl.session.SessionMsgType.POST_TELEMETRY_REQUEST;
-import static io.netty.handler.codec.mqtt.MqttMessageType.CONNACK;
-import static io.netty.handler.codec.mqtt.MqttMessageType.SUBACK;
+import static io.netty.handler.codec.mqtt.MqttMessageType.*;
 import static io.netty.handler.codec.mqtt.MqttQoS.*;
 
 /**
@@ -30,6 +31,11 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
 
     private volatile boolean connected;
     private volatile InetSocketAddress address;
+    private final ConcurrentMap<MqttTopicMatcher,Integer> mqttQoSMap;
+
+    public MqttTransportHandler() {
+        this.mqttQoSMap = new ConcurrentHashMap<>();
+    }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -56,6 +62,21 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
                 break;
             case SUBSCRIBE:
                 processSubscribe(ctx, (MqttSubscribeMessage) msg);
+                break;
+            case UNSUBSCRIBE:
+                processUnsubscribe(ctx, (MqttUnsubscribeMessage) msg);
+                break;
+            case PINGREQ:
+                if (checkConnected(ctx)) {
+                    ctx.writeAndFlush(new MqttMessage(new MqttFixedHeader(PINGRESP,false,AT_MOST_ONCE, false, 0)));
+                }
+                break;
+            case DISCONNECT:
+                if (checkConnected(ctx)) {
+                    processDisconnect(ctx);
+                }
+                break;
+            default:
                 break;
 
         }
@@ -108,6 +129,17 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
         MqttMessageIdVariableHeader mqttMessageIdVariableHeader = MqttMessageIdVariableHeader.from(msgId);
         MqttSubAckPayload mqttSubAckPayload = new MqttSubAckPayload(grantedQoSList);
         return new MqttSubAckMessage(mqttFixedHeader, mqttMessageIdVariableHeader, mqttSubAckPayload);
+    }
+
+    private void processUnsubscribe(ChannelHandlerContext ctx, MqttUnsubscribeMessage mqttMsg) {
+        if (!checkConnected(ctx)) {
+            return;
+        }
+        for (String topicName: mqttMsg.payload().topics()) {
+            switch (topicName) {
+
+            }
+        }
     }
 
     private void processDisconnect(ChannelHandlerContext ctx) {
