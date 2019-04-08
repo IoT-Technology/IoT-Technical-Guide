@@ -1,14 +1,14 @@
 package com.sanshengshui.mqtt.adapter;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+import com.sanshengshui.mqtt.MqttTopics;
 import com.sanshengshui.tsl.adaptor.AdaptorException;
 import com.sanshengshui.tsl.adaptor.JsonConverter;
-import com.sanshengshui.tsl.core.TelemetryUploadRequest;
 import com.sanshengshui.tsl.data.kv.AttributeKvEntry;
 import com.sanshengshui.tsl.data.kv.KvEntry;
-import com.sanshengshui.tsl.session.FromDeviceMsg;
 import com.sanshengshui.tsl.session.SessionMsgType;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -17,9 +17,7 @@ import io.netty.handler.codec.mqtt.MqttMessage;
 import io.netty.handler.codec.mqtt.MqttPublishMessage;
 
 import java.nio.charset.Charset;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author james mu
@@ -38,6 +36,12 @@ public class JsonMqttAdaptor {
                 break;
             case POST_ATTRIBUTES_REQUEST:
                 convertToUpdateAttributesRequest((MqttPublishMessage) inbound);
+                break;
+            case SUBSCRIBE_ATTRIBUTES_REQUEST:
+                System.out.println("{\"key1\":\"value1\"}");
+                break;
+            case GET_ATTRIBUTES_REQUEST:
+                convertToGetAttributesRequest((MqttPublishMessage) inbound);
                 break;
         }
     }
@@ -66,6 +70,35 @@ public class JsonMqttAdaptor {
             }
         } catch (IllegalStateException | JsonSyntaxException ex) {
             throw new AdaptorException(ex);
+        }
+    }
+
+    private static void convertToGetAttributesRequest(MqttPublishMessage inbound) throws AdaptorException {
+        try {
+            String payload = inbound.payload().toString(UTF8);
+            JsonElement requestBody = new JsonParser().parse(payload);
+            Set<String> clientKeys = toStringSet(requestBody, "clientKeys");
+            Set<String> sharedKeys = toStringSet(requestBody, "sharedKeys");
+            if (clientKeys == null && sharedKeys == null) {
+            } else {
+                for (String clientKey : clientKeys) {
+                    System.out.print("客户端属性:" + clientKey +" ");
+                }
+                for (String sharedKey : sharedKeys) {
+                    System.out.print("共享设备属性:" + sharedKey + " ");
+                }
+            }
+        }catch (RuntimeException e) {
+            throw new AdaptorException(e);
+        }
+    }
+
+    private static Set<String> toStringSet(JsonElement requestBody, String name) {
+        JsonElement element = requestBody.getAsJsonObject().get(name);
+        if (element != null) {
+            return new HashSet<>(Arrays.asList(element.getAsString().split(",")));
+        } else {
+            return null;
         }
     }
 

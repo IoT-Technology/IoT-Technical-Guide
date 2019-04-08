@@ -14,9 +14,8 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import static com.sanshengshui.mqtt.MqttTopics.DEVICE_ATTRIBUTES_TOPIC;
-import static com.sanshengshui.tsl.session.SessionMsgType.POST_ATTRIBUTES_REQUEST;
-import static com.sanshengshui.tsl.session.SessionMsgType.POST_TELEMETRY_REQUEST;
+import static com.sanshengshui.mqtt.MqttTopics.*;
+import static com.sanshengshui.tsl.session.SessionMsgType.*;
 import static io.netty.handler.codec.mqtt.MqttMessageType.*;
 import static io.netty.handler.codec.mqtt.MqttQoS.*;
 
@@ -100,6 +99,8 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
                 JsonMqttAdaptor.convertToMsg(POST_TELEMETRY_REQUEST, mqttMsg);
             } else if(topicName.equals(DEVICE_ATTRIBUTES_TOPIC)) {
                 JsonMqttAdaptor.convertToMsg(POST_ATTRIBUTES_REQUEST, mqttMsg);
+            } else if(topicName.equals(MqttTopics.DEVICE_ATTRIBUTES_REQUEST_TOPIC_PREFIX)) {
+                JsonMqttAdaptor.convertToMsg(GET_ATTRIBUTES_REQUEST, mqttMsg);
             }
         } catch (AdaptorException e) {
 
@@ -113,11 +114,24 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
         }
         List<Integer> grantedQoSList = new ArrayList<>();
         for (MqttTopicSubscription subscription : mqttMsg.payload().topicSubscriptions()) {
-            String topicName = subscription.topicName();
-            //TODO: handle this qos level.
+            String topic = subscription.topicName();
             MqttQoS reqQoS = subscription.qualityOfService();
-            if (topicName.equals(DEVICE_ATTRIBUTES_TOPIC)) {
-
+            try {
+                switch (topic) {
+                    case DEVICE_ATTRIBUTES_TOPIC: {
+                        JsonMqttAdaptor.convertToMsg(SUBSCRIBE_ATTRIBUTES_REQUEST, mqttMsg);
+                        registerSubQoS(topic, grantedQoSList, reqQoS);
+                        break;
+                    }
+                    case DEVICE_ATTRIBUTES_RESPONSE_TOPIC_PREFIX:
+                        registerSubQoS(topic, grantedQoSList, reqQoS);
+                        break;
+                    default:
+                        grantedQoSList.add(FAILURE.value());
+                        break;
+                }
+            } catch (AdaptorException e) {
+                grantedQoSList.add(FAILURE.value());
             }
         }
         ctx.writeAndFlush(createSubAckMessage(mqttMsg.variableHeader().messageId(), grantedQoSList));
@@ -131,15 +145,36 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
         return new MqttSubAckMessage(mqttFixedHeader, mqttMessageIdVariableHeader, mqttSubAckPayload);
     }
 
+    private void registerSubQoS(String topic, List<Integer> grantedQoSList, MqttQoS reqQoS) {
+        grantedQoSList.add(getMinSupportedQos(reqQoS));
+        mqttQoSMap.put(new MqttTopicMatcher(topic), getMinSupportedQos(reqQoS));
+    }
+
+    private static int getMinSupportedQos(MqttQoS reqQoS) {
+        return Math.min(reqQoS.value(), MAX_SUPPORTED_QOS_LVL.value());
+    }
+
     private void processUnsubscribe(ChannelHandlerContext ctx, MqttUnsubscribeMessage mqttMsg) {
         if (!checkConnected(ctx)) {
             return;
         }
         for (String topicName: mqttMsg.payload().topics()) {
-            switch (topicName) {
+            mqttQoSMap.remove(new MqttTopicMatcher(topicName));
+            try {
+                switch (topicName) {
+                    case DEVICE_ATTRIBUTES_TOPIC: {
+                        JsonMqttAdaptor.convertToMsg(UNSUBSCRIBE_ATTRIBUTES_REQUEST, mqttMsg);
+                        break;
+                    }
+                    case DEVICE_ATTRIBUTES_RESPONSES_TOPIC:
+                        break;
+
+                }
+            }catch (AdaptorException e) {
 
             }
         }
+        ctx.writeAndFlush(createUnSubAckMessage(mqttMsg.variableHeader().messageId()));
     }
 
     private void processDisconnect(ChannelHandlerContext ctx) {
@@ -149,6 +184,13 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
     private void processConnect(ChannelHandlerContext ctx, MqttConnectMessage msg) {
         ctx.writeAndFlush(createMqttConnAckMsg(MqttConnectReturnCode.CONNECTION_ACCEPTED));
         connected = true;
+    }
+
+    private MqttMessage createUnSubAckMessage(int msgId) {
+        MqttFixedHeader mqttFixedHeader =
+                new MqttFixedHeader(UNSUBACK, false, AT_LEAST_ONCE, false, 0);
+        MqttMessageIdVariableHeader mqttMessageIdVariableHeader = MqttMessageIdVariableHeader.from(msgId);
+        return new MqttMessage(mqttFixedHeader, mqttMessageIdVariableHeader);
     }
 
     private MqttConnAckMessage createMqttConnAckMsg(MqttConnectReturnCode returnCode) {
