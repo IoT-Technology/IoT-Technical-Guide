@@ -58,6 +58,7 @@
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
         <netty-all.version>4.1.6.Final</netty-all.version>
         <lombok.version>1.16.18</lombok.version>
+        <mysql.version>5.1.43</mysql.version>
     </properties>
 
     <dependencies>
@@ -162,6 +163,21 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
