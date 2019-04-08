@@ -7,12 +7,12 @@ import com.sanshengshui.tsl.data.kv.KvEntry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.async.DeferredResult;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
 
 
 /**
@@ -38,6 +38,21 @@ public class DeviceApiController {
         return responseWriter;
     }
 
+    @RequestMapping(value = "/{deviceToken}/attributes", method = RequestMethod.GET, produces = "application/json")
+    public DeferredResult<ResponseEntity> getDeviceAttributes(@PathVariable("deviceToken") String deviceToken,
+                                                              @RequestParam(value = "clientKeys", required = false, defaultValue = "") String clientKeys,
+                                                              @RequestParam(value = "sharedKeys", required = false, defaultValue = "") String sharedKeys) {
+        DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
+        if (StringUtils.isEmpty(clientKeys) && StringUtils.isEmpty(sharedKeys)) {
+
+        }else {
+            Set<String> clientKeySet = !StringUtils.isEmpty(clientKeys) ? new HashSet<>(Arrays.asList(clientKeys.split(","))) : null;
+            Set<String> sharedKeySet = !StringUtils.isEmpty(sharedKeys) ? new HashSet<>(Arrays.asList(sharedKeys.split(","))) : null;
+        }
+        return responseWriter;
+
+    }
+
     @RequestMapping(value = "/{deviceToken}/telemetry",method = RequestMethod.POST)
     public DeferredResult<ResponseEntity> postTelemetry(@PathVariable("deviceToken") String deviceToken,
                                                         @RequestBody String json){
@@ -50,6 +65,14 @@ public class DeviceApiController {
                 System.out.println("属性名="+kvEntry.getKey()+ " 属性值="+kvEntry.getValueAsString());
             }
         }
+        return responseWriter;
+    }
+
+    @RequestMapping(value = "/{deviceToken}/attributes/updates", method = RequestMethod.GET, produces = "application/json")
+    public DeferredResult<ResponseEntity> subscribeToAttributes(@PathVariable("deviceToken") String deviceToken,
+                                                                @RequestParam(value = "timeout", required = false, defaultValue = "0") long timeout,
+                                                                HttpServletRequest httpRequest){
+        DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
         return responseWriter;
     }
 }
