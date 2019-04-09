@@ -38,6 +38,7 @@
         <module>IOT-Guide-RuleEngine</module>
         <module>IOT-Guide-DB</module>
         <module>IOT-Guide-RealTime</module>
+        <module>IOT-Guide-Docker</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
