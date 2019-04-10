@@ -7,7 +7,7 @@
     <a href="https://github.com/sanshengshui/IOT-Technical-Guide/issues"><img src="http://isitmaintained.com/badge/open/dreamans/syncd.svg" /></a>
 
 
-[📖 English Documentation](README-EN.md) | 📖 中文文档
+[📖English Documentation](README_EN.md) | 📖 中文文档
 
  **:maple_leaf:高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
 
