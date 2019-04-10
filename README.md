@@ -1,8 +1,6 @@
 <p align="center">
-    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/logo.png" alt="IOT Technical Guide">
+    <img src="png/logo.png" alt="IOT Technical Guide">
 </p>
-
-<h3 align="center">IOT Technical Guide</h3>
 <p align="center">
     <a href="https://travis-ci.org/sanshengshui/IOT-Technical-Guide"><img src="https://travis-ci.org/sanshengshui/IOT-Technical-Guide.svg?branch=master" /></a>
     <a href="https://github.com/sanshengshui/Groza/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache-000000.svg" /></a>
@@ -11,7 +9,19 @@
 
  **高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
 
+### 第1篇 怒放的 IOT
 
+- **第1章** [IOT platform ->Technical]()
+- **第1章** [IOT TSL(Thing Specification)->Json]()
+
+### 第2篇 设备接入和管理
+
+本篇完全面向入门者。我假设你从零开始创建一个项目并且想用 Git 来进行版本控制，我们会讨论如何在你的个人项目中使用 Git，比如如何初始化你的项目，如何管理新的或者已有的文件，如何在远端仓库中储存你的代码。
+
+- **第1章** [IOT protocol -> HTTP]()
+- **第2章** [IOT protocol -> MQTT]()
+- **第3章** [IOT protocol -> Coap]()
+- **第4章** [IOT protocol -> Gateway]()
 
 :four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
 
@@ -19,7 +29,7 @@
 ### 版权说明
 
 - ✍️ [穆书伟 (sanshengshui@github)](https://github.com/sanshengshui)
-- 除非另行注明，这个项目中的所有内容采用知识共享-署名（[CC BY 2.5 AU](http://creativecommons.org/licenses/by/2.5/au/deed.zh)）协议共享。
+- 除非另行注明，这个项目中的所有内容采用Apache2.0（[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)）协议共享。
 - 不少文章在原基础上翻译或演绎而来，页面上方标注了原作者、原文链接以及原文采用的协议。如有版权疑问，请在 Issue 中提出。
 - 如果引用本此项目教程代码或者文章,请注明作者和github项目地址。
 - 欢迎通过 Issue 或者 Pull Request 推荐你认为合适的资料，让这份菜单更充实一些。
