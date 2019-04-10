@@ -1,6 +1,13 @@
-![logo](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/logo.png)
+<p align="center">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/logo.png" alt="IOT Technical Guide">
+</p>
 
-# :maple_leaf: ​IOT 技术指南
+<h3 align="center">IOT Technical Guide</h3>
+<p align="center">
+    <a href="https://travis-ci.org/sanshengshui/IOT-Technical-Guide"><img src="https://travis-ci.org/sanshengshui/IOT-Technical-Guide.svg?branch=master" /></a>
+    <a href="https://github.com/sanshengshui/Groza/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache-000000.svg" /></a>
+    <a href="https://github.com/sanshengshui/IOT-Technical-Guide/issues"><img src="http://isitmaintained.com/badge/open/dreamans/syncd.svg" /></a>
+
 
  **高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
 
