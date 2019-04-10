@@ -7,7 +7,7 @@
     <a href="https://github.com/sanshengshui/IOT-Technical-Guide/issues"><img src="http://isitmaintained.com/badge/open/dreamans/syncd.svg" /></a>
 
 
-📖 English Documentation | [📖 中文文档](README_EN.md)
+📖 English Documentation | [📖 中文文档](README_CN.md)
 
  **:maple_leaf:High quality IOT technology tutoria,The code is mainly derived from the foreign open source Internet of Things platform [ThingsBoard](https://thingsboard.io/)  and the perception of the Alibaba Cloud IoT platform.l，**
 
@@ -22,10 +22,10 @@
 
 The IoT platform supports massive devices connected to the cloud, and the device and the cloud perform stable and reliable two-way communication, providing complete device lifecycle management functions.
 
-- **第1章** [MQTT Protocol]()
-- **第2章** [HTTP Protocol]()
-- **第3章** [Coap Protocol]()
-- **第4章** [Gateway]()
+- **Section 1** [MQTT Protocol]()
+- **Section 2** [HTTP Protocol]()
+- **Section 3** [Coap Protocol]()
+- **Section 4** [Gateway]()
 
 ...
 
