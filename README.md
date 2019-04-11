@@ -14,18 +14,17 @@
 ### Chapter 1 IOT in full bloom
 
 - **Section 1** [Mainstream Internet of Things platform features?]()
-- **Section 2** [An object model that describes the function of the device]()
-
 
 
 ### Chapter 2 Device access and management
 
 The IoT platform supports massive devices connected to the cloud, and the device and the cloud perform stable and reliable two-way communication, providing complete device lifecycle management functions.
 
-- **Section 1** [MQTT Protocol]()
-- **Section 2** [HTTP Protocol]()
-- **Section 3** [Coap Protocol]()
-- **Section 4** [Gateway]()
+- **Section 1** [TSL]()
+- **Section 2** [MQTT Protocol]()
+- **Section 3** [HTTP Protocol]()
+- **Section 4** [Coap Protocol]()
+- **Section 5** [Gateway]()
 
 ...
 
@@ -36,7 +35,7 @@ The IoT platform supports massive devices connected to the cloud, and the device
 
 ### Copyright 
 
-- ✍️ [穆书伟 (sanshengshui@github)](https://github.com/sanshengshui)
+- ✍️ [james mu (sanshengshui@github)](https://github.com/sanshengshui)
 - Unless otherwise noted, all content in this project is shared using the Apache 2.0 ([Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)) protocol。
 - Many articles were translated or interpreted on the original basis. The original author, the original link and the agreement adopted by the original text were marked on the top of the page. If you have a copyright question, please ask in the Issue。
 - If you quote this tutorial code or article, please indicate the author and github project address。
