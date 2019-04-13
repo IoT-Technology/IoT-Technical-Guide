@@ -1,6 +1,7 @@
-package com.sanshengshui.token.model;
+package com.sanshengshui.token.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sanshengshui.token.model.Authority;
 
 /**
  * @Author: 穆书伟

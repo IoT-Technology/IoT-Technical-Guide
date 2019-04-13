@@ -1,5 +1,6 @@
 package com.sanshengshui.token.model;
 
+import com.sanshengshui.token.data.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
