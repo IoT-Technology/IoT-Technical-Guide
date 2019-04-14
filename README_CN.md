@@ -29,7 +29,11 @@
 
 ...
 
+:honeybee::honeybee::honeybee::honeybee::honeybee::honeybee:
 
+### Project Gantt
+
+![gantt_en](png/gantt.svg)
 
 :four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
 
