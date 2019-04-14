@@ -33,7 +33,7 @@
 
 ### Project Gantt
 
-![gantt_en](png/gantt.svg)
+![gantt_en](png/gantt_cn.svg)
 
 :four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
 
