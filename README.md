@@ -29,6 +29,11 @@ The IoT platform supports massive devices connected to the cloud, and the device
 ...
 
 
+:honeybee::honeybee::honeybee::honeybee::honeybee::honeybee:
+
+### Project Gantt
+
+![gantt_en](png\gantt.svg)
 
 :four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
 
