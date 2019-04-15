@@ -53,3 +53,7 @@ The IoT platform supports massive devices connected to the cloud, and the device
 > When I learned about the open source IoT platform ThingsBoard and the Alibaba Cloud IoT platform, I was very interested in the field of Internet of Things. I found that the implementation speed of the ThingsBoard is very frequent and the code architecture is very good. With the next ten years, there will be billions of devices that will be connected to the Internet and domestically. Numerous developers have experienced the era of Web 2.0 and mobile Internet, but the knowledge of future device networking is very scarce, and most articles on search engines are relatively shallow. In addition, these materials often only cover certain topics. If a menu can be used to string these recipes in a specific way, it will be a great convenience for IOT learners. Especially for lazy people like me who love to view community information better than publications:new_moon_with_face: As my learning rhythm continues, new recipes will continue to be added.。
 >
 
+### Licensing
+
+IOT Technical Guide  is licensed under the Apache License, Version 2.0. See [LICENSE](https://github.com/sanshengshui/IOT-Technical-Guide/blob/master/LICENSE) for the full license text.
+
