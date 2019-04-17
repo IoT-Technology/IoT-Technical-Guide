@@ -13,7 +13,7 @@
 
 ### Chapter 1 IOT in full bloom
 
-- **Section 1** [Mainstream Internet of Things platform features?]()
+- **Section 1** [Mainstream Internet of Things platform features?](https://github.com/sanshengshui/IOT-Technical-Guide/wiki/Mainstream-Internet-of-Things-platform-features)
 
 
 ### Chapter 2 Device access and management

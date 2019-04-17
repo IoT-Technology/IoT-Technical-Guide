@@ -1,0 +1,360 @@
+<svg id="mermaid-1555420702969" width="100%" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1155 364"><style>
+
+
+#mermaid-1555420702969 .label {
+  font-family: 'trebuchet ms', verdana, arial;
+  color: #333; }
+
+#mermaid-1555420702969 .node rect,
+#mermaid-1555420702969 .node circle,
+#mermaid-1555420702969 .node ellipse,
+#mermaid-1555420702969 .node polygon {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1px; }
+
+#mermaid-1555420702969 .node.clickable {
+  cursor: pointer; }
+
+#mermaid-1555420702969 .arrowheadPath {
+  fill: #333333; }
+
+#mermaid-1555420702969 .edgePath .path {
+  stroke: #333333;
+  stroke-width: 1.5px; }
+
+#mermaid-1555420702969 .edgeLabel {
+  background-color: #e8e8e8; }
+
+#mermaid-1555420702969 .cluster rect {
+  fill: #ffffde !important;
+  stroke: #aaaa33 !important;
+  stroke-width: 1px !important; }
+
+#mermaid-1555420702969 .cluster text {
+  fill: #333; }
+
+#mermaid-1555420702969 div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 12px;
+  background: #ffffde;
+  border: 1px solid #aaaa33;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+#mermaid-1555420702969 .actor {
+  stroke: #CCCCFF;
+  fill: #ECECFF; }
+
+#mermaid-1555420702969 text.actor {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1555420702969 .actor-line {
+  stroke: grey; }
+
+#mermaid-1555420702969 .messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1555420702969 .messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1555420702969 #arrowhead {
+  fill: #333; }
+
+#mermaid-1555420702969 #crosshead path {
+  fill: #333 !important;
+  stroke: #333 !important; }
+
+#mermaid-1555420702969 .messageText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1555420702969 .labelBox {
+  stroke: #CCCCFF;
+  fill: #ECECFF; }
+
+#mermaid-1555420702969 .labelText {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1555420702969 .loopText {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1555420702969 .loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #CCCCFF; }
+
+#mermaid-1555420702969 .note {
+  stroke: #aaaa33;
+  fill: #fff5ad; }
+
+#mermaid-1555420702969 .noteText {
+  fill: black;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 14px; }
+
+#mermaid-1555420702969 .activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1555420702969 .activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1555420702969 .activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+
+#mermaid-1555420702969 .section {
+  stroke: none;
+  opacity: 0.2; }
+
+#mermaid-1555420702969 .section0 {
+  fill: rgba(102, 102, 255, 0.49); }
+
+#mermaid-1555420702969 .section2 {
+  fill: #fff400; }
+
+#mermaid-1555420702969 .section1,
+#mermaid-1555420702969 .section3 {
+  fill: white;
+  opacity: 0.2; }
+
+#mermaid-1555420702969 .sectionTitle0 {
+  fill: #333; }
+
+#mermaid-1555420702969 .sectionTitle1 {
+  fill: #333; }
+
+#mermaid-1555420702969 .sectionTitle2 {
+  fill: #333; }
+
+#mermaid-1555420702969 .sectionTitle3 {
+  fill: #333; }
+
+#mermaid-1555420702969 .sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px; }
+
+
+#mermaid-1555420702969 .grid .tick {
+  stroke: lightgrey;
+  opacity: 0.3;
+  shape-rendering: crispEdges; }
+
+#mermaid-1555420702969 .grid path {
+  stroke-width: 0; }
+
+
+#mermaid-1555420702969 .today {
+  fill: none;
+  stroke: red;
+  stroke-width: 2px; }
+
+
+
+#mermaid-1555420702969 .task {
+  stroke-width: 2; }
+
+#mermaid-1555420702969 .taskText {
+  text-anchor: middle;
+  font-size: 11px; }
+
+#mermaid-1555420702969 .taskTextOutsideRight {
+  fill: black;
+  text-anchor: start;
+  font-size: 11px; }
+
+#mermaid-1555420702969 .taskTextOutsideLeft {
+  fill: black;
+  text-anchor: end;
+  font-size: 11px; }
+
+
+#mermaid-1555420702969 .taskText0,
+#mermaid-1555420702969 .taskText1,
+#mermaid-1555420702969 .taskText2,
+#mermaid-1555420702969 .taskText3 {
+  fill: white; }
+
+#mermaid-1555420702969 .task0,
+#mermaid-1555420702969 .task1,
+#mermaid-1555420702969 .task2,
+#mermaid-1555420702969 .task3 {
+  fill: #8a90dd;
+  stroke: #534fbc; }
+
+#mermaid-1555420702969 .taskTextOutside0,
+#mermaid-1555420702969 .taskTextOutside2 {
+  fill: black; }
+
+#mermaid-1555420702969 .taskTextOutside1,
+#mermaid-1555420702969 .taskTextOutside3 {
+  fill: black; }
+
+
+#mermaid-1555420702969 .active0,
+#mermaid-1555420702969 .active1,
+#mermaid-1555420702969 .active2,
+#mermaid-1555420702969 .active3 {
+  fill: #bfc7ff;
+  stroke: #534fbc; }
+
+#mermaid-1555420702969 .activeText0,
+#mermaid-1555420702969 .activeText1,
+#mermaid-1555420702969 .activeText2,
+#mermaid-1555420702969 .activeText3 {
+  fill: black !important; }
+
+
+#mermaid-1555420702969 .done0,
+#mermaid-1555420702969 .done1,
+#mermaid-1555420702969 .done2,
+#mermaid-1555420702969 .done3 {
+  stroke: grey;
+  fill: lightgrey;
+  stroke-width: 2; }
+
+#mermaid-1555420702969 .doneText0,
+#mermaid-1555420702969 .doneText1,
+#mermaid-1555420702969 .doneText2,
+#mermaid-1555420702969 .doneText3 {
+  fill: black !important; }
+
+
+#mermaid-1555420702969 .crit0,
+#mermaid-1555420702969 .crit1,
+#mermaid-1555420702969 .crit2,
+#mermaid-1555420702969 .crit3 {
+  stroke: #ff8888;
+  fill: red;
+  stroke-width: 2; }
+
+#mermaid-1555420702969 .activeCrit0,
+#mermaid-1555420702969 .activeCrit1,
+#mermaid-1555420702969 .activeCrit2,
+#mermaid-1555420702969 .activeCrit3 {
+  stroke: #ff8888;
+  fill: #bfc7ff;
+  stroke-width: 2; }
+
+#mermaid-1555420702969 .doneCrit0,
+#mermaid-1555420702969 .doneCrit1,
+#mermaid-1555420702969 .doneCrit2,
+#mermaid-1555420702969 .doneCrit3 {
+  stroke: #ff8888;
+  fill: lightgrey;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+#mermaid-1555420702969 .doneCritText0,
+#mermaid-1555420702969 .doneCritText1,
+#mermaid-1555420702969 .doneCritText2,
+#mermaid-1555420702969 .doneCritText3 {
+  fill: black !important; }
+
+#mermaid-1555420702969 .activeCritText0,
+#mermaid-1555420702969 .activeCritText1,
+#mermaid-1555420702969 .activeCritText2,
+#mermaid-1555420702969 .activeCritText3 {
+  fill: black !important; }
+
+#mermaid-1555420702969 .titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: black; }
+
+#mermaid-1555420702969 g.classGroup text {
+  fill: #9370DB;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 10px; }
+
+#mermaid-1555420702969 g.classGroup rect {
+  fill: #ECECFF;
+  stroke: #9370DB; }
+
+#mermaid-1555420702969 g.classGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 .classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #ECECFF;
+  opacity: 0.5; }
+
+#mermaid-1555420702969 .classLabel .label {
+  fill: #9370DB;
+  font-size: 10px; }
+
+#mermaid-1555420702969 .relation {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+#mermaid-1555420702969 #compositionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 #compositionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 #aggregationStart {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 #aggregationEnd {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 #dependencyStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 #dependencyEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 #extensionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 #extensionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1555420702969 .commit-id,
+#mermaid-1555420702969 .commit-msg,
+#mermaid-1555420702969 .branch-label {
+  fill: lightgrey;
+  color: lightgrey; }
+</style><style>#mermaid-1555420702969 {
+    color: rgba(0, 0, 0, 0.65);
+    font: ;
+  }</style><g></g><g class="grid" transform="translate(75, 314)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="currentColor" d="M0.5,-279V0.5H1005.5V-279"></path><g class="tick" opacity="1" transform="translate(144.5,0)"><line stroke="currentColor" y2="-279"></line><text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2019-04-21</text></g><g class="tick" opacity="1" transform="translate(311.5,0)"><line stroke="currentColor" y2="-279"></line><text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2019-04-28</text></g><g class="tick" opacity="1" transform="translate(479.5,0)"><line stroke="currentColor" y2="-279"></line><text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2019-05-05</text></g><g class="tick" opacity="1" transform="translate(646.5,0)"><line stroke="currentColor" y2="-279"></line><text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2019-05-12</text></g><g class="tick" opacity="1" transform="translate(814.5,0)"><line stroke="currentColor" y2="-279"></line><text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2019-05-19</text></g><g class="tick" opacity="1" transform="translate(981.5,0)"><line stroke="currentColor" y2="-279"></line><text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2019-05-26</text></g></g><g><rect x="0" y="48" width="1117.5" height="24" class="section section0"></rect><rect x="0" y="72" width="1117.5" height="24" class="section section0"></rect><rect x="0" y="96" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="120" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="144" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="168" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="192" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="216" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="240" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="264" width="1117.5" height="24" class="section section1"></rect><rect x="0" y="288" width="1117.5" height="24" class="section section2"></rect></g><g><rect rx="3" ry="3" x="75" y="50" width="24" height="20" class="task  done0"></rect><rect rx="3" ry="3" x="75" y="74" width="24" height="20" class="task  done0"></rect><rect rx="3" ry="3" x="75" y="98" width="24" height="20" class="task  done1"></rect><rect rx="3" ry="3" x="99" y="122" width="96" height="20" class="task  active1"></rect><rect rx="3" ry="3" x="195" y="146" width="71" height="20" class="task  task1"></rect><rect rx="3" ry="3" x="266" y="170" width="96" height="20" class="task  task1"></rect><rect rx="3" ry="3" x="362" y="194" width="72" height="20" class="task  task1"></rect><rect rx="3" ry="3" x="434" y="218" width="96" height="20" class="task  task1"></rect><rect rx="3" ry="3" x="530" y="242" width="71" height="20" class="task  task1"></rect><rect rx="3" ry="3" x="601" y="266" width="96" height="20" class="task  task1"></rect><rect rx="3" ry="3" x="1080" y="290" width="0" height="20" class="task  task2"></rect><text font-size="11" x="104" y="63.5" text-height="20" class="taskTextOutsideRight taskTextOutside0  doneText0">IOT platform?     </text><text font-size="11" x="104" y="87.5" text-height="20" class="taskTextOutsideRight taskTextOutside0  doneText0">物联网平台-中文?    </text><text font-size="11" x="104" y="111.5" text-height="20" class="taskTextOutsideRight taskTextOutside1  doneText1">物模型             </text><text font-size="11" x="147" y="135.5" text-height="20" class="taskText taskText1 activeText1">物模型文档          </text><text font-size="11" x="230.5" y="159.5" text-height="20" class="taskText taskText1 ">HTTP              </text><text font-size="11" x="314" y="183.5" text-height="20" class="taskText taskText1 ">HTTP文档           </text><text font-size="11" x="398" y="207.5" text-height="20" class="taskText taskText1 ">MQTT              </text><text font-size="11" x="482" y="231.5" text-height="20" class="taskText taskText1 ">MQTT文档           </text><text font-size="11" x="565.5" y="255.5" text-height="20" class="taskText taskText1 ">Coap              </text><text font-size="11" x="649" y="279.5" text-height="20" class="taskText taskText1 ">Coap文档           </text><text font-size="11" x="1075" y="303.5" text-height="20" class="taskTextOutsideLeft taskTextOutside2 ">期待中...			   </text></g><g><text x="10" y="74" class="sectionTitle sectionTitle0">怒放的IOT</text><text x="10" y="194" class="sectionTitle sectionTitle1">设备接入和管理</text><text x="10" y="302" class="sectionTitle sectionTitle2">期待中...</text></g><g class="today"><line x1="120" x2="120" y1="25" y2="339" class="today"></line></g><text x="577.5" y="25" class="titleText">IOT技术指南</text></svg>
