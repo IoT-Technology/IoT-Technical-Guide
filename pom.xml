@@ -39,6 +39,7 @@
         <module>IOT-Guide-DB</module>
         <module>IOT-Guide-RealTime</module>
         <module>IOT-Guide-Docker</module>
+        <module>IOT-Guide-Kubernates</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
