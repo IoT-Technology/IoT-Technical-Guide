@@ -3,7 +3,7 @@ package com.sanshengshui.tsl.core;
 
 /**
  * @Author: 穆书伟
- * @Date: 19-4-2 下午2:22
+ * @Date: 19-4-2
  * @Version 1.0
  */
 public class BasicRequest {

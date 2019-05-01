@@ -5,7 +5,7 @@ import java.util.Optional;
 
 /**
  * @Author: 穆书伟
- * @Date: 19-4-2 下午3:06
+ * @Date: 19-4-2
  * @Version 1.0
  */
 public class LongDataEntry extends BasicKvEntry {

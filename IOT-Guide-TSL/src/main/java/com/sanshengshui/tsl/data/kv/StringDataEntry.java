@@ -5,7 +5,7 @@ import java.util.Optional;
 
 /**
  * @Author: 穆书伟
- * @Date: 19-4-2 下午2:55
+ * @Date: 19-4-2
  * @Version 1.0
  */
 public class StringDataEntry extends BasicKvEntry {

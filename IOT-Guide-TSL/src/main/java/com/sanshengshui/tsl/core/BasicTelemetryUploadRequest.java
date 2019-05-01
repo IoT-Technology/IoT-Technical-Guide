@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * @Author: 穆书伟
- * @Date: 19-4-2 下午2:40
+ * @Date: 19-4-2
  * @Version 1.0
  */
 public class BasicTelemetryUploadRequest extends BasicRequest implements TelemetryUploadRequest {

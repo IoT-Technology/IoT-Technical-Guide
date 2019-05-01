@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @Author: 穆书伟
- * @Date: 19-4-16 下午3:00
+ * @Date: 19-4-16
  * @Version 1.0
  */
 @SpringBootApplication(scanBasePackages = {"com.sanshengshui.tsl"})
