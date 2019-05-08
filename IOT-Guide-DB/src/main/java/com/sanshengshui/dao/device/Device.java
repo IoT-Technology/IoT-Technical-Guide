@@ -9,9 +9,9 @@ public class Device implements Serializable {
 
     private static final long serialVersionUID = 8250339805336035966L;
 
-    private int id;
-    private int customerId;
+    private Integer id;
+    private Integer customerId;
     private String name;
     private String searchText;
-    private int tenantId;
+    private Integer tenantId;
 }
