@@ -11,23 +11,46 @@
 
  **:maple_leaf:高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
 
-### 第1篇 怒放的 IOT
+### IOT
 
-- **第1章** [主流物联网平台有什么?](https://github.com/sanshengshui/IOT-Technical-Guide/wiki/%E4%B8%BB%E6%B5%81%E7%89%A9%E8%81%94%E7%BD%91%E5%B9%B3%E5%8F%B0%E6%9C%89%E4%BB%80%E4%B9%88)
+- [Mainstream Internet of Things platform features?](https://github.com/sanshengshui/IOT-Technical-Guide/wiki/Mainstream-Internet-of-Things-platform-features)
 
+### :couple: 商业模式
 
+- [ToB Blue Ocean's technical threshold - PaaS-SaaS]()
 
-### 第2篇 设备接入和管理
+### :scroll: 概念
 
-物联网平台支持海量设备连接上云，设备与云端进行稳定可靠地双向通信,提供完整的设备生命周期管理功能。
+- [Thing Specification Language]()
 
-- **第1章** [物模型](https://github.com/sanshengshui/IOT-Technical-Guide/wiki/%E7%89%A9%E6%A8%A1%E5%9E%8B)
-- **第2章** [MQTT协议]()
-- **第3章** [HTTP协议]()
-- **第4章** [Coap协议]()
-- **第5章** [网关]()
+### :email: 协议
 
-...
+-  [Coap](https://github.com/sanshengshui/IOT-Technical-Guide/wiki/TSL)
+-  [MQTT ]()
+-  [HTTP ]()
+-  [Gateway]()
+
+### :bar_chart: 物联网通用平台
+
+- [RuleEngine]()
+- [DB]()
+- [RealTime]()
+
+### :house: 架构
+
+- [Msa]()
+
+#### :closed_lock_with_key:  安全框架
+- [Token]()
+- [OAuth2.0]()
+
+###  :wheel_of_dharma: 持续集成->持续部署->持续交付
+>DevOps的本质其实是一种鼓励协作的文化
+>Dev的工作是,为软件增加新功能和修复缺陷，这要通过频繁的变更来达到,Ops的工作是,保证系统的高稳定性和高性能，这代表着变更越少越不容易出错.
+>DevOps是一组技术,包括自动化运维,持续交付,高频部署,Docker,Kubernates等
+
+- [Docker]()
+- [Kubernates]()
 
 :honeybee::honeybee::honeybee::honeybee::honeybee::honeybee:
 

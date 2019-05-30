@@ -11,9 +11,9 @@ public interface Dao<T> {
 
     T findById(Integer id);
 
-    ListenableFuture<T> findByIdAsync(int id);
+    ListenableFuture<T> findByIdAsync(Integer id);
 
     T save(T t);
 
-    boolean removeById(int id);
+    boolean removeById(Integer id);
 }
