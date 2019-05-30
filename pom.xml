@@ -40,6 +40,7 @@
         <module>IOT-Guide-RealTime</module>
         <module>IOT-Guide-Docker</module>
         <module>IOT-Guide-Kubernates</module>
+        <module>IOT-Guide-OAuth2.0</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
