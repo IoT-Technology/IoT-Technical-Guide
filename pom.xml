@@ -27,20 +27,39 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <!--EN Internet of Things business model -->
+        <!--CN 物联网商业模式-->
+        <module>IOT-Guide-MultiTenant</module>
+
+        <!--EN Internet of Things Protocol -->
+        <!--CN 物联网设备通讯协议 -->
         <module>IOT-Guide-Coap</module>
         <module>IOT-Guide-MQTT</module>
         <module>IOT-Guide-HTTP</module>
         <module>IOT-Guide-Gateway</module>
+
+        <!--EN Internet of Things concept -->
+        <!--CN 物联网概念-->
         <module>IOT-Guide-TSL</module>
-        <module>IOT-Guide-MultiTenant</module>
-        <module>IOT-Guide-Token</module>
-        <module>IOT-Guide-Msa</module>
+
+        <!--EN Internet of Things universal function -->
+        <!--CN 物联网通用功能-->
         <module>IOT-Guide-RuleEngine</module>
         <module>IOT-Guide-DB</module>
         <module>IOT-Guide-RealTime</module>
+
+        <!--EN Internet of Things Architecture -->
+        <!--CN 物联网架构 -->
+        <module>IOT-Guide-Msa</module>
+        <!--EN Microservice security framework -->
+        <!--CN 物联网安全框架 -->
+        <module>IOT-Guide-Token</module>
+        <module>IOT-Guide-OAuth2.0</module>
+
+        <!--EN Internet of Things DevOps -->
+        <!--CN 物联网持续集成,持续部署,持续交付-->
         <module>IOT-Guide-Docker</module>
         <module>IOT-Guide-Kubernates</module>
-        <module>IOT-Guide-OAuth2.0</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
