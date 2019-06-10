@@ -39,6 +39,7 @@
 ### :house: Architecture
 
 - [Msa]()
+  1. Service Discovery and Configuration
 
 #### :closed_lock_with_key:  security framework
 - [Token]()
