@@ -40,6 +40,7 @@
 
 - [Msa]()
   1. Service Discovery and Configuration
+  2. Gateway Service
 
 #### :closed_lock_with_key:  security framework
 - [Token]()
