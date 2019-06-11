@@ -62,9 +62,9 @@
   
      **Hystrix**
   
-     
+  6. Alerting
   
-     
+     **Prometheus**
   
      
 
