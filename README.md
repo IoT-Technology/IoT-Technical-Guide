@@ -58,6 +58,12 @@
   
      **CAT**
   
+  5. Fault Tolerance
+  
+     **Hystrix**
+  
+     
+  
      
   
      
