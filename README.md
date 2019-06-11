@@ -39,8 +39,22 @@
 ### :house: Architecture
 
 - [Msa]()
+  
   1. Service Discovery and Configuration
+  
+     **Eureka**
+  
+     **Consul**
+  
   2. Gateway Service
+  
+     **Zuul**
+  
+  3. Config management
+  
+     **Apollo**
+  
+     
 
 #### :closed_lock_with_key:  security framework
 - [Token]()
