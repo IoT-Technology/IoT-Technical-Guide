@@ -21,7 +21,7 @@
 
 ### :scroll: 概念
 
-- [Thing Specification Language]()
+- [物模型]()
 
 ### :email: 协议
 
