@@ -17,7 +17,7 @@
 
 ### :couple: 商业模式
 
-- [ToB Blue Ocean's technical threshold - PaaS-SaaS]()
+- [ToB蓝海的台阶-PaaS,SaaS技术详解]()
 
 ### :scroll: 概念
 
