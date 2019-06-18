@@ -13,7 +13,7 @@
 
 ### IOT
 
-- [Mainstream Internet of Things platform features?](https://github.com/sanshengshui/IOT-Technical-Guide/wiki/Mainstream-Internet-of-Things-platform-features)
+- [主流物联网平台有哪些功能?](https://github.com/sanshengshui/IOT-Technical-Guide/wiki/Mainstream-Internet-of-Things-platform-features)
 
 ### :couple: 商业模式
 
