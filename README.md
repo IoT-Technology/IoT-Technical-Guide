@@ -36,7 +36,7 @@
 
   - Kafka Streams ![](png/kafka.png)
 
-  - Flink [<img src="png/flink-header-logo.svg" align="center" width="64">](https://electronjs.org)
+  - Flink [<img src="png/flink-header-logo.svg" align="center" width="64">](https://flink.apache.org/)
 
 - [DB]() ![](png/db.png)
 
@@ -62,17 +62,17 @@
   
   4. monitoring
   
-     **CAT** [<img src="png/cat.png" align="center" width="64">](https://electronjs.org)
+     **CAT** [<img src="png/cat.png" align="center" width="128">](https://electronjs.org)
      
-     **SkyWalking** [<img src="png/skywalking.svg" align="center" width="64">](https://electronjs.org)
+     **SkyWalking** [<img src="png/skywalking.svg" align="center" width="128">](https://electronjs.org)
   
   5. Fault Tolerance
   
-     **Hystrix** [<img src="png/hystrix.png" align="center" width="64">](https://electronjs.org)
+     **Hystrix** [<img src="png/hystrix.png" align="center" width="128">](https://electronjs.org)
   
   6. Alerting
   
-     **Prometheus** [<img src="png/prometheus.svg" align="center" width="64">](https://electronjs.org)
+     **Prometheus** [<img src="png/prometheus.png" align="center" width="64">](https://prometheus.io/)
   
      
 
