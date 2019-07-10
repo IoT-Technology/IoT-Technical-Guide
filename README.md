@@ -36,7 +36,7 @@
 
   - Kafka Streams ![](png/kafka.png)
 
-  - Flink
+  - Flink [<img src="png/flink-header-logo.svg" align="center" width="64">](https://electronjs.org)
 
 - [DB]()
 
