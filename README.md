@@ -34,9 +34,17 @@
 
 - [RuleEngine]()
 
-  - Kafka Streams ![](png/kafka.png)
-
-  - Flink [<img src="png/flink-header-logo.svg" align="center" width="64">](https://flink.apache.org/)
+  1. Forward-Chaining Engines
+  
+  2. Stream Processing Engines
+  
+  3. Condition-Action Engines
+  
+  4. Decision Trees
+  
+  5. CEP Engines
+  
+  6. Finite State Engines
 
 - [DB]() ![](png/db.png)
 
@@ -78,10 +86,12 @@
 
 #### :closed_lock_with_key:  security framework
 - [Token]()
+
 - [OAuth2.0]()
 
 ###  :wheel_of_dharma: DevOps
 - [Docker]()
+
 - [Kubernates]()
 
 
