@@ -66,7 +66,7 @@
   
   4. [Decision Trees](https://dzone.com/articles/a-guide-to-rules-engines-for-iot-decision-trees)
   
-  5. CEP Engines
+  5. [CEP Engines](https://dzone.com/articles/a-guide-to-rules-engines-for-iot-cep-engines)
   
   6. Finite State Engines
   
