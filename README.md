@@ -68,7 +68,7 @@
   
   5. [CEP Engines](https://dzone.com/articles/a-guide-to-rules-engines-for-iot-cep-engines)
   
-  6. Finite State Engines
+  6. [Finite State Engines](https://dzone.com/articles/a-guide-to-rules-engines-for-iot-finite-state-mach)
   
 - [DB]() ![](png/db.png)
 
