@@ -8,3 +8,17 @@ security:
     tokenSigningKey: "${JWT_TOKEN_SIGNING_KEY:IotGuideSigningKey}"
   # Enable/disable access to Tenant Administrators JWT token by System Administrator or Customer Users JWT token by Tenant Administrator
   user_token_access_enabled: "${SECURITY_USER_TOKEN_ACCESS_ENABLED:true}"
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:token;DB_CLOSE_DELAY=-1
+    name:
+    username: token
+    password: james
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database: H2
+    generate-ddl: true
+    show-sql: true

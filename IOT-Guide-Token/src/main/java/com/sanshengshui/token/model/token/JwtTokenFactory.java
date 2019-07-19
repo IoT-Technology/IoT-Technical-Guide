@@ -49,7 +49,7 @@ public class JwtTokenFactory {
             throw new IllegalArgumentException("Cannot create JWT Token without username/email");
 
         if (securityUser.getAuthority() == null)
-            throw new IllegalArgumentException("User doesn't have any privileges");
+            throw new IllegalArgumentException("UserEntity doesn't have any privileges");
 
         UserPrincipal principal = securityUser.getUserPrincipal();
         String subject = principal.getValue();
@@ -96,11 +96,11 @@ public class JwtTokenFactory {
         securityUser.setUserPrincipal(principal);
         String tenantId = claims.get(TENANT_ID, String.class);
         if (tenantId != null) {
-            securityUser.setTenantId("123");
+            securityUser.setTenantId(1l);
         }
         String customerId = claims.get(CUSTOMER_ID, String.class);
         if (customerId != null) {
-            securityUser.setCustomerId("123");
+            securityUser.setCustomerId(1l);
         }
 
         return securityUser;

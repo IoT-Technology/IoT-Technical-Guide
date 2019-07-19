@@ -59,7 +59,7 @@ public class RestAwareAuthenticationSuccessHandler implements AuthenticationSucc
     }
 
     /**
-     * Removes temporary authentication-related data which may have been stored
+     * Removes temporary authentication-related dao which may have been stored
      * in the session during the authentication process..
      *
      */

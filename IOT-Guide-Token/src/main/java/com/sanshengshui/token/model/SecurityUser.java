@@ -1,6 +1,6 @@
 package com.sanshengshui.token.model;
 
-import com.sanshengshui.token.data.User;
+import com.sanshengshui.token.dao.model.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  * @Date: 19-4-9 上午9:59
  * @Version 1.0
  */
-public class SecurityUser extends User {
+public class SecurityUser extends UserEntity {
 
     private static final long serialVersionUID = -797397440703066079L;
 
@@ -25,8 +25,8 @@ public class SecurityUser extends User {
         super();
     }
 
-    public SecurityUser(User user, boolean enabled, UserPrincipal userPrincipal) {
-        super(user);
+    public SecurityUser(UserEntity userEntity, boolean enabled, UserPrincipal userPrincipal) {
+        super(userEntity);
         this.enabled = enabled;
         this.userPrincipal = userPrincipal;
     }

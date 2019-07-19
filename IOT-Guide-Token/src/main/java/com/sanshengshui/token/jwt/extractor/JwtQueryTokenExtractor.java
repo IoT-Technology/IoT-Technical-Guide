@@ -1,6 +1,6 @@
 package com.sanshengshui.token.jwt.extractor;
 
-import com.sanshengshui.token.config.ThingsboardSecurityConfiguration;
+import com.sanshengshui.token.config.IotGuideSecurityConfiguration;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.stereotype.Component;
@@ -19,7 +19,7 @@ public class JwtQueryTokenExtractor implements TokenExtractor{
     public String extract(HttpServletRequest request) {
         String token = null;
         if (request.getParameterMap() != null && !request.getParameterMap().isEmpty()) {
-            String[] tokenParamValue = request.getParameterMap().get(ThingsboardSecurityConfiguration.JWT_TOKEN_QUERY_PARAM);
+            String[] tokenParamValue = request.getParameterMap().get(IotGuideSecurityConfiguration.JWT_TOKEN_QUERY_PARAM);
             if (tokenParamValue != null && tokenParamValue.length == 1) {
                 token = tokenParamValue[0];
             }

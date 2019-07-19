@@ -3,6 +3,7 @@ package com.sanshengshui.token.rest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sanshengshui.token.exception.AuthMethodNotSupportedException;
 import com.sanshengshui.token.model.UserPrincipal;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationServiceException;
@@ -25,6 +26,7 @@ import java.io.IOException;
  * @Date: 19-4-10 上午11:15
  * @Version 1.0
  */
+@Slf4j
 public class RestPublicLoginProcessingFilter extends AbstractAuthenticationProcessingFilter {
 
     private final AuthenticationSuccessHandler successHandler;
@@ -44,6 +46,9 @@ public class RestPublicLoginProcessingFilter extends AbstractAuthenticationProce
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
             throws AuthenticationException, IOException, ServletException {
         if (!HttpMethod.POST.name().equals(request.getMethod())) {
+            if(log.isDebugEnabled()) {
+                log.debug("Authentication method not supported. Request method: " + request.getMethod());
+            }
             throw new AuthMethodNotSupportedException("Authentication method not supported");
         }
 

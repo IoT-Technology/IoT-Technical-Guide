@@ -1,6 +1,6 @@
 package com.sanshengshui.token.jwt.extractor;
 
-import com.sanshengshui.token.config.ThingsboardSecurityConfiguration;
+import com.sanshengshui.token.config.IotGuideSecurityConfiguration;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
@@ -19,7 +19,7 @@ public class JwtHeaderTokenExtractor implements TokenExtractor{
 
     @Override
     public String extract(HttpServletRequest request) {
-        String header = request.getHeader(ThingsboardSecurityConfiguration.JWT_TOKEN_HEADER_PARAM);
+        String header = request.getHeader(IotGuideSecurityConfiguration.JWT_TOKEN_HEADER_PARAM);
         if (StringUtils.isBlank(header)) {
             throw new AuthenticationServiceException("Authorization header cannot be blank!");
         }
