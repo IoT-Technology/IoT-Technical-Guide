@@ -49,7 +49,7 @@ public class BasicTelemetryUploadRequest extends BasicRequest implements Telemet
 
     @Override
     public String toString() {
-        return "BasicTelemetryUploadRequest [data=" + data + "]";
+        return "BasicTelemetryUploadRequest [dao=" + data + "]";
     }
 
 

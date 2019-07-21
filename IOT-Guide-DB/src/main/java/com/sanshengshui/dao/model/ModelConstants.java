@@ -14,7 +14,7 @@ public class ModelConstants {
     public static final String CUSTOMER_ID_PROPERTY = "customer_id";
 
     /**
-     * user constants
+     * repository constants
      */
     public static final String USER_PG_HIBERNATE_COLUMN_FAMILY_NAME = "ga_user";
     public static final String USER_TENANT_ID_PROPERTY = TENANT_ID_PROPERTY;

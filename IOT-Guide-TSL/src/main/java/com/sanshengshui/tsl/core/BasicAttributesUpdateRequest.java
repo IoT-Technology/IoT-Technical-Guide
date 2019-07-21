@@ -47,6 +47,6 @@ public class BasicAttributesUpdateRequest extends BasicRequest implements Attrib
 
     @Override
     public String toString() {
-        return "BasicAttributesUpdateRequest [data=" + data + "]";
+        return "BasicAttributesUpdateRequest [dao=" + data + "]";
     }
 }
