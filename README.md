@@ -122,7 +122,7 @@
 
 - ![](png/serverless.svg)
 
-- [<img src="png/whale.png" align="center" width="128">](https://www.openfaas.com/) OpenFaaS 
+- [<img src="png/whale.png" align="center" width="48">](https://www.openfaas.com/) OpenFaaS 
 
 :honeybee::honeybee::honeybee::honeybee::honeybee::honeybee:
 
