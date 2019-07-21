@@ -3,10 +3,7 @@ package com.sanshengshui.token.dao.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 
@@ -19,6 +16,7 @@ public class UserCredentialsEntity implements Serializable {
 
     public static final long serialVersionUID = -2108436378880529163L;
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
     private Long id;

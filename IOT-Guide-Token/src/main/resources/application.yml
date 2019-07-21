@@ -15,6 +15,7 @@ spring:
     name:
     username: token
     password: james
+    data: classpath:db/data.sql
   h2:
     console:
       enabled: true
