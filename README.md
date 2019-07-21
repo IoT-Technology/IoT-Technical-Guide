@@ -120,9 +120,9 @@
 
 ### :label: Serverless
 
-- Serverless ![](png/serverless.svg)
+- ![](png/serverless.svg)
 
-- OpenFaaS ![](png/whale.png)
+- [<img src="png/whale.png" align="center" width="128">](https://www.openfaas.com/) OpenFaaS 
 
 :honeybee::honeybee::honeybee::honeybee::honeybee::honeybee:
 
