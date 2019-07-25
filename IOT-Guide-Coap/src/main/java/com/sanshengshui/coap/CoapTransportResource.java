@@ -4,7 +4,6 @@ import com.sanshengshui.coap.adaptors.JsonCoapAdaptor;
 import com.sanshengshui.coap.common.FeatureType;
 import com.sanshengshui.coap.session.SessionMsgType;
 import com.sanshengshui.tsl.adaptor.AdaptorException;
-import lombok.extern.slf4j.Slf4j;
 import org.eclipse.californium.core.CoapResource;
 import org.eclipse.californium.core.coap.CoAP;
 import org.eclipse.californium.core.coap.Request;
@@ -38,21 +37,13 @@ public class CoapTransportResource extends CoapResource {
         if (!featureType.isPresent()) {
         } else if (featureType.get() == FeatureType.TELEMETRY) {
             exchange.respond(CoAP.ResponseCode.BAD_REQUEST);
-        } else if (exchange.getRequestOptions().hasObserve()) {
-            processExchangeGetRequest(exchange, featureType.get());
-        } else if (featureType.get() == FeatureType.ATTRIBUTES) {
+        }  else if (featureType.get() == FeatureType.ATTRIBUTES) {
             processRequest(exchange, SessionMsgType.GET_ATTRIBUTES_REQUEST);
         } else {
             exchange.respond(CoAP.ResponseCode.BAD_REQUEST);
         }
     }
 
-    private void processExchangeGetRequest(CoapExchange exchange, FeatureType featureType) {
-        boolean unsubscribe = exchange.getRequestOptions().getObserve() == 1;
-        SessionMsgType sessionMsgType;
-        sessionMsgType = unsubscribe ? SessionMsgType.UNSUBSCRIBE_ATTRIBUTES_REQUEST : SessionMsgType.SUBSCRIBE_ATTRIBUTES_REQUEST;
-        processRequest(exchange, sessionMsgType);
-    }
 
 
 
@@ -85,10 +76,6 @@ public class CoapTransportResource extends CoapResource {
                 case POST_ATTRIBUTES_REQUEST:
                     JsonCoapAdaptor.convertToMsg(type,request);
                     break;
-                case SUBSCRIBE_ATTRIBUTES_REQUEST:
-                    break;
-                case UNSUBSCRIBE_ATTRIBUTES_REQUEST:
-                    break;
                 default:
                     throw new IllegalArgumentException("Unsupported msg type: " + type);
             }
@@ -116,4 +103,6 @@ public class CoapTransportResource extends CoapResource {
     public Resource getChild(String name) {
         return this;
     }
+
+
 }
