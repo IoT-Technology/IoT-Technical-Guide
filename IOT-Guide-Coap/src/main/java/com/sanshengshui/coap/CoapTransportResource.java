@@ -1,23 +1,25 @@
 package com.sanshengshui.coap;
 
+import com.sanshengshui.coap.adaptors.JsonCoapAdaptor;
 import com.sanshengshui.coap.common.FeatureType;
 import com.sanshengshui.coap.session.SessionMsgType;
+import com.sanshengshui.tsl.adaptor.AdaptorException;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.californium.core.CoapResource;
 import org.eclipse.californium.core.coap.CoAP;
 import org.eclipse.californium.core.coap.Request;
 import org.eclipse.californium.core.network.Exchange;
 import org.eclipse.californium.core.server.resources.CoapExchange;
+import org.eclipse.californium.core.server.resources.Resource;
 import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Optional;
 
-@Slf4j
 public class CoapTransportResource extends CoapResource {
 
-    public static final int FEATURE_TYPE_POSITION = 4;
+    public static final int FEATURE_TYPE_POSITION = 3;
 
     private final Field observerField;
     private final long timeout;
@@ -34,16 +36,13 @@ public class CoapTransportResource extends CoapResource {
     public void handleGET(CoapExchange exchange) {
         Optional<FeatureType> featureType = getFeatureType(exchange.advanced().getRequest());
         if (!featureType.isPresent()) {
-            log.trace("Missing feature type parameter");
         } else if (featureType.get() == FeatureType.TELEMETRY) {
-            log.trace("Can't fetch/subscribe to timeseries updates");
             exchange.respond(CoAP.ResponseCode.BAD_REQUEST);
         } else if (exchange.getRequestOptions().hasObserve()) {
             processExchangeGetRequest(exchange, featureType.get());
         } else if (featureType.get() == FeatureType.ATTRIBUTES) {
             processRequest(exchange, SessionMsgType.GET_ATTRIBUTES_REQUEST);
         } else {
-            log.trace("Invalid feature type parameter");
             exchange.respond(CoAP.ResponseCode.BAD_REQUEST);
         }
     }
@@ -61,7 +60,6 @@ public class CoapTransportResource extends CoapResource {
     public void handlePOST(CoapExchange exchange) {
         Optional<FeatureType> featureType = getFeatureType(exchange.advanced().getRequest());
         if (!featureType.isPresent()) {
-            log.trace("Missing feature type parameter");
             exchange.respond(CoAP.ResponseCode.BAD_REQUEST);
         } else {
             switch (featureType.get()) {
@@ -76,7 +74,6 @@ public class CoapTransportResource extends CoapResource {
     }
 
     private void processRequest(CoapExchange exchange, SessionMsgType type) {
-        log.trace("Processing {}", exchange.advanced().getRequest());
         exchange.accept();
         Exchange advanced = exchange.advanced();
         Request request = advanced.getRequest();
@@ -86,17 +83,19 @@ public class CoapTransportResource extends CoapResource {
                 case GET_ATTRIBUTES_REQUEST:
                 case POST_TELEMETRY_REQUEST:
                 case POST_ATTRIBUTES_REQUEST:
+                    JsonCoapAdaptor.convertToMsg(type,request);
                     break;
                 case SUBSCRIBE_ATTRIBUTES_REQUEST:
                     break;
                 case UNSUBSCRIBE_ATTRIBUTES_REQUEST:
                     break;
                 default:
-                    log.trace("Unsupported msg type: {}", type);
                     throw new IllegalArgumentException("Unsupported msg type: " + type);
             }
+            exchange.respond("Data has been received");
+        } catch (AdaptorException e){
+            exchange.respond(CoAP.ResponseCode.BAD_REQUEST, e.getMessage());
         } catch (IllegalArgumentException  e) {
-            log.debug("Failed to process payload {}", e);
             exchange.respond(CoAP.ResponseCode.INTERNAL_SERVER_ERROR, e.getMessage());
         }
     }
@@ -109,8 +108,12 @@ public class CoapTransportResource extends CoapResource {
                 return Optional.of(FeatureType.valueOf(uriPath.get(FEATURE_TYPE_POSITION - 1).toUpperCase()));
             }
         } catch (RuntimeException e) {
-            log.warn("Failed to decode feature type: {}", uriPath);
         }
         return Optional.empty();
+    }
+
+    @Override
+    public Resource getChild(String name) {
+        return this;
     }
 }
