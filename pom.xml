@@ -77,6 +77,7 @@
         <junit.version>4.12</junit.version>
         <mockito.version>1.9.5</mockito.version>
         <gson.version>2.6.2</gson.version>
+        <guava.version>23.0</guava.version>
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
         <netty-all.version>4.1.6.Final</netty-all.version>
         <lombok.version>1.16.18</lombok.version>
@@ -220,6 +221,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.postgresql</groupId>
