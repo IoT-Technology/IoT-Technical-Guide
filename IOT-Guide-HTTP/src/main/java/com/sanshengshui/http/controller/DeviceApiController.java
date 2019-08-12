@@ -1,10 +1,13 @@
 package com.sanshengshui.http.controller;
 
 import com.google.gson.JsonParser;
+import com.sanshengshui.http.quota.host.HostRequestsQuotaService;
 import com.sanshengshui.tsl.adaptor.JsonConverter;
 import com.sanshengshui.tsl.data.kv.AttributeKvEntry;
 import com.sanshengshui.tsl.data.kv.KvEntry;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
@@ -25,11 +28,20 @@ import java.util.*;
 @Slf4j
 public class DeviceApiController {
 
+    @Value("${http.request_timeout}")
+    private long defaultTimeout;
+
+    @Autowired(required = false)
+    private HostRequestsQuotaService quotaService;
+
     @RequestMapping(value = "/{deviceToken}/attributes",method = RequestMethod.POST)
     public DeferredResult<ResponseEntity> postDeviceAttributes(
             @PathVariable("deviceToken") String deviceToken,
-            @RequestBody String json) {
+            @RequestBody String json, HttpServletRequest request) {
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
+        if (quotaExceeded(request, responseWriter)) {
+            return responseWriter;
+        }
         responseWriter.setResult(new ResponseEntity<>(HttpStatus.ACCEPTED));
         Set<AttributeKvEntry> attributeKvEntrySet = JsonConverter.convertToAttributes(new JsonParser().parse(json)).getAttributes();
         for (AttributeKvEntry attributeKvEntry : attributeKvEntrySet){
@@ -41,8 +53,12 @@ public class DeviceApiController {
     @RequestMapping(value = "/{deviceToken}/attributes", method = RequestMethod.GET, produces = "application/json")
     public DeferredResult<ResponseEntity> getDeviceAttributes(@PathVariable("deviceToken") String deviceToken,
                                                               @RequestParam(value = "clientKeys", required = false, defaultValue = "") String clientKeys,
-                                                              @RequestParam(value = "sharedKeys", required = false, defaultValue = "") String sharedKeys) {
+                                                              @RequestParam(value = "sharedKeys", required = false, defaultValue = "") String sharedKeys,
+                                                              HttpServletRequest httpRequest) {
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
+        if (quotaExceeded(httpRequest, responseWriter)) {
+            return responseWriter;
+        }
         if (StringUtils.isEmpty(clientKeys) && StringUtils.isEmpty(sharedKeys)) {
 
         }else {
@@ -55,8 +71,11 @@ public class DeviceApiController {
 
     @RequestMapping(value = "/{deviceToken}/telemetry",method = RequestMethod.POST)
     public DeferredResult<ResponseEntity> postTelemetry(@PathVariable("deviceToken") String deviceToken,
-                                                        @RequestBody String json){
+                                                        @RequestBody String json, HttpServletRequest request){
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
+        if (quotaExceeded(request, responseWriter)) {
+            return responseWriter;
+        }
         responseWriter.setResult(new ResponseEntity(HttpStatus.ACCEPTED));
         Map<Long, List<KvEntry>> telemetryMaps = JsonConverter.convertToTelemetry(new JsonParser().parse(json)).getData();
         for (Map.Entry<Long,List<KvEntry>> entry : telemetryMaps.entrySet()) {
@@ -73,6 +92,19 @@ public class DeviceApiController {
                                                                 @RequestParam(value = "timeout", required = false, defaultValue = "0") long timeout,
                                                                 HttpServletRequest httpRequest){
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
+        if (quotaExceeded(httpRequest, responseWriter)) {
+            return responseWriter;
+        }
         return responseWriter;
+    }
+
+    private boolean quotaExceeded(HttpServletRequest request, DeferredResult<ResponseEntity> responseWriter) {
+
+        if (quotaService.isQuotaExceeded(request.getRemoteAddr())) {
+            log.warn("REST Quota exceeded for [{}] . Disconnect", request.getRemoteAddr());
+            responseWriter.setResult(new ResponseEntity<>(HttpStatus.BANDWIDTH_LIMIT_EXCEEDED));
+            return true;
+        }
+        return false;
     }
 }

@@ -1,8 +1,12 @@
+# Server bind port
 server:
   port: 8080
-  http2:
-    enabled: true
 
+# Device communication protocol parameters
+http:
+  request_timeout: "${HTTP_REQUEST_TIMEOUT:60000}"
+
+# Quota parameters
 quota:
   host:
     # Max allowed number of API requests in interval for single host
