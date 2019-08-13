@@ -34,9 +34,8 @@ public class DeviceApiController {
     @Autowired(required = false)
     private HostRequestsQuotaService quotaService;
 
-    @RequestMapping(value = "/{deviceToken}/attributes",method = RequestMethod.POST)
+    @RequestMapping(value = "/attributes",method = RequestMethod.POST)
     public DeferredResult<ResponseEntity> postDeviceAttributes(
-            @PathVariable("deviceToken") String deviceToken,
             @RequestBody String json, HttpServletRequest request) {
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
         if (quotaExceeded(request, responseWriter)) {
@@ -50,9 +49,8 @@ public class DeviceApiController {
         return responseWriter;
     }
 
-    @RequestMapping(value = "/{deviceToken}/attributes", method = RequestMethod.GET, produces = "application/json")
-    public DeferredResult<ResponseEntity> getDeviceAttributes(@PathVariable("deviceToken") String deviceToken,
-                                                              @RequestParam(value = "clientKeys", required = false, defaultValue = "") String clientKeys,
+    @RequestMapping(value = "/attributes", method = RequestMethod.GET, produces = "application/json")
+    public DeferredResult<ResponseEntity> getDeviceAttributes(@RequestParam(value = "clientKeys", required = false, defaultValue = "") String clientKeys,
                                                               @RequestParam(value = "sharedKeys", required = false, defaultValue = "") String sharedKeys,
                                                               HttpServletRequest httpRequest) {
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
@@ -69,9 +67,8 @@ public class DeviceApiController {
 
     }
 
-    @RequestMapping(value = "/{deviceToken}/telemetry",method = RequestMethod.POST)
-    public DeferredResult<ResponseEntity> postTelemetry(@PathVariable("deviceToken") String deviceToken,
-                                                        @RequestBody String json, HttpServletRequest request){
+    @RequestMapping(value = "/telemetry",method = RequestMethod.POST)
+    public DeferredResult<ResponseEntity> postTelemetry(@RequestBody String json, HttpServletRequest request){
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
         if (quotaExceeded(request, responseWriter)) {
             return responseWriter;
@@ -87,9 +84,8 @@ public class DeviceApiController {
         return responseWriter;
     }
 
-    @RequestMapping(value = "/{deviceToken}/attributes/updates", method = RequestMethod.GET, produces = "application/json")
-    public DeferredResult<ResponseEntity> subscribeToAttributes(@PathVariable("deviceToken") String deviceToken,
-                                                                @RequestParam(value = "timeout", required = false, defaultValue = "0") long timeout,
+    @RequestMapping(value = "/attributes/updates", method = RequestMethod.GET, produces = "application/json")
+    public DeferredResult<ResponseEntity> subscribeToAttributes(@RequestParam(value = "timeout", required = false, defaultValue = "0") long timeout,
                                                                 HttpServletRequest httpRequest){
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
         if (quotaExceeded(httpRequest, responseWriter)) {
