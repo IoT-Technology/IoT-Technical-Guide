@@ -40,7 +40,9 @@
   
    技术框架 :  [Netty](https://netty.io/)
    
-   教程 : IOT-Guide-MQTT
+   教程 : [IOT-Guide-MQTT](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-MQTT)
+   
+   博文 : [物联网时代-跟着Thingsboard学IOT架构-MQTT设备协议](https://www.cnblogs.com/sanshengshui/p/11237695.html)
 
 - ![](png/HTTP.png)
   
