@@ -30,7 +30,9 @@
 
   技术框架 : [Californium(cf)](https://www.eclipse.org/californium/)
   
-  教程 : IOT-Guide-Coap
+  教程 : [IOT-Guide-Coap](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-Coap)
+  
+  博文 : [物联网时代 跟着Thingsboard学IOT架构-CoAP设备协议](https://www.cnblogs.com/sanshengshui/p/11229139.html)
 
 - ![](png/MQTT.png)
 
