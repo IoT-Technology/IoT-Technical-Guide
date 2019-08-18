@@ -55,7 +55,9 @@
    
    技术框架 :  [Spring Boot](https://spring.io/projects/spring-boot)
        
-   教程 : IOT-Guide-HTTP
+   教程 : [IOT-Guide-HTTP](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-HTTP)
+   
+   博文 : [物联网时代-跟着Thingsboard学IOT架构-HTTP设备协议及API相关限制](https://blog.mushuwei.cn/2019/08/16/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-HTTP%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE%E5%8F%8AAPI%E7%9B%B8%E5%85%B3%E9%99%90%E5%88%B6/)
    
 - ![](png/gateway.png)
   
