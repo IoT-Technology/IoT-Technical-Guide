@@ -47,7 +47,7 @@
    
    教程 : [IOT-Guide-MQTT](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-MQTT)
    
-   博文 : [物联网时代-跟着Thingsboard学IOT架构-MQTT设备协议](https://www.cnblogs.com/sanshengshui/p/11237695.html)
+   博文 : [物联网时代-跟着Thingsboard学IOT架构-MQTT设备协议](https://blog.mushuwei.cn/2019/07/24/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-MQTT%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE/)
 
 - ![](png/HTTP.png)
   
