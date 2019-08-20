@@ -67,6 +67,11 @@
     
     博文 : 
 
+#### :closed_lock_with_key:  安全框架
+
+- [Spring Security + JWT]()
+- [OAuth2.0]()
+
 ### :bar_chart: 物联网通用平台
 
 - [RuleEngine]()
@@ -105,9 +110,6 @@
 
      **Prometheus**
 
-#### :closed_lock_with_key:  安全框架
-- [Token]()
-- [OAuth2.0]()
 
 ###  :wheel_of_dharma: 持续集成->持续部署->持续交付
 >DevOps的本质其实是一种鼓励协作的文化
