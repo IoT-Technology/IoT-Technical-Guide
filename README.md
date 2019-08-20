@@ -69,8 +69,8 @@
 
 #### :closed_lock_with_key:  安全框架
 
-- [Spring Security + JWT]() [<img src="png/pic_logo.svg" align="center" width="64">](https://jwt.io/)
-- [OAuth2.0]() [<img src="png/oauth-2-sm.png" align="center" width="128">](https://oauth.net/2/)
+- [Spring Security + JWT]() [<img src="png/pic_logo.svg" align="center" width="32">](https://jwt.io/)
+- [OAuth2.0]() [<img src="png/oauth-2-sm.png" align="center" width="32">](https://oauth.net/2/)
 
 ### :bar_chart: 物联网通用平台
 
