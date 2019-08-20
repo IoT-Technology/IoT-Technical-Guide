@@ -24,7 +24,7 @@
 
 ### :scroll: 概念
 
-- [物模型]()![](png/language.png)
+- 物模型![](png/language.png)
   
   博文: [物联网时代　跟着Thingsboard学IOT架构-物模型](https://blog.mushuwei.cn/2019/04/17/%E6%88%91%E6%98%AF%E5%BA%96%E4%B8%81-%E8%82%A2%E8%A7%A3IOT%E5%B9%B3%E5%8F%B0%E4%B9%8B%E7%89%A9%E6%A8%A1%E5%9E%8B/)
 
@@ -61,9 +61,11 @@
    
 - ![](png/gateway.png)
   
-    释义 : Gateway
+    释义 : [Gateway](https://baike.baidu.com/item/%E7%BD%91%E5%85%B3/98992?fr=aladdin)
     
-    教程 : IOT-Guide_Gateway
+    教程 : [IOT-Guide_Gateway](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-Gateway)
+    
+    博文 : 
 
 ### :bar_chart: 物联网通用平台
 
