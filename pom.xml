@@ -61,6 +61,7 @@
         <module>IOT-Guide-Docker</module>
         <module>IOT-Guide-Kubernates</module>
         <module>IOT-Guide-HTTP-Test</module>
+        <module>IOT-Guide-Flink</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
