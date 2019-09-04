@@ -22,6 +22,14 @@
 
 - [物联网前景与市场](https://blog.mushuwei.cn/2018/10/26/IOT市场及技术模拟/)
 
+### :white_check_mark:准备工作
+
+> - 非必须工作，如若编译不成功，可以参考[Issues](https://github.com/thingsboard/thingsboard/issues)。只是为了更好的让大家了解thingsboard,通过调试代码的方式，得到更直观的方法调用。
+>
+> - [安装教程](https://thingsboard.io/docs/installation/)，当然也可以直接使用官方提供的[Demo](http://demo.thingsboard.io)
+
+- ​	[物联网时代-Thingsboard源码分析-调试环境搭建](https://blog.mushuwei.cn/2018/07/21/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-Thingsboard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)
+
 ### :scroll: 概念
 
 - 物模型![](png/language.png)
