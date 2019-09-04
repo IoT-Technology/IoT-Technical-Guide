@@ -50,6 +50,12 @@ public class GatewayTransportHandler extends ChannelInboundHandlerAdapter implem
             case PUBLISH:
                 processPublish(ctx, (MqttPublishMessage) msg);
                 break;
+            case SUBSCRIBE:
+                processSubscribe(ctx, (MqttSubscribeMessage) msg);
+                break;
+            case UNSUBSCRIBE:
+                processUnsubscribe(ctx, (MqttUnsubscribeMessage) msg);
+                break;
             case PINGREQ:
                 if (checkConnected(ctx)) {
                     ctx.writeAndFlush(new MqttMessage(new MqttFixedHeader(PINGRESP,false,AT_MOST_ONCE, false, 0)));
@@ -85,6 +91,18 @@ public class GatewayTransportHandler extends ChannelInboundHandlerAdapter implem
         int msgId = mqttMsg.variableHeader().messageId();
         handleGatewayPublishMsg(topicName, msgId, mqttMsg);
 
+    }
+
+    private void processSubscribe(ChannelHandlerContext ctx, MqttSubscribeMessage mqttMsg) {
+        if (!checkConnected(ctx)) {
+            return;
+        }
+    }
+
+    private void processUnsubscribe(ChannelHandlerContext ctx, MqttUnsubscribeMessage mqttMsg) {
+        if (!checkConnected(ctx)) {
+
+        }
     }
 
     private void handleGatewayPublishMsg(String topicName, int msgId, MqttPublishMessage mqttMsg) {
