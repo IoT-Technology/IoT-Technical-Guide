@@ -5,6 +5,7 @@ import com.sanshengshui.tsl.adaptor.AdaptorException;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.mqtt.*;
+import io.netty.util.ReferenceCountUtil;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 
@@ -29,10 +30,14 @@ public class GatewayTransportHandler extends ChannelInboundHandlerAdapter implem
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        if (msg instanceof MqttMessage) {
-            processMqttMsg(ctx,(MqttMessage) msg);
-        } else {
-            ctx.close();
+        try {
+            if (msg instanceof MqttMessage) {
+                processMqttMsg(ctx,(MqttMessage) msg);
+            } else {
+                ctx.close();
+            }
+        } finally {
+            ReferenceCountUtil.safeRelease(msg);
         }
     }
 
@@ -86,7 +91,6 @@ public class GatewayTransportHandler extends ChannelInboundHandlerAdapter implem
         if (!checkConnected(ctx)) {
             return;
         }
-
         String topicName = mqttMsg.variableHeader().topicName();
         int msgId = mqttMsg.variableHeader().messageId();
         handleGatewayPublishMsg(topicName, msgId, mqttMsg);
@@ -109,9 +113,22 @@ public class GatewayTransportHandler extends ChannelInboundHandlerAdapter implem
         try {
             switch (topicName) {
                 case MqttTopics.GATEWAY_TELEMETRY_TOPIC:
-                    gatewaySessionHandler.onDeviceConnect(mqttMsg);
+                    gatewaySessionHandler.onDeviceTelemetry(mqttMsg);
                     break;
                 case MqttTopics.GATEWAY_ATTRIBUTES_TOPIC:
+                    gatewaySessionHandler.onDeviceAttributes(mqttMsg);
+                    break;
+                case MqttTopics.GATEWAY_ATTRIBUTES_REQUEST_TOPIC:
+                    gatewaySessionHandler.onDeviceAttributesRequest(mqttMsg);
+                    break;
+                case MqttTopics.GATEWAY_RPC_TOPIC:
+                    gatewaySessionHandler.onDeviceRpcResponse(mqttMsg);
+                    break;
+                case MqttTopics.GATEWAY_CONNECT_TOPIC:
+                    gatewaySessionHandler.onDeviceConnect(mqttMsg);
+                    break;
+                case MqttTopics.GATEWAY_DISCONNECT_TOPIC:
+                    gatewaySessionHandler.onDeviceDisconnect(mqttMsg);
                     break;
             }
         } catch (RuntimeException | AdaptorException e) {
