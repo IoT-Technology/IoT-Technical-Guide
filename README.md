@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="png/logo.png" alt="IOT Technical Guide">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/logo.png" alt="IOT Technical Guide">
 </p>
 <p align="center">
     <a href="https://travis-ci.org/sanshengshui/IOT-Technical-Guide"><img src="https://travis-ci.org/sanshengshui/IOT-Technical-Guide.svg?branch=master" /></a>
@@ -11,7 +11,7 @@
 
  **:maple_leaf:高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
 
-### ![](png/IOT.png)IOT
+### ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/IOT.png)IOT
 
 - [开源且架构优秀的物联网平台-Thingsboard](https://thingsboard.io/)
 
@@ -32,7 +32,7 @@
 
 ### :scroll: 概念
 
-- 物模型![](png/language.png)
+- 物模型![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)
   
   > 此处引用阿里云物联网平台的解释，此处感谢:clap: ​[Alibaba Cloud@github](https://github.com/aliyun)
   
@@ -41,7 +41,7 @@
   博文: [物联网时代　跟着Thingsboard学IOT架构-物模型](https://blog.mushuwei.cn/2019/04/17/%E6%88%91%E6%98%AF%E5%BA%96%E4%B8%81-%E8%82%A2%E8%A7%A3IOT%E5%B9%B3%E5%8F%B0%E4%B9%8B%E7%89%A9%E6%A8%A1%E5%9E%8B/)
 
 ### :email: 协议
-- ![](png/coap.png)
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)
 
   协议 :  [CoAP](https://coap.technology/)
 
@@ -51,7 +51,7 @@
   
   博文 : [物联网时代 跟着Thingsboard学IOT架构-CoAP设备协议](https://blog.mushuwei.cn/2019/07/25/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-CoAP%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE/)
 
-- ![](png/MQTT.png)
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)
 
    协议 :  [MQTT](http://mqtt.org/)
   
@@ -61,7 +61,7 @@
    
    博文 : [物联网时代-跟着Thingsboard学IOT架构-MQTT设备协议](https://blog.mushuwei.cn/2019/07/24/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-MQTT%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE/)
 
-- ![](png/HTTP.png)
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)
   
    协议 :  [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
    
@@ -71,7 +71,7 @@
    
    博文 : [物联网时代-跟着Thingsboard学IOT架构-HTTP设备协议及API相关限制](https://blog.mushuwei.cn/2019/08/16/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-HTTP%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE%E5%8F%8AAPI%E7%9B%B8%E5%85%B3%E9%99%90%E5%88%B6/)
    
-- ![](png/gateway.png)
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/gateway.png)
   
     释义 : [Gateway](https://baike.baidu.com/item/%E7%BD%91%E5%85%B3/98992?fr=aladdin)
     
@@ -81,8 +81,8 @@
 
 #### :closed_lock_with_key:  安全框架
 
-- [Spring Security + JWT]() [<img src="png/pic_logo.svg" align="center" width="32">](https://jwt.io/)
-- [OAuth2.0]() [<img src="png/oauth-2-sm.png" align="center" width="32">](https://oauth.net/2/)
+- [Spring Security + JWT]() [<img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/pic_logo.svg" align="center" width="32">](https://jwt.io/)
+- [OAuth2.0]() [<img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png" align="center" width="32">](https://oauth.net/2/)
 
 ### :bar_chart: 物联网通用平台
 
@@ -135,7 +135,7 @@
 
 ### Project Gantt
 
-![gantt_en](png/gantt_cn.svg)
+![gantt_en](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/gantt_cn.svg)
 
 :four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
 
