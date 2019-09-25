@@ -96,7 +96,7 @@
 
   1. 注册发现
 
-     **Eureka**
+     **Eureka** [<img src="png/eureka.png" align="center" width="64">](https://electronjs.org)
 
      **Consul**
 
