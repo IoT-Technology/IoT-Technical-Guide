@@ -11,6 +11,11 @@
 
  **:maple_leaf:高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
 
+### 🔎Awesome IOT
+
+-  关于物联网框架、开源库、操作系统和平台的资源  [:point_right:](https://phodal.github.io/awesome-iot/)
+- 一个很棒的物联网项目和资源的列表  [:point_right:](https://github.com/HQarroum/awesome-iot)
+
 ### ![](png/IOT.png)IOT
 
 - [开源且架构优秀的物联网平台-Thingsboard](https://thingsboard.io/)
