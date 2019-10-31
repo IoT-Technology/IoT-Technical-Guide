@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="png/logo.png" alt="IOT Technical Guide">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/logo.png" alt="IOT Technical Guide">
 </p>
 <p align="center">
     <a href="https://travis-ci.org/sanshengshui/IOT-Technical-Guide"><img src="https://travis-ci.org/sanshengshui/IOT-Technical-Guide.svg?branch=master" /></a>
