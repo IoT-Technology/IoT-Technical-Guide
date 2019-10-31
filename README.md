@@ -16,7 +16,7 @@
 -  关于物联网框架、开源库、操作系统和平台的资源  [:point_right:](https://phodal.github.io/awesome-iot/)
 - 一个很棒的物联网项目和资源的列表  [:point_right:](https://github.com/HQarroum/awesome-iot)
 
-### ![](png/IOT.png)IOT
+### ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/IOT.png)IOT
 
 - [开源且架构优秀的物联网平台-Thingsboard](https://thingsboard.io/)
 
@@ -37,7 +37,7 @@
 
 ### :scroll: 概念
 
-- 物模型![](png/language.png)
+- 物模型![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)
   
   > 此处引用阿里云物联网平台的解释，此处感谢:clap: ​[Alibaba Cloud@github](https://github.com/aliyun)
   
