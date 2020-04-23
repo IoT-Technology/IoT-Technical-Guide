@@ -11,142 +11,57 @@
 
  **:maple_leaf:高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
 
-### 🔎Awesome IOT
-
--  关于物联网框架、开源库、操作系统和平台的资源  [:point_right:](https://phodal.github.io/awesome-iot/)
-- 一个很棒的物联网项目和资源的列表  [:point_right:](https://github.com/HQarroum/awesome-iot)
-
-### ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/IOT.png)IOT
-
-- [开源且架构优秀的物联网平台-Thingsboard](https://thingsboard.io/)
-
-- [品宣和产品的保证-阿里云物联网平台](https://www.aliyun.com/product/iot-deviceconnect?spm=5176.12825654.eofdhaal5.103.e9392c4adOqibP)
 
 
-### :couple: 商业前景
-
-- [物联网前景与市场](https://blog.mushuwei.cn/2018/10/26/IOT市场及技术模拟/)
-
-### :white_check_mark:准备工作
-
-> - 非必须工作，如若编译不成功，可以参考[Issues](https://github.com/thingsboard/thingsboard/issues)。只是为了更好的让大家了解thingsboard,通过调试代码的方式，得到更直观的方法调用。
->
-> - [安装教程](https://thingsboard.io/docs/installation/)，当然也可以直接使用官方提供的[Demo](http://demo.thingsboard.io)
-
-- [Thingsboard中文翻译网站](https://thingsboard.mushuwei.cn/)
-- [物联网时代-Thingsboard源码分析-调试环境搭建](https://blog.mushuwei.cn/2018/07/21/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-Thingsboard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)
-
-### :scroll: 概念
-
-- 物模型![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)
-  
-  > 此处引用阿里云物联网平台的解释，此处感谢:clap: ​[Alibaba Cloud@github](https://github.com/aliyun)
-  
-  释义:  [什么是物模型](https://help.aliyun.com/document_detail/73727.html)
-  
-  博文: [物联网时代　跟着Thingsboard学IOT架构-物模型](https://blog.mushuwei.cn/2019/04/17/%E6%88%91%E6%98%AF%E5%BA%96%E4%B8%81-%E8%82%A2%E8%A7%A3IOT%E5%B9%B3%E5%8F%B0%E4%B9%8B%E7%89%A9%E6%A8%A1%E5%9E%8B/)
-
-### :email: 协议
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)
-
-  协议 :  [CoAP](https://coap.technology/)
-
-  技术框架 : [Californium(cf)](https://www.eclipse.org/californium/)
-  
-  教程 : [IOT-Guide-Coap](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-Coap)
-  
-  博文 : [物联网时代 跟着Thingsboard学IOT架构-CoAP设备协议](https://blog.mushuwei.cn/2019/07/25/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-CoAP%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE/)
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)
-
-   协议 :  [MQTT](http://mqtt.org/)
-  
-   技术框架 :  [Netty](https://netty.io/)
-   
-   教程 : [IOT-Guide-MQTT](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-MQTT)
-   
-   博文 : [物联网时代-跟着Thingsboard学IOT架构-MQTT设备协议](https://blog.mushuwei.cn/2019/07/24/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-MQTT%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE/)
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)
-  
-   协议 :  [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
-   
-   技术框架 :  [Spring Boot](https://spring.io/projects/spring-boot)
-       
-   教程 : [IOT-Guide-HTTP](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-HTTP)
-   
-   博文 : [物联网时代-跟着Thingsboard学IOT架构-HTTP设备协议及API相关限制](https://blog.mushuwei.cn/2019/08/16/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-%E8%B7%9F%E7%9D%80Thingsboard%E5%AD%A6IOT%E6%9E%B6%E6%9E%84-HTTP%E8%AE%BE%E5%A4%87%E5%8D%8F%E8%AE%AE%E5%8F%8AAPI%E7%9B%B8%E5%85%B3%E9%99%90%E5%88%B6/)
-   
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/gateway.png)
-  
-    释义 : [Gateway](https://baike.baidu.com/item/%E7%BD%91%E5%85%B3/98992?fr=aladdin)
-    
-    教程 : [IOT-Guide_Gateway](https://github.com/sanshengshui/IOT-Technical-Guide/tree/master/IOT-Guide-Gateway)
-    
-    博文 : 
-
-#### :closed_lock_with_key:  安全框架
-
-- [Spring Security + JWT]() [<img src="png/pic_logo.svg" align="center" width="32">](https://jwt.io/)
-- [OAuth2.0]() [<img src="png/oauth-2-sm.png" align="center" width="32">](https://oauth.net/2/)
-
-### :bar_chart: 物联网通用平台
-
-- [RuleEngine]()
-- [DB]()
-- [RealTime]()
-
-### :house: 架构
-
-- [Msa]()
-
-  1. 注册发现
-
-     **Eureka**
-
-     **Consul**
-
-  2. 网关
-
-     **Zuul**
-
-  3. 配置中心
-
-     **Apollo**
-
-  4. 调用链监控
-
-     **CAT**
-
-     **SkyWalking**
-
-  5. 容错限流
-
-     **Hystrix**
-
-  6. 监控报警
-
-     **Prometheus**
+备注:  :unlock: :表示**公开浏览**;   :closed_lock_with_key: :表示**需要加入作者知识星球才可浏览**; 
 
 
-###  :wheel_of_dharma: 持续集成->持续部署->持续交付
->DevOps的本质其实是一种鼓励协作的文化
->Dev的工作是,为软件增加新功能和修复缺陷，这要通过频繁的变更来达到,Ops的工作是,保证系统的高稳定性和高性能，这代表着变更越少越不容易出错.
->DevOps是一组技术,包括自动化运维,持续交付,高频部署,Docker,Kubernates等
 
-- [Docker]()
-- [Kubernates]()
+## ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/thingsboard_logo_blue.png?imageMogr2/thumbnail/!10p) 源码解析系列
 
-:honeybee::honeybee::honeybee::honeybee::honeybee::honeybee:
+### 设备连接协议
 
-### Project Gantt
+- **MQTT** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)
 
-![gantt_en](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/gantt_cn.svg)
+ 协议 :  [MQTT](http://mqtt.org/)
 
-:four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
+ 技术框架 :  [Netty](https://netty.io/)
+
+- :unlock: [《MQTT入门篇》]([https://blog.mushuwei.cn/2020/02/05/mqtt%E5%85%A5%E9%97%A8%E7%AF%87/](https://blog.mushuwei.cn/2020/02/05/mqtt入门篇/))<br>
+
+- :unlock: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上》](https://blog.mushuwei.cn/2020/01/24/物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上/)<br>
+
+- :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下》](https://blog.mushuwei.cn/2020/04/23/物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下/)<br>
 
 
-### 版权说明
+
+## IoT在线资源推荐
+
+-  关于物联网框架、开源库、操作系统和平台的资源 https://phodal.github.io/awesome-iot/
+- 一个很棒的物联网项目和资源的列表  https://github.com/HQarroum/awesome-iot/
+
+
+
+## 号外
+
+  致力于打造专业的物联网技术圈，帮助朋友和同学在物联网的风口上早日起飞 🛫️
+
+主要内容有:
+1. :loudspeaker: ThingsBoard源码解析
+高达5k+的开源物联网平台，物联网解决方案的设备管理、数据收集、处理和可视化
+2. :wind_chime: 应用于物联网应用层技术领域的技术和实践
+
+并且你还可以得到：
+
+- Java通信领域Netty技术的极大提升。
+- MQTT, CoAP, Http2和网关协议的理论知识和指导。
+- 手把手教你搭建高可用及高性能IoT平台。
+
+![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/Knowledge.jpg?imageMogr2/thumbnail/!50p)
+
+
+
+## 版权说明
 
 - ✍️ [穆书伟 (sanshengshui@github)](https://github.com/sanshengshui)
 - 除非另行注明，这个项目中的所有内容采用Apache2.0（[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)）协议共享。
@@ -156,7 +71,7 @@
 
 :four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
 
-### 为什么要做这份菜单
+## 为什么要做这份菜单
 
 > 在学习开源物联网平台ThingsBoard和使用阿里云物联网平台的时候，让我对物联网这个领域产生了极大的兴趣。我发现ThingsBoard的更新速度十分频繁且代码架构十分优秀，随着未来十年内将会有数十亿的设备将联网和国内对物联网领域的高热度。众多的开发人员经历过Web2.0和移动互联网的时代，但是对于未来的设备联网这块的知识十分缺乏，并且搜索引擎上大多数文章都比较的粗浅。此外，这些资料往往只涉及某些特定的话题，如果能有一份菜单将这些菜谱以特定的方式串起来，那么对于 IOT 学习者来说将会是极大的便利。尤其对于我这样热爱查阅社区资料胜过出版物的懒人:new_moon_with_face: 随着我的学习节奏还会不断有新的菜谱加入进来。
 >
