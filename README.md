@@ -17,6 +17,10 @@
 
 
 
+![分割线](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/halving_line.jpg)
+
+
+
 ## ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/thingsboard_logo_blue.png?imageMogr2/thumbnail/!10p) 源码解析系列
 
 ### 设备连接协议
@@ -57,7 +61,12 @@
 - MQTT, CoAP, Http2和网关协议的理论知识和指导。
 - 手把手教你搭建高可用及高性能IoT平台。
 
-![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/Knowledge.jpg?imageMogr2/thumbnail/!50p)
+<p align="center">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/Knowledge.jpg?imageMogr2/thumbnail/!50p" alt="物联网技术指导知识星球">
+</p>
+<p align="center">
+
+
 
 
 
