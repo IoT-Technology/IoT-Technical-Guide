@@ -16,14 +16,21 @@
 备注:  :unlock: :表示**公开浏览**;   :closed_lock_with_key: :表示**需要加入作者知识星球才可浏览**; 
 
 
-
-![分割线](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/halving_line.jpg)
-
+<p align="center">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/halving_line.jpg" alt="分割线">
+</p>
+<p align="center">
 
 
 ## ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/thingsboard_logo_blue.png?imageMogr2/thumbnail/!10p) 源码解析系列
 
-### 设备连接协议
+### a.『 准备篇 』
+
+- :unlock: [《物联网时代-Thingsboard源码分析-调试环境调试》](https://blog.mushuwei.cn/2018/07/21/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-Thingsboard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)<br>
+
+- :unlock: [《物联网时代-Thingsboard源码分析-项目结构说明》](https://blog.mushuwei.cn/2018/07/24/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-ThingsBoard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E/)<br>
+
+### b.『设备连接协议篇 』
 
 - **MQTT** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)
 
@@ -31,7 +38,7 @@
 
  技术框架 :  [Netty](https://netty.io/)
 
-- :unlock: [《MQTT入门篇》]([https://blog.mushuwei.cn/2020/02/05/mqtt%E5%85%A5%E9%97%A8%E7%AF%87/](https://blog.mushuwei.cn/2020/02/05/mqtt入门篇/))<br>
+- :unlock: [《MQTT入门篇》](https://blog.mushuwei.cn/2020/02/05/mqtt入门篇/)<br>
 
 - :unlock: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上》](https://blog.mushuwei.cn/2020/01/24/物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上/)<br>
 
