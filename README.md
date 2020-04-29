@@ -44,6 +44,15 @@
 
 - :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下》](https://blog.mushuwei.cn/2020/04/23/物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下/)<br>
 
+  
+
+- **CoAP**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)
+
+  协议 :  [CoAP](https://coap.technology/)
+
+  框架: [Californium(cf)](https://www.eclipse.org/californium/)
+  
+- :unlock: [《初识CoAP协议》](https://blog.mushuwei.cn/2020/04/30/%E5%88%9D%E8%AF%86CoAP%E5%8D%8F%E8%AE%AE/)<br>  
 
 
 ## IoT在线资源推荐
