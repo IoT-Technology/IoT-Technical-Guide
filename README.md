@@ -54,7 +54,9 @@
   
 - :unlock: [《初识CoAP协议》](https://blog.mushuwei.cn/2020/04/30/%E5%88%9D%E8%AF%86CoAP%E5%8D%8F%E8%AE%AE/)<br>
  
-- :unlock: [《抓住CoAP协议的'心'》](https://blog.mushuwei.cn/2020/05/07/%E6%8A%93%E4%BD%8FCoAP%E5%8D%8F%E8%AE%AE%E7%9A%84-%E5%BF%83/)<br>  
+- :unlock: [《抓住CoAP协议的'心'》](https://blog.mushuwei.cn/2020/05/07/%E6%8A%93%E4%BD%8FCoAP%E5%8D%8F%E8%AE%AE%E7%9A%84-%E5%BF%83/)<br> 
+
+- :closed_lock_with_key: [《100行代码快速搭建功能完备的CoAP Server服务》](https://blog.mushuwei.cn/2020/05/10/100%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8A%9F%E8%83%BD%E5%AE%8C%E5%A4%87%E7%9A%84CoAP-Server%E6%9C%8D%E5%8A%A1/)<br> 
 
 
 ## IoT在线资源推荐
