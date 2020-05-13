@@ -59,6 +59,20 @@
 - :closed_lock_with_key: [《100行代码快速搭建功能完备的CoAP Server服务》](https://blog.mushuwei.cn/2020/05/10/100%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8A%9F%E8%83%BD%E5%AE%8C%E5%A4%87%E7%9A%84CoAP-Server%E6%9C%8D%E5%8A%A1/)<br> 
 
 
+- **HTTP** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)
+  
+  协议 :  [HTTP](https://baike.baidu.com/item/HTTP/243074)
+    
+  框架 :  [Spring Boot](https://spring.io/projects/spring-boot)
+
+
+- **Gateway** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/gateway.png)
+  
+  概述 : 网关
+    
+  教程 : IOT-Guide-Gateway
+    
+
 ## IoT在线资源推荐
 
 -  关于物联网框架、开源库、操作系统和平台的资源 https://phodal.github.io/awesome-iot/
