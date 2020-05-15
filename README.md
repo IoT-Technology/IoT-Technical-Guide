@@ -56,7 +56,10 @@
  
 - :unlock: [《抓住CoAP协议的'心'》](https://blog.mushuwei.cn/2020/05/07/%E6%8A%93%E4%BD%8FCoAP%E5%8D%8F%E8%AE%AE%E7%9A%84-%E5%BF%83/)<br> 
 
+- :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-CoAP设备连接协议》](https://blog.mushuwei.cn/2020/05/13/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-ThingsBoard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-CoAP%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5%E5%8D%8F%E8%AE%AE/)<br> 
+
 - :closed_lock_with_key: [《100行代码快速搭建功能完备的CoAP Server服务》](https://blog.mushuwei.cn/2020/05/10/100%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8A%9F%E8%83%BD%E5%AE%8C%E5%A4%87%E7%9A%84CoAP-Server%E6%9C%8D%E5%8A%A1/)<br> 
+
 
 
 - **HTTP** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)
