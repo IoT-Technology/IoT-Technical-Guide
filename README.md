@@ -75,9 +75,9 @@
   
   *常用协议*
   
-  - **Modbus** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg)
+  - **Modbus** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg?imageMogr2/thumbnail/!50p)
   
-  - **OPC UA**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg)
+  - **OPC UA**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)
   
   
 
