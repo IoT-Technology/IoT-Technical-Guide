@@ -83,6 +83,22 @@
   
   
 
+### c.『数据交换和序列化篇 』
+
+- **JSON**
+
+  
+
+- **Protocol Buffers**
+
+  > ProtoBuf是一种语言无关，与平台无关并且具有可扩展机制，用于序列化结构化数据
+
+  官方网址：https://developers.google.com/protocol-buffers
+
+​	:unlock: [《Proto语言指南(proto3)》](https://blog.mushuwei.cn/2018/10/07/Proto%E8%AF%AD%E8%A8%80%E6%8C%87%E5%8D%97-proto3/)<br>
+
+​		
+
 ## IoT在线资源推荐
 
 -  关于物联网框架、开源库、操作系统和平台的资源 https://phodal.github.io/awesome-iot/
