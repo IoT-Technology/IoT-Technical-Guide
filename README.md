@@ -22,6 +22,8 @@
 <p align="center">
 
 
+
+
 ## ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/thingsboard_logo_blue.png?imageMogr2/thumbnail/!10p) 源码解析系列
 
 ### a.『 准备篇 』
@@ -81,15 +83,25 @@
   
   - **OPC UA**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)
   
-  
+
+
+
+- **WebSocket**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Websocket.png)
+
+  概述：WebSocket
+
+  :zap: 待更新......
 
 ### c.『数据交换和序列化篇 』
 
-- **JSON**
-
+- **JSON**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)
   
+  > 物模型指将物理空间中的实体数字化，并在云端构建该实体的数据模型。物模型TSL（Thing Specification Language）。是一个JSON格式的文件。
 
-- **Protocol Buffers**
+  :zap: 待更新......
+
+
+- **Protocol Buffers**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/buffer.png)
 
   > ProtoBuf是一种语言无关，与平台无关并且具有可扩展机制，用于序列化结构化数据
 
@@ -97,7 +109,43 @@
 
 ​	:unlock: [《Proto语言指南(proto3)》](https://blog.mushuwei.cn/2018/10/07/Proto%E8%AF%AD%E8%A8%80%E6%8C%87%E5%8D%97-proto3/)<br>
 
-​		
+​	
+
+### d.『设备、接口认证和安全篇 』
+
+- **Spring Security**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/security.png)
+
+  
+
+- **OAuth2**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png?imageMogr2/thumbnail/!50p)
+
+:zap: 待更新......
+
+### e.『流处理和消息队列篇 』	
+
+- **kafka**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kafka.png)
+
+
+
+- **RabbitMQ**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/RabbitMQ-logo.svg)
+
+:zap: 待更新......
+
+### f.『规则引擎篇 』
+
+**Rule Engine**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Ruler.png)
+
+:zap: 待更新......
+
+### g.『Docker和Kubernetes篇 』
+
+- **Docker**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Docker.png)
+
+
+
+- **Kubernetes**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kubernetes.png)
+
+:zap: 待更新......
 
 ## IoT在线资源推荐
 
