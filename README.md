@@ -2,7 +2,7 @@
     <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/logo.png" alt="IOT Technical Guide">
 </p>
 <p align="center">
-    <a href="https://travis-ci.org/sanshengshui/IOT-Technical-Guide"><img src="https://travis-ci.org/sanshengshui/IOT-Technical-Guide.svg?branch=master" /></a>
+    <a href="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide"><img src="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide.svg?branch=master" /></a>
     <a href="https://github.com/sanshengshui/Groza/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache-000000.svg" /></a>
     <a href="https://github.com/sanshengshui/IOT-Technical-Guide/issues"><img src="http://isitmaintained.com/badge/open/dreamans/syncd.svg" /></a>
 
@@ -179,6 +179,7 @@
 
 <p align="center">
     <img src="/png/chat.jpg" width="365" height="475" alt="物联网技术指导知识星球">
+    <img src="/png/Wechat.jpg" width="337" height="448" alt="联系方式">
 </p>
 
 
