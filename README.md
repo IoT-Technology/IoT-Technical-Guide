@@ -24,6 +24,12 @@
 
 
 
+## 框架一览图
+
+![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/thingsboard-architecture.svg)
+
+
+
 ## ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/thingsboard_logo_blue.png?imageMogr2/thumbnail/!10p) 源码解析系列
 
 ### a.『 准备篇 』
