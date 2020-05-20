@@ -27,7 +27,7 @@
 ## 框架一览图
 
 <p align="center">
-    <img src="/png/thingsboard-architecture.svg" alt="IoT Architecture">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/thingsboard-architecture.svg" alt="IoT Architecture">
 </p>
 
 
@@ -178,8 +178,8 @@
 - 手把手教你搭建高可用及高性能IoT平台。
 
 <p align="center">
-    <img src="/png/chat.jpg" width="365" height="475" alt="物联网技术指导知识星球">
-    <img src="/png/Wechat.jpg" width="337" height="448" alt="联系方式">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/Knowledge.jpg?imageMogr2/thumbnail/!50p" width="365" height="475" alt="物联网技术指导知识星球">
+    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Wechat.jpg?imageMogr2/thumbnail/!50p" width="337" height="448" alt="联系方式">
 </p>
 
 
