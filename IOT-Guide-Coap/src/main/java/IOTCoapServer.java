@@ -1,5 +1,5 @@
 
-import com.sanshengshui.coap.*;
+import iot.technology.coap.*;
 import org.eclipse.californium.core.CoapResource;
 import org.eclipse.californium.core.CoapServer;
 import java.net.UnknownHostException;
