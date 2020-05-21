@@ -3,9 +3,12 @@
 </p>
 <p align="center">
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/IoT-Technology/IOT-Technical-Guide?style=flat"></a>
-    <a href="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide"><img src="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide.svg?branch=master" /></a>
+    <a href="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide" title="Travis CI"><img src="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide.svg?branch=master"/></a>
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/blob/master/LICENSE" title="License"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg?style=flat"></a>
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/IoT-Technology/IOT-Technical-Guide?style=flat"></a>
+    <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/stargazers" title="Stars"><img src="https://img.shields.io/github/stars/IoT-Technology/IOT-Technical-Guide.svg?style=social&label=Star"></a>
+    <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/network/members" title="Fork Members"><img src="https://img.shields.io/github/forks/IoT-Technology/IOT-Technical-Guide.svg?style=social&label=Fork"></a>
+    <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/watchers" title="Watchers"><img src="https://img.shields.io/github/watchers/IoT-Technology/IOT-Technical-Guide.svg?style=social&label=Watch"></a>
 </p>
 
 
