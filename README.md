@@ -2,10 +2,11 @@
     <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/logo.png" alt="IOT Technical Guide">
 </p>
 <p align="center">
+    <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/IoT-Technology/IOT-Technical-Guide?style=flat"></a>
     <a href="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide"><img src="https://travis-ci.org/IoT-Technology/IOT-Technical-Guide.svg?branch=master" /></a>
-    <a href="https://github.com/sanshengshui/Groza/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache-000000.svg" /></a>
-    <a href="https://github.com/sanshengshui/IOT-Technical-Guide/issues"><img src="http://isitmaintained.com/badge/open/dreamans/syncd.svg" /></a>
-
+    <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/blob/master/LICENSE" title="License"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg?style=flat"></a>
+    <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/IoT-Technology/IOT-Technical-Guide?style=flat"></a>
+</p>
 
 
 
