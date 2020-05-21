@@ -113,7 +113,11 @@
   
   > 物模型指将物理空间中的实体数字化，并在云端构建该实体的数据模型。物模型TSL（Thing Specification Language）。是一个JSON格式的文件。
 
-  :zap: 待更新......
+​	名词解释 : [物模型](https://www.alibabacloud.com/help/zh/doc-detail/73727.htm)
+
+  :closed_lock_with_key: [《技术魔法剖析物模型》](https://blog.mushuwei.cn/2019/04/17/%E6%88%91%E6%98%AF%E5%BA%96%E4%B8%81-%E8%82%A2%E8%A7%A3IOT%E5%B9%B3%E5%8F%B0%E4%B9%8B%E7%89%A9%E6%A8%A1%E5%9E%8B/)<br>
+
+
 
 
 - **Protocol Buffers**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/buffer.png)
