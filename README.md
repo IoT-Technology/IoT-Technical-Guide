@@ -96,6 +96,9 @@
   
   - **Modbus** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg?imageMogr2/thumbnail/!50p)
   
+- :unlock: [《一文说透Modbus协议》](https://blog.mushuwei.cn/2020/05/23/%E4%B8%80%E6%96%87%E8%AE%B2%E9%80%8FModbus%E5%8D%8F%E8%AE%AE/)<br>
+  
+  
   - **OPC UA**![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)
   
 
