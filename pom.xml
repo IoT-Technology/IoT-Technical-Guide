@@ -63,6 +63,7 @@
         <module>IOT-Guide-HTTP-Test</module>
         <module>IOT-Guide-Flink</module>
         <module>IOT-Guide-Custom-Protocol</module>
+        <module>IOT-Guide-Gateway-Modbus</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
@@ -96,16 +97,16 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
         </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.sanshengshui</groupId>
                 <artifactId>IOT-Guide-TSL</artifactId>
