@@ -15,6 +15,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.71</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.7.2</version>
+        </dependency>
+        <dependency>
             <groupId>com.infiniteautomation</groupId>
             <artifactId>modbus4j</artifactId>
             <version>3.0.3</version>

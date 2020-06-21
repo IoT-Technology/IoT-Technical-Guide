@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.async.DeferredResult;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 
@@ -68,20 +69,27 @@ public class DeviceApiController {
     }
 
     @RequestMapping(value = "/telemetry",method = RequestMethod.POST)
-    public DeferredResult<ResponseEntity> postTelemetry(@RequestBody String json, HttpServletRequest request){
+    public DeferredResult<ResponseEntity> postTelemetry(@RequestBody String json, HttpServletRequest request)
+            throws UnsupportedEncodingException {
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
-        if (quotaExceeded(request, responseWriter)) {
-            return responseWriter;
-        }
-        responseWriter.setResult(new ResponseEntity(HttpStatus.ACCEPTED));
-        Map<Long, List<KvEntry>> telemetryMaps = JsonConverter.convertToTelemetry(new JsonParser().parse(json)).getData();
-        for (Map.Entry<Long,List<KvEntry>> entry : telemetryMaps.entrySet()) {
-            System.out.println("key= " + entry.getKey());
-            for (KvEntry kvEntry: entry.getValue()) {
-                System.out.println("属性名="+kvEntry.getKey()+ " 属性值="+kvEntry.getValueAsString());
-            }
-        }
+        System.out.println(new String(json.getBytes(), "UTF-8"));
+        responseWriter.setResult(new ResponseEntity("ok", HttpStatus.ACCEPTED));
         return responseWriter;
+        /**
+         * 限流操作和物模性解析逻辑操作
+         *
+         * if (quotaExceeded(request, responseWriter)) {
+         *             return responseWriter;
+         * }
+         *
+         * Map<Long, List<KvEntry>> telemetryMaps = JsonConverter.convertToTelemetry(new JsonParser().parse(json)).getData();
+         *         for (Map.Entry<Long,List<KvEntry>> entry : telemetryMaps.entrySet()) {
+         *             System.out.println("key= " + entry.getKey());
+         *             for (KvEntry kvEntry: entry.getValue()) {
+         *                 System.out.println("属性名="+kvEntry.getKey()+ " 属性值="+kvEntry.getValueAsString());
+         *         }
+         * }
+         **/
     }
 
     @RequestMapping(value = "/attributes/updates", method = RequestMethod.GET, produces = "application/json")

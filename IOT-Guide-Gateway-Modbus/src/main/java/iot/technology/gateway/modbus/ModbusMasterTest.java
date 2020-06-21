@@ -1,5 +1,6 @@
 package iot.technology.gateway.modbus;
 
+import com.alibaba.fastjson.JSONObject;
 import com.serotonin.modbus4j.BatchRead;
 import com.serotonin.modbus4j.BatchResults;
 import com.serotonin.modbus4j.ModbusMaster;
@@ -7,8 +8,11 @@ import com.serotonin.modbus4j.code.DataType;
 import com.serotonin.modbus4j.exception.ErrorResponseException;
 import com.serotonin.modbus4j.exception.ModbusTransportException;
 import com.serotonin.modbus4j.locator.BaseLocator;
+import iot.technology.gateway.modbus.conveter.OkHttpUtil;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -35,6 +39,9 @@ public class ModbusMasterTest {
                 try {
                     BatchResults<String> results = ModbusUtil.batchRead(modbusMaster, batch);
                     log.info("slave id 1 读取结果为: " + results);
+                    Map<String, String> map = new HashMap<>();
+                    map.put("json", String.valueOf(results));
+                    OkHttpUtil.post("http://localhost:8080/api/v1/telemetry", map);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
