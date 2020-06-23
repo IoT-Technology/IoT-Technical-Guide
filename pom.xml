@@ -92,8 +92,7 @@
         <postgresql.version>42.2.5</postgresql.version>
         <h2database.version>1.4.197</h2database.version>
         <flink.version>1.9.0</flink.version>
-        <fastjson.version>1.2.71</fastjson.version>
-        <okhttp.version>4.7.2</okhttp.version>
+        <paho.version>1.2.4</paho.version>
     </properties>
 
     <dependencies>
@@ -280,14 +279,9 @@
                 <version>${flink.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.squareup.okhttp3</groupId>
-                <artifactId>okhttp</artifactId>
-                <version>${okhttp.version}</version>
+                <groupId>org.eclipse.paho</groupId>
+                <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+                <version>${paho.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

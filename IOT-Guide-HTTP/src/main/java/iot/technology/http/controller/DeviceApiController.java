@@ -69,27 +69,21 @@ public class DeviceApiController {
     }
 
     @RequestMapping(value = "/telemetry",method = RequestMethod.POST)
-    public DeferredResult<ResponseEntity> postTelemetry(@RequestBody String json, HttpServletRequest request)
-            throws UnsupportedEncodingException {
+    public DeferredResult<ResponseEntity> postTelemetry(@RequestBody String json, HttpServletRequest request) {
         DeferredResult<ResponseEntity> responseWriter = new DeferredResult<ResponseEntity>();
-        System.out.println(new String(json.getBytes(), "UTF-8"));
         responseWriter.setResult(new ResponseEntity("ok", HttpStatus.ACCEPTED));
+        if (quotaExceeded(request, responseWriter)) {
+            return responseWriter;
+        }
+        Map<Long, List<KvEntry>> telemetryMaps = JsonConverter.convertToTelemetry(new JsonParser().parse(json)).getData();
+            for (Map.Entry<Long,List<KvEntry>> entry : telemetryMaps.entrySet()) {
+            System.out.println("key= " + entry.getKey());
+            for (KvEntry kvEntry: entry.getValue()) {
+                System.out.println("属性名="+kvEntry.getKey()+ " 属性值="+kvEntry.getValueAsString());
+            }
+        }
+
         return responseWriter;
-        /**
-         * 限流操作和物模性解析逻辑操作
-         *
-         * if (quotaExceeded(request, responseWriter)) {
-         *             return responseWriter;
-         * }
-         *
-         * Map<Long, List<KvEntry>> telemetryMaps = JsonConverter.convertToTelemetry(new JsonParser().parse(json)).getData();
-         *         for (Map.Entry<Long,List<KvEntry>> entry : telemetryMaps.entrySet()) {
-         *             System.out.println("key= " + entry.getKey());
-         *             for (KvEntry kvEntry: entry.getValue()) {
-         *                 System.out.println("属性名="+kvEntry.getKey()+ " 属性值="+kvEntry.getValueAsString());
-         *         }
-         * }
-         **/
     }
 
     @RequestMapping(value = "/attributes/updates", method = RequestMethod.GET, produces = "application/json")

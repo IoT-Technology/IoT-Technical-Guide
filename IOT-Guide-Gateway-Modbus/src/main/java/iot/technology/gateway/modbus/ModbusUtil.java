@@ -42,35 +42,6 @@ public class ModbusUtil {
     }
 
 
-
-    public static Boolean readCoilStatus(ModbusMaster master, int slaveId, int offset)
-            throws ErrorResponseException, ModbusTransportException {
-        BaseLocator<Boolean> loc = BaseLocator.coilStatus(slaveId, offset);
-        Boolean value = master.getValue(loc);
-        return value;
-    }
-
-    public static Boolean readInputStatus(ModbusMaster master, int slaveId, int offset)
-            throws ErrorResponseException, ModbusTransportException {
-        BaseLocator<Boolean> loc = BaseLocator.inputStatus(slaveId, offset);
-        Boolean value = master.getValue(loc);
-        return value;
-    }
-
-    public static Number readHoldingRegister(ModbusMaster master, int slaveId, int offset, int dataType)
-            throws ErrorResponseException, ModbusTransportException {
-        BaseLocator<Number> loc = BaseLocator.holdingRegister(slaveId, offset, dataType);
-        Number value = master.getValue(loc);
-        return value;
-    }
-
-    public static Number readInputRegister(ModbusMaster master, int slaveId, int offset, int dataType)
-            throws ErrorResponseException, ModbusTransportException {
-        BaseLocator<Number> loc = BaseLocator.holdingRegister(slaveId, offset, dataType);
-        Number value = master.getValue(loc);
-        return value;
-    }
-
     public static BatchResults<String> batchRead(ModbusMaster master, BatchRead<String> batchRead)
             throws ErrorResponseException, ModbusTransportException {
        batchRead.setContiguousRequests(false);
