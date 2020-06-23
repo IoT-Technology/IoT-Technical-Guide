@@ -103,8 +103,9 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
             } else if(topicName.equals(MqttTopics.DEVICE_ATTRIBUTES_REQUEST_TOPIC_PREFIX)) {
                 JsonMqttAdaptor.convertToMsg(GET_ATTRIBUTES_REQUEST, mqttMsg);
             }
+            ctx.writeAndFlush(createMqttPubAckMsg(msgId));
         } catch (AdaptorException e) {
-
+            ctx.close();
         }
 
     }
@@ -185,6 +186,14 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
     private void processConnect(ChannelHandlerContext ctx, MqttConnectMessage msg) {
         ctx.writeAndFlush(createMqttConnAckMsg(MqttConnectReturnCode.CONNECTION_ACCEPTED));
         connected = true;
+    }
+
+    private static MqttPubAckMessage createMqttPubAckMsg(int requestId) {
+        MqttFixedHeader mqttFixedHeader =
+                new MqttFixedHeader(PUBACK, false, AT_LEAST_ONCE, false, 0);
+        MqttMessageIdVariableHeader mqttMsgIdVariableHeader =
+                MqttMessageIdVariableHeader.from(requestId);
+        return new MqttPubAckMessage(mqttFixedHeader, mqttMsgIdVariableHeader);
     }
 
     private MqttMessage createUnSubAckMessage(int msgId) {
