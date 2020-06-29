@@ -10,7 +10,7 @@ http:
 quota:
   host:
     # Max allowed number of API requests in interval for single host
-    limit: "${QUOTA_HOST_LIMIT:10}"
+    limit: "${QUOTA_HOST_LIMIT:5}"
     # Interval duration
     intervalMs: "${QUOTA_HOST_INTERVAL_MS:60000}"
     # Maximum silence duration for host after which Host removed from QuotaService. Must be bigger than intervalMs

@@ -35,23 +35,23 @@
 
 ### a.『 预习篇 』
 
--  [《新基建和5G风口下的物联网平台》]()<br>
+-  [《新基建和5G风口下的物联网平台》](https://iot.mushuwei.cn/#/iot-platform)<br>
 
--  [《理解SaaS多租户应用的架构和设计》]()<br>
+-  [《理解SaaS多租户应用的架构和设计》](https://iot.mushuwei.cn/#/saas)<br>
 
 ### b.『 设备接入篇 』
 
--  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)[《白话MQTT基础知识和入门》]()<br>
--  [《实现百万并发MQTT服务端》]()<br>
--  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)[《初识CoAP并抓住它的"心"》]()<br>
--  [《100行代码快速搭建功能完备的CoAP服务》]()<br>
+-  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)[《白话MQTT基础知识和入门》](https://iot.mushuwei.cn/#/mqtt-basic)<br>
+-  [《实现百万并发MQTT服务端》](https://iot.mushuwei.cn/#/high-performance-mqtt-server)<br>
+-  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)[《初识CoAP并抓住它的"心"》](https://iot.mushuwei.cn/#/coap-basic)<br>
+-  [《100行代码快速搭建功能完备的CoAP服务》](https://iot.mushuwei.cn/#/100-lines-of-code-realize-coap-service)<br>
 
--  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)[《重新认识HTTP协议并管理设备》]()<br>
--  [《实践案例: 车载终端设备的数据解析》]()<br>
+-  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)[《重新认识HTTP协议并管理设备》](https://iot.mushuwei.cn/#/rethinking-http)<br>
+-  [《实践案例: 车载终端设备的数据解析》](https://iot.mushuwei.cn/#/decoder-encoder-equipment-protocol)<br>
 
 ### c.『 边缘计算篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg?imageMogr2/thumbnail/!50p)[《工业领域下的Modbus网关设备》]()<br>
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg?imageMogr2/thumbnail/!50p)[《工业领域下的Modbus网关设备》](https://iot.mushuwei.cn/#/gateway-modbus)<br>
 
 > 本文通过实战用python对工业Modbus网关设备进行数据读取和写入，
 >
@@ -60,7 +60,7 @@
 
 
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)[《工业领域下的OPC-UA网关设备》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)[《工业领域下的OPC-UA网关设备》](https://iot.mushuwei.cn/#/gateway-opcua)
 
 >本文通过实战用python在工业OPC-UA网关设备高效的性能和占用内存小的特点，
 >
@@ -68,7 +68,7 @@
 
 ### d.『 实时显示篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Websocket.png)[《WebSocket技术魔法》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Websocket.png)[《WebSocket技术魔法》](https://iot.mushuwei.cn/#/websocket)
 
 > 数据在页面上的实时显示是当前大多数人的需求，WebSocket可以让梦想成真，
 >
@@ -76,13 +76,13 @@
 
 ### e.『 数据交换和序列化篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)[《设备的语言-物模型》]()　
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)[《设备的语言-物模型》](https://iot.mushuwei.cn/#/tsl)　
 
 > 物模型是一个Json格式的文件。它是物理空间中的实体，如传感器、车载装置、楼宇、工厂等在云端的数字化表示，你对实现这样的功能感到好奇吗？相信我，在这里，你将得到它。
 
 
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/buffer.png)[《平台无关并具有扩展性的ProtoBuf》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/buffer.png)[《平台无关并具有扩展性的ProtoBuf》](https://iot.mushuwei.cn/#/protobuf)
 
 > 本文是通过ProtoBuf在IoT设备协议和数据的序列化上，去讲解Protobuf高效，不依赖语言的特点。
 >
@@ -90,17 +90,17 @@
 
 ### f.『 存储和查询篇 』
 
-- [《PostgreSQL碰撞IoT》]()
+- [《PostgreSQL碰撞IoT》](https://iot.mushuwei.cn/#/postgresql-iot)
 
 
 
 
 
-- [《MongoDB在IoT中的应用》]()
+- [《MongoDB在IoT中的应用》](https://iot.mushuwei.cn/#/mongodb-iot)
 
 ### g.『 设备、接口认证和安全篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/security.png)[《Spring Security能量》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/security.png)[《Spring Security能量》](https://iot.mushuwei.cn/#/spring-security)
 
 > 本文是通过Spring Security在接口认证运用的案例，讲解接口安全的重要性。
 >
@@ -108,7 +108,7 @@
 
 
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png?imageMogr2/thumbnail/!50p)[《下一代安全实践 OAuth2》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png?imageMogr2/thumbnail/!50p)[《下一代安全实践 OAuth2》](https://iot.mushuwei.cn/#/oauth2)
 
 > 本文是通过OAuth2在设备认证的案例来解决设备的一个机器一个密码。
 >
@@ -116,13 +116,13 @@
 
 ### h.『 流处理和消息队列篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kafka.png)[《广受好评的Kafka》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kafka.png)[《广受好评的Kafka》](https://iot.mushuwei.cn/#/kafka)
 
 > 本文是通过Kafka在流处理和应用解耦的特点，更好、更高效的处理数据分析。
 
 
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/RabbitMQ-logo.svg)[《从未缺席的RabbitMQ》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/RabbitMQ-logo.svg)[《从未缺席的RabbitMQ》](https://iot.mushuwei.cn/#/rabbitmq)
 
 > 本文是通过另一个消息中间件RabbitMQ在IoT设备数据的应用，
 >
@@ -130,7 +130,7 @@
 
 ### i.『 规则引擎篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Ruler.png)[《解放放劳动力的Rule Engine》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Ruler.png)[《解放放劳动力的Rule Engine》](https://iot.mushuwei.cn/#/rule-engine)
 
 > 你是否还在为繁多的业务而劳累，例如：当温度超过120度，就发出报警。在这章，通过学习规则引擎，
 >
@@ -138,7 +138,7 @@
 
 ### j.『 Docker和k8s篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Docker.png)[《Docker在IoT技术领域的应用》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Docker.png)[《Docker在IoT技术领域的应用》](https://iot.mushuwei.cn/#/docker-iot)
 
 > 容器已经成为今年来最炙手可热的技术了，通过Docker,你将无需为部署环境而烦恼，
 >
@@ -146,7 +146,7 @@
 
 
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kubernetes.png)[《DevOps的领头羊-Kubernetes》]()
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kubernetes.png)[《DevOps的领头羊-Kubernetes》](https://iot.mushuwei.cn/#/devops-kubernetes)
 
 > 串联开发团队和IT运维团队！利用K8s让两个团队之间，建立良好的沟通和协作，
 >
@@ -164,8 +164,8 @@
 ### a.『 准备篇 』
 
 - :unlock: [《ThingsBoard中文官网》](http://www.ithingsboard.com/)<br>
-- :unlock: [《物联网时代-Thingsboard源码分析-调试环境调试》](https://blog.mushuwei.cn/2018/07/21/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-Thingsboard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)<br>
-- :unlock: [《物联网时代-Thingsboard源码分析-项目结构说明》](https://blog.mushuwei.cn/2018/07/24/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-ThingsBoard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E/)<br>
+- :unlock: [《物联网时代-Thingsboard源码分析-调试环境调试》](https://iot.mushuwei.cn/#/thingsboard/thingsboard-build)<br>
+- :unlock: [《物联网时代-Thingsboard源码分析-项目结构说明》](https://iot.mushuwei.cn/#/thingsboard/project-structure)<br>
 
 
 
@@ -177,9 +177,9 @@
 
  技术框架 :  [Netty](https://netty.io/)
 
-  - :unlock: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上》](https://blog.mushuwei.cn/2020/01/24/物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上/)<br>
+  - :unlock: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part1)<br>
 
-  - :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下》](https://blog.mushuwei.cn/2020/04/23/物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下/)<br>
+  - :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part2)<br>
 
 
 
@@ -189,7 +189,7 @@
 
   框架: [Californium(cf)](https://www.eclipse.org/californium/)
   
-- :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-CoAP设备连接协议》](https://blog.mushuwei.cn/2020/05/13/%E7%89%A9%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3-ThingsBoard%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-CoAP%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5%E5%8D%8F%E8%AE%AE/)<br>
+- :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-CoAP设备连接协议》](https://iot.mushuwei.cn/#/thingsboard/coap-protocol)<br>
 
 
 

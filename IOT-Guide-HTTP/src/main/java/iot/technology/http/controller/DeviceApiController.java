@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.async.DeferredResult;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 
@@ -82,7 +81,6 @@ public class DeviceApiController {
                 System.out.println("属性名="+kvEntry.getKey()+ " 属性值="+kvEntry.getValueAsString());
             }
         }
-
         return responseWriter;
     }
 
