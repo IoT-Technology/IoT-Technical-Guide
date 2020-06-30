@@ -11,7 +11,7 @@
 
     <name>IOT Technology Guide :: Gateway OpcUA</name>
     <groupId>iot.technology</groupId>
-    <artifactId>IOT-Guide-Gateway-OPC(UA)</artifactId>
+    <artifactId>IOT-Guide-Gateway-OPCUA</artifactId>
 
     <dependencies>
         <dependency>
