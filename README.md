@@ -90,13 +90,9 @@
 
 ### f.『 存储和查询篇 』
 
-- [《PostgreSQL碰撞IoT》](https://iot.mushuwei.cn/#/postgresql-iot)
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MongoDB-Logo.svg.png?imageMogr2/thumbnail/!40p)[《PostgreSQL碰撞IoT》](https://iot.mushuwei.cn/#/postgresql-iot)
 
-
-
-
-
-- [《MongoDB在IoT中的应用》](https://iot.mushuwei.cn/#/mongodb-iot)
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/elephant.png?imageMogr2/thumbnail/!10p)[《MongoDB在IoT中的应用》](https://iot.mushuwei.cn/#/mongodb-iot)
 
 ### g.『 设备、接口认证和安全篇 』
 
