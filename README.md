@@ -20,7 +20,6 @@
 
 
 
-备注:  :unlock: :表示**公开浏览**;   :closed_lock_with_key: :表示**需要加入作者知识星球才可浏览**; 
 
 
 <p align="center">
@@ -29,9 +28,8 @@
 <p align="center">
 
 
+[📖 Thingsboard源码分析](README-EN.md) | 📖 从0搭建高性能IoT平台和实践
 
-
-## 从0搭建高性能IoT平台
 
 ### a.『 预习篇 』
 
@@ -148,133 +146,6 @@
 >
 > 更块更可靠的创建高质量软件！
 
-
-
-<p align="center">
-    <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/jump_people.gif" alt="分割线">
-</p>
-<p align="center">
-
-## ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/thingsboard_logo_blue.png?imageMogr2/thumbnail/!10p) 源码解析系列
-
-### a.『 准备篇 』
-
-- :unlock: [《ThingsBoard中文官网》](http://www.ithingsboard.com/)<br>
-- :unlock: [《物联网时代-Thingsboard源码分析-调试环境调试》](https://iot.mushuwei.cn/#/thingsboard/thingsboard-build)<br>
-- :unlock: [《物联网时代-Thingsboard源码分析-项目结构说明》](https://iot.mushuwei.cn/#/thingsboard/project-structure)<br>
-
-
-
-### b.『设备连接协议篇 』
-
-- **MQTT** 
-
- 协议 :  [MQTT](http://mqtt.org/)
-
- 技术框架 :  [Netty](https://netty.io/)
-
-  - :unlock: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part1)<br>
-
-  - :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part2)<br>
-
-
-
-- **CoAP**
-
-  协议 :  [CoAP](https://coap.technology/)
-
-  框架: [Californium(cf)](https://www.eclipse.org/californium/)
-  
-- :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-CoAP设备连接协议》](https://iot.mushuwei.cn/#/thingsboard/coap-protocol)<br>
-
-
-
-
-- **HTTP** 
-  
-  协议 :  [HTTP](https://baike.baidu.com/item/HTTP/243074)
-  
-  框架 :  [Spring Boot](https://spring.io/projects/spring-boot)
-
-
-
-- **Gateway** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/gateway.png)
-  
-  概述 : 网关
-  
-  *常用协议*
-  
-  - **Modbus** 
-  
-- :unlock: [《一文说透Modbus协议》](https://blog.mushuwei.cn/2020/05/23/%E4%B8%80%E6%96%87%E8%AE%B2%E9%80%8FModbus%E5%8D%8F%E8%AE%AE/)<br>
-  
-  
-  - **OPC UA**
-
-- **WebSocket**
-
-  概述：WebSocket
-
-  :zap: 待更新......
-
-### c.『数据交换和序列化篇 』
-
-- **JSON**
-  
-  > 物模型指将物理空间中的实体数字化，并在云端构建该实体的数据模型。物模型TSL（Thing Specification Language）。是一个JSON格式的文件。
-
-	名词解释 : [物模型](https://www.alibabacloud.com/help/zh/doc-detail/73727.htm)
-
-  :closed_lock_with_key: [《技术魔法剖析物模型》](https://blog.mushuwei.cn/2019/04/17/%E6%88%91%E6%98%AF%E5%BA%96%E4%B8%81-%E8%82%A2%E8%A7%A3IOT%E5%B9%B3%E5%8F%B0%E4%B9%8B%E7%89%A9%E6%A8%A1%E5%9E%8B/)<br>
-
-
-
-
-- **Protocol Buffers**
-
-  > ProtoBuf是一种语言无关，与平台无关并且具有可扩展机制，用于序列化结构化数据
-
-  官方网址：https://developers.google.com/protocol-buffers
-
-	:unlock: [《Proto语言指南(proto3)》](https://blog.mushuwei.cn/2018/10/07/Proto%E8%AF%AD%E8%A8%80%E6%8C%87%E5%8D%97-proto3/)<br>
-
-	
-
-### d.『设备、接口认证和安全篇 』
-
-- **Spring Security**
-
-  
-
-- **OAuth2**
-
-:zap: 待更新......
-
-### e.『流处理和消息队列篇 』	
-
-- **kafka**
-
-
-
-- **RabbitMQ**
-
-:zap: 待更新......
-
-### f.『规则引擎篇 』
-
-**Rule Engine**
-
-:zap: 待更新......
-
-### g.『Docker和Kubernetes篇 』
-
-- **Docker**
-
-
-
-- **Kubernetes**
-
-:zap: 待更新......
 
 ## IoT在线资源推荐
 
