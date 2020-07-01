@@ -21,14 +21,18 @@
 
 
 
-
 <p align="center">
     <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/halving_line.jpg" alt="分割线">
 </p>
 <p align="center">
 
+------
 
-[📖 Thingsboard源码分析](README-EN.md) | 📖 从0搭建高性能IoT平台和实践
+[📖 Thingsboard源码分析](README_EN.md) | 📖 从0搭建高性能IoT平台和实践
+
+------
+
+
 
 
 ### a.『 预习篇 』
