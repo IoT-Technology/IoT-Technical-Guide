@@ -8,16 +8,11 @@ import org.eclipse.milo.opcua.sdk.client.api.nodes.VariableNode;
 import org.eclipse.milo.opcua.sdk.client.api.subscriptions.UaSubscription;
 import org.eclipse.milo.opcua.stack.core.AttributeId;
 import org.eclipse.milo.opcua.stack.core.BuiltinDataType;
-import org.eclipse.milo.opcua.stack.core.types.builtin.DataValue;
-import org.eclipse.milo.opcua.stack.core.types.builtin.NodeId;
-import org.eclipse.milo.opcua.stack.core.types.builtin.StatusCode;
-import org.eclipse.milo.opcua.stack.core.types.builtin.Variant;
+import org.eclipse.milo.opcua.stack.core.types.builtin.*;
 import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.Unsigned;
 import org.eclipse.milo.opcua.stack.core.types.enumerated.MonitoringMode;
 import org.eclipse.milo.opcua.stack.core.types.enumerated.TimestampsToReturn;
-import org.eclipse.milo.opcua.stack.core.types.structured.MonitoredItemCreateRequest;
-import org.eclipse.milo.opcua.stack.core.types.structured.MonitoringParameters;
-import org.eclipse.milo.opcua.stack.core.types.structured.ReadValueId;
+import org.eclipse.milo.opcua.stack.core.types.structured.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -25,7 +20,6 @@ import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.concurrent.ExecutionException;
 
 /**
  * @author james mu
@@ -69,15 +63,12 @@ public class ClientHandler {
      * @MethodName: subscribe
      * @Description: 订阅节点变量
      * @throws Exception
-     * @CreateTime 2019年12月18日 上午10:38:11
      */
     public String subscribe(List<NodeEntity> nodes) throws Exception {
 
         if (client == null) {
             return "找不到客户端，操作失败";
         }
-
-//		List<Node> ns = client.getAddressSpace().browse(new NodeId(2, "模拟通道一.模拟设备一")).get();
 
         // 查询订阅对象，没有则创建
         UaSubscription subscription = null;
@@ -132,6 +123,7 @@ public class ClientHandler {
         return "断开连接成功";
     }
 
+
     /**
      * @MethodName: write
      * @Description: 变节点量写入
@@ -148,10 +140,10 @@ public class ClientHandler {
         Variant value = null;
         switch (node.getType()) {
             case "int":
-                value = new Variant(Integer.parseInt(node.getValue().toString()));
+                value = new Variant(Integer.parseInt(node.getValue()));
                 break;
             case "boolean":
-                value = new Variant(Boolean.parseBoolean(node.getValue().toString()));
+                value = new Variant(Boolean.parseBoolean(node.getValue()));
                 break;
         }
         DataValue dataValue = new DataValue(value, null, null);
@@ -164,21 +156,24 @@ public class ClientHandler {
     /**
      * 读取节点数据
      *
-     * @param node
      * @return
      * @throws Exception
      */
     public String read(NodeEntity node) throws Exception {
-        if (Objects.isNull(client)) {
-            return "找不到客户端, 操作失败";
+        if (client == null) {
+            return "找不到客户端，操作失败";
         }
+
         NodeId nodeId = new NodeId(node.getIndex(), node.getIdentifier());
         VariableNode vnode = client.getAddressSpace().createVariableNode(nodeId);
         DataValue value = vnode.readValue().get();
-        log.info("Value:{}", value);
+        log.info("Value={}", value);
+
         Variant variant = value.getValue();
         log.info("Variant={}", variant.getValue());
+
         log.info("BackingClass={}", BuiltinDataType.getBackingClass(variant.getDataType().get()));
+
         return "节点【" + node.getIdentifier() + "】：" + variant.getValue();
     }
 }

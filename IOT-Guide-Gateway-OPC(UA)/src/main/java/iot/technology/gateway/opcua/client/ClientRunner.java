@@ -1,10 +1,10 @@
 package iot.technology.gateway.opcua.client;
 
-import iot.technology.gateway.opcua.cert.KeyStoreLoader;
 import iot.technology.gateway.opcua.config.Properties;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.milo.opcua.sdk.client.OpcUaClient;
 import org.eclipse.milo.opcua.sdk.client.api.config.OpcUaClientConfig;
+import org.eclipse.milo.opcua.sdk.client.api.identity.AnonymousProvider;
 import org.eclipse.milo.opcua.sdk.client.api.identity.UsernameProvider;
 import org.eclipse.milo.opcua.stack.client.DiscoveryClient;
 import org.eclipse.milo.opcua.stack.core.Stack;
@@ -35,12 +35,10 @@ public class ClientRunner {
     private final CompletableFuture<OpcUaClient> future = new CompletableFuture<>();
 
     private final Properties properties;
-    private final KeyStoreLoader keyStoreLoader;
 
     @Autowired
-    public ClientRunner(Properties properties, KeyStoreLoader keyStoreLoader) {
+    public ClientRunner(Properties properties) {
         this.properties = properties;
-        this.keyStoreLoader = keyStoreLoader;
     }
 
 
@@ -65,16 +63,6 @@ public class ClientRunner {
 
     private OpcUaClient createClient() throws Exception {
 
-        Path securityTempDir = Paths.get(properties.getCertPath(), "security");
-
-        Files.createDirectories(securityTempDir);
-        if (!Files.exists(securityTempDir)) {
-            log.error("unable to create security dir: " + securityTempDir);
-            return null;
-        }
-
-        KeyStoreLoader loader = keyStoreLoader.load(securityTempDir);
-
         // 搜索OPC节点
         List<EndpointDescription> endpoints = null;
         try {
@@ -97,11 +85,11 @@ public class ClientRunner {
                 .findFirst().orElseThrow(() -> new Exception("no desired endpoints returned"));
 
         OpcUaClientConfig config = OpcUaClientConfig.builder()
-                .setApplicationName(LocalizedText.english("jlOpcUaClient"))
-                .setApplicationUri("urn:Jellyleo:UnifiedAutomation:UaExpert@Jellyleo")
-                .setCertificate(loader.getClientCertificate()).setKeyPair(loader.getClientKeyPair())
-                .setEndpoint(endpoint).setIdentityProvider(new UsernameProvider("jellyleo", "123456"))
-//				.setIdentityProvider(new AnonymousProvider()) // 匿名验证
+                .setApplicationName(LocalizedText.english(properties.getAppName()))
+                /**
+                 * 匿名验证
+                 */
+                .setEndpoint(endpoint).setIdentityProvider(new AnonymousProvider())
                 .setRequestTimeout(Unsigned.uint(5000)).build();
 
         return OpcUaClient.create(config);

@@ -5,19 +5,21 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Objects;
+
 /**
  * @author james mu
- * @date 2020/7/10 09:29
+ * @date 2020/7/11 22:03
  */
 @Data
-@Builder
+@Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
 public class NodeEntity {
 
     private Integer index;
     private String identifier;
-    private Object value;
+    private String value;
     private String type;
     private Integer clientHandle;
 }
