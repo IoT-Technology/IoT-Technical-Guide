@@ -145,6 +145,12 @@ public class ClientHandler {
             case "boolean":
                 value = new Variant(Boolean.parseBoolean(node.getValue()));
                 break;
+            case "double":
+                value = new Variant(Double.parseDouble(node.getValue()));
+                break;
+            case "string":
+                value = new Variant(node.getValue());
+                break;
         }
         DataValue dataValue = new DataValue(value, null, null);
 
