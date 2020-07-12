@@ -66,6 +66,7 @@
         <module>IOT-Guide-Flink</module>
         <module>IOT-Guide-Custom-Protocol</module>
         <module>IOT-Guide-Gateway-OPC(UA)</module>
+        <module>IOT-Guide-Protobuf</module>
     </modules>
 
     <url>https://sanshengshui.github.io/</url>
