@@ -1,7 +1,6 @@
 package iot.technology.gateway.modbus;
 
 import com.serotonin.modbus4j.ModbusFactory;
-
 import java.util.Objects;
 
 /**
