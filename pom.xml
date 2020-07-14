@@ -97,6 +97,7 @@
         <paho.version>1.2.4</paho.version>
         <milo.version>0.4.1</milo.version>
         <bouncycastle.version>1.65</bouncycastle.version>
+        <easyrule.version>4.0.0</easyrule.version>
     </properties>
 
     <dependencies>
@@ -296,6 +297,11 @@
                 <groupId>org.eclipse.milo</groupId>
                 <artifactId>sdk-server</artifactId>
                 <version>${milo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jeasy</groupId>
+                <artifactId>easy-rules-core</artifactId>
+                <version>${easyrule.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
