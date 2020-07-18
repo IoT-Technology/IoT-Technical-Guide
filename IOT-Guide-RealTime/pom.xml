@@ -29,7 +29,7 @@
     <artifactId>IOT-Guide-RealTime</artifactId>
     <packaging>jar</packaging>
 
-    <url>https://sanshengshui.github.io/</url>
+    <url>https://iot.mushuwei.cn/</url>
     <description>IOT Technical Guide - Real Time of the era of the Internet of Everything</description>
 
     <dependencies>

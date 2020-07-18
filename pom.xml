@@ -71,8 +71,8 @@
         <module>IOT-Guide-DB-PostgreSQL</module>
     </modules>
 
-    <url>https://sanshengshui.github.io/</url>
-    <inceptionYear>2019</inceptionYear>
+    <url>https://iot.mushuwei.cn/</url>
+    <inceptionYear>2019-2020</inceptionYear>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

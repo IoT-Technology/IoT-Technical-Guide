@@ -24,7 +24,7 @@
   <artifactId>IOT-Guide-HTTP-Test</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <url>https://sanshengshui.github.io/</url>
+  <url>https://iot.mushuwei.cn/</url>
   <description>IOT Technical Guide - Test HTTP protocol of the era of the Internet of Everything</description>
 
   <properties>

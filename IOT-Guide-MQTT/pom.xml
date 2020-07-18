@@ -29,7 +29,7 @@
     <artifactId>IOT-Guide-MQTT</artifactId>
     <packaging>jar</packaging>
 
-    <url>https://sanshengshui.github.io/</url>
+    <url>https://iot.mushuwei.cn/</url>
     <description>IOT Technical Guide - MQTT protocol of the era of the Internet of Everything</description>
 
     <properties>
