@@ -10,6 +10,7 @@
 <p align="center">
     <a href="https://blog.mushuwei.cn/categories/IOT-Technical-Guide/"><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="阅读">
     <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
+    <a href="https://gitter.im/sanshengshui/IoT-Technology-Guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/sanshengshui/IoT-Technology-Guide.svg"></a>
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/stargazers" title="Stars"><img src="https://img.shields.io/github/stars/IoT-Technology/IOT-Technical-Guide.svg?style=social&label=Star"></a>
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/network/members" title="Fork Members"><img src="https://img.shields.io/github/forks/IoT-Technology/IOT-Technical-Guide.svg?style=social&label=Fork"></a>
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/watchers" title="Watchers"><img src="https://img.shields.io/github/watchers/IoT-Technology/IOT-Technical-Guide.svg?style=social&label=Watch"></a>
