@@ -6,5 +6,5 @@ package iot.technology.tsl.data.kv;
  * @Version 1.0
  */
 public enum DataType {
-    STRING, LONG, BOOLEAN, DOUBLE;
+    STRING, LONG, BOOLEAN, DOUBLE, JSON;
 }

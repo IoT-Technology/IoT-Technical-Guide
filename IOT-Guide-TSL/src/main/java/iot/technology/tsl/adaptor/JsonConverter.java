@@ -83,7 +83,9 @@ public class JsonConverter {
                 } else {
                     throw new JsonSyntaxException(CAN_T_PARSE_VALUE + value);
                 }
-            } else {
+            } else if (element.isJsonObject() || element.isJsonArray()) {
+                result.add(new JsonDataEntry(valueEntry.getKey(), element.toString()));
+            }   else {
                 throw new JsonSyntaxException(CAN_T_PARSE_VALUE + element);
             }
         }

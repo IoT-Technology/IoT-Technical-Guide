@@ -48,6 +48,10 @@ public class TslApiController {
                         responseModel.setValue("Boolean value="+kvEntry.getValueAsString());
                         responseModelList.add(responseModel);
                         break;
+                    case JSON:
+                        responseModel.setValue("Json value="+kvEntry.getValueAsString());
+                        responseModelList.add(responseModel);
+                        break;
                 }
 
             }
