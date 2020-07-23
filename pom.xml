@@ -100,6 +100,7 @@
         <milo.version>0.4.1</milo.version>
         <bouncycastle.version>1.65</bouncycastle.version>
         <easyrule.version>4.0.0</easyrule.version>
+        <netty-socketio.version>1.7.7</netty-socketio.version>
     </properties>
 
     <dependencies>
@@ -220,11 +221,6 @@
                 <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-websocket</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
@@ -304,6 +300,11 @@
                 <groupId>org.jeasy</groupId>
                 <artifactId>easy-rules-core</artifactId>
                 <version>${easyrule.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.corundumstudio.socketio</groupId>
+                <artifactId>netty-socketio</artifactId>
+                <version>${netty-socketio.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
