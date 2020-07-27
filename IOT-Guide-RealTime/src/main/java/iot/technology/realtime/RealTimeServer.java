@@ -20,15 +20,20 @@ public class RealTimeServer {
             @Override
             public void onData(final SocketIOClient client, ChatObject data, final AckRequest ackRequest) {
 
-                // check is ack requested by client,
-                // but it's not required check
+                /**
+                 * 客户端请求检查ack, 但不需要检查
+                 */
                 if (ackRequest.isAckRequested()) {
-                    // send ack response with data to client
-                    ackRequest.sendAckData("client message was delivered to server!", "yeah!");
+                    /**
+                     * 向客户端发送带数据的确认响应
+                     */
+                    ackRequest.sendAckData("客户端消息已传递到服务器!", "你说的东西挺有意思的!");
                 }
 
-                // send message back to client with ack callback WITH data
-                ChatObject ackChatObjectData = new ChatObject(data.getUserName(), "message with ack data");
+                /**
+                 * 使用带数据的ack回调将消息返回客户端
+                 */
+                ChatObject ackChatObjectData = new ChatObject(data.getUserName(), "包含ack数据的消息");
                 client.sendEvent("ackevent2", new AckCallback<String>(String.class) {
                     @Override
                     public void onSuccess(String result) {
@@ -36,9 +41,10 @@ public class RealTimeServer {
                     }
                 }, ackChatObjectData);
 
-                ChatObject ackChatObjectData1 = new ChatObject(data.getUserName(), "message with void ack");
+                ChatObject ackChatObjectData1 = new ChatObject(data.getUserName(), "不带有ack数据的消息");
                 client.sendEvent("ackevent3", new VoidAckCallback() {
 
+                    @Override
                     protected void onSuccess() {
                         System.out.println("void ack from: " + client.getSessionId());
                     }

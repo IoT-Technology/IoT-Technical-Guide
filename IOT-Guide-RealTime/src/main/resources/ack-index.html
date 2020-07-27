@@ -4,7 +4,7 @@
 
         <meta charset="utf-8" />
 
-        <title>Demo Chat</title>
+        <title>物联网技术指导-实时IM</title>
 
         <link href="../bootstrap.css" rel="stylesheet">
 
@@ -34,25 +34,25 @@
 		var socket =  io.connect('http://localhost:9092');
 
 		socket.on('connect', function() {
-			output('<span class="connect-msg">Client has connected to the server!</span>');
+			output('<span class="connect-msg">客户端已连接到服务器!</span>');
 		});
 
 		socket.on('message', function(data, ackServerCallback) {
 			output('<span class="username-msg">' + data.userName + ':</span> ' + data.message);
 			if (ackServerCallback) {
                                 // send ack data to server
-                        	ackServerCallback('server message was delivered to client!');
+                        	ackServerCallback('服务器消息已传递到客户端!');
                         }
 		});
 
 		socket.on('disconnect', function() {
-			output('<span class="disconnect-msg">The client has disconnected!</span>');
+			output('<span class="disconnect-msg">客户端已经断开连接!</span>');
 		});
 
 		socket.on('ackevent2', function(data, ackServerCallback, arg1) {
 			output('<span class="username-msg">' + data.userName + ':</span> ' + data.message);
                         if (ackServerCallback) {
-                           ackServerCallback('server message was delivered to client!');
+                           ackServerCallback('服务器消息已传递到客户端!');
                         }
 		});
 
@@ -76,7 +76,7 @@
                                           message: message};
 
                         socket.emit('ackevent1', jsonObject, function(arg1, arg2) {
-                            alert("ack from server! arg1: " + arg1 + ", arg2: " + arg2);
+                            alert("服务器确认! 服务器 : " + arg1 + ", 回复 : " + arg2);
                         });
 		}
 
@@ -97,7 +97,7 @@
 
 <body>
 
-	<h1>Netty-socketio Demo Chat</h1>
+	<h1>物联网技术指导 --- Demo Chat</h1>
 
 	<br/>
 
@@ -105,9 +105,9 @@
 	</div>
 
         <form class="well form-inline" onsubmit="return false;">
-           <input id="msg" class="input-xlarge" type="text" placeholder="Type something..."/>
-           <button type="button" onClick="sendMessage()" class="btn" id="send">Send</button>
-           <button type="button" onClick="sendDisconnect()" class="btn">Disconnect</button>
+           <input id="msg" class="input-xlarge" type="text" placeholder="说点好听的～"/>
+           <button type="button" onClick="sendMessage()" class="btn" id="send">发送</button>
+           <button type="button" onClick="sendDisconnect()" class="btn">断开连接</button>
         </form>
 
 
