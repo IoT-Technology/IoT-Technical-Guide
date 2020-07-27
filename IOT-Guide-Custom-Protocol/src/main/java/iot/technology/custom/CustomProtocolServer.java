@@ -1,4 +1,4 @@
-package iot.technology.custom.protocol;
+package iot.technology.custom;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

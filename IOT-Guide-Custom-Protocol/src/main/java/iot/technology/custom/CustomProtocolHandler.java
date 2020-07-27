@@ -1,4 +1,4 @@
-package iot.technology.custom.protocol;
+package iot.technology.custom;
 
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

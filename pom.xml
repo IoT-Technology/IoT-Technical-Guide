@@ -101,6 +101,7 @@
         <bouncycastle.version>1.65</bouncycastle.version>
         <easyrule.version>4.0.0</easyrule.version>
         <netty-socketio.version>1.7.7</netty-socketio.version>
+        <fastjson.version>1.2.72</fastjson.version>
     </properties>
 
     <dependencies>
@@ -305,6 +306,12 @@
                 <groupId>com.corundumstudio.socketio</groupId>
                 <artifactId>netty-socketio</artifactId>
                 <version>${netty-socketio.version}</version>
+            </dependency>
+            <!-- fastjson序列化 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
