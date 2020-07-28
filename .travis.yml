@@ -3,4 +3,4 @@ sudo: false
 jdk:
   - openjdk8
 
-install: mvn install package -DskipTests=true -Dmaven.javadoc.skip=true
+install: mvn clean verify -DskipTests=true -Dmaven.javadoc.skip=true
