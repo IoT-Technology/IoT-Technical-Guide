@@ -25,7 +25,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <name>IOT Technology Guide :: Real Time</name>
+    <name>IOT Technology Guide :: Real Time Backend</name>
     <artifactId>IOT-Guide-RealTime</artifactId>
     <packaging>jar</packaging>
 
@@ -40,8 +40,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.corundumstudio.socketio</groupId>
-            <artifactId>netty-socketio</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
