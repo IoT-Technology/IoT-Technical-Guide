@@ -8,6 +8,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ *
+ *<pre>
+ * **********************************************************************************
+ *                                   protocol
+ * +---------+---------+---------+----------+-----------+----------------+-----------+
+ * |         |         |         |          |           |                |           |
+ * |   2     |   1     |    1    |     1    |     2     |       N        |     1     |
+ * |         |         |         |          |           |                |           |
+ * +---------------------------------------------------------------------------------+
+ * |         |         |         |          |           |                |           |
+ * |   STR   |   CMD   |  SWV    |   ENM    |   LEN     |      DAT       |    VER    |
+ * |         |         |         |          |           |                |           |
+ * +---------+---------+---------+----------+-----------+----------------+-----------+
+ *
+ * 消息头7个字节定长
+ * = 2 // 起始符,STR: ASCII码 "##", 用0x23,0x23表示
+ * + 1 // 命令单元
+ * + 1 // 软件版本号,企业自定义的车载终端固件版本号
+ * + 1 // 数据加密方式 0x01-不加密 0x02-对称AES128算法
+ * + 2 // 数据部分的长度,short 类型
+ * </pre>
  * @author james mu
  * @date 2020/7/27 13:45
  */
@@ -35,7 +56,6 @@ public class PacketCodec {
         byteBuf.writeByte(MAGIC_NUMBER1);
         byteBuf.writeByte(MAGIC_NUMBER2);
         byteBuf.writeByte(packet.getCommand());
-        byteBuf.writeBytes(packet.getVin());
         byteBuf.writeByte(packet.getSwv());
         byteBuf.writeByte(Encryption.DEFAULT.getEncryptionAlgorithm());
         byteBuf.writeShort(bytes.length);
@@ -47,9 +67,6 @@ public class PacketCodec {
     public Packet decode(ByteBuf byteBuf) {
         byteBuf.skipBytes(2);
         byte command = byteBuf.readByte();
-
-        byte[] vinByte = new byte[17];
-        byteBuf.readBytes(vinByte);
 
         byte swv = byteBuf.readByte();
         byte enm = byteBuf.readByte();
@@ -63,9 +80,7 @@ public class PacketCodec {
         Encryption encryption = getEncryption(enm);
 
         if (requestType != null && encryption != null) {
-            Packet packet = encryption.decrypt(requestType, bytes);
-            packet.setVin(vinByte);
-            return packet;
+            return encryption.decrypt(requestType, bytes);
         }
         return null;
 

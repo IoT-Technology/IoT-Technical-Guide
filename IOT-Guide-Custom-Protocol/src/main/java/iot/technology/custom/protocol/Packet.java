@@ -13,8 +13,6 @@ public abstract class Packet {
     @JSONField(serialize = false)
     public abstract byte getCommand();
 
-    public byte[] vin;
-
     @JSONField(deserialize = false, serialize = false)
     private byte swv = 1;
 

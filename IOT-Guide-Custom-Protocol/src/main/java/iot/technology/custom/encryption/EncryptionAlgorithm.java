@@ -14,15 +14,6 @@ public interface EncryptionAlgorithm {
     /**
      * 对称AES128算法
      */
-    byte aes128 = (byte) 0x05;
+    byte aes128 = (byte) 0x02;
 
-    /**
-     * 异常
-     */
-    byte error = (byte) 0xFE;
-
-    /**
-     * 无效
-     */
-    byte valid = (byte) 0xFF;
 }
