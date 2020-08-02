@@ -3,9 +3,19 @@ package iot.technology.custom.protocol;
 import io.netty.buffer.ByteBuf;
 import iot.technology.custom.encryption.Encryption;
 import iot.technology.custom.encryption.impl.NotEncryption;
+import iot.technology.custom.protocol.request.HeartBeatRequestPacket;
+import iot.technology.custom.protocol.request.LoginRequestPacket;
+import iot.technology.custom.protocol.request.LogoutRequestPacket;
+import iot.technology.custom.protocol.request.MessageRequestPacket;
+import iot.technology.custom.protocol.response.HeartBeatResponsePacket;
+import iot.technology.custom.protocol.response.LoginResponsePacket;
+import iot.technology.custom.protocol.response.LogoutResponsePacket;
+import iot.technology.custom.protocol.response.MessageResponsePacket;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static iot.technology.custom.protocol.command.Command.*;
 
 /**
  *
@@ -44,6 +54,15 @@ public class PacketCodec {
 
     private PacketCodec() {
         packetTypeMap = new HashMap<>();
+        packetTypeMap.put(LOGIN_REQUEST, LoginRequestPacket.class);
+        packetTypeMap.put(LOGIN_RESPONSE, LoginResponsePacket.class);
+        packetTypeMap.put(MESSAGE_REQUEST, MessageRequestPacket.class);
+        packetTypeMap.put(MESSAGE_RESPONSE, MessageResponsePacket.class);
+        packetTypeMap.put(LOGOUT_REQUEST, LogoutRequestPacket.class);
+        packetTypeMap.put(LOGOUT_RESPONSE, LogoutResponsePacket.class);
+        packetTypeMap.put(HEARTBEAT_REQUEST, HeartBeatRequestPacket.class);
+        packetTypeMap.put(HEARTBEAT_RESPONSE, HeartBeatResponsePacket.class);
+
         serializerMap = new HashMap<>();
         Encryption encryption = new NotEncryption();
         serializerMap.put(encryption.getEncryptionAlgorithm(), encryption);
