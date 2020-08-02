@@ -37,6 +37,7 @@ public class CustomProtocolServer {
                       ch.pipeline().addLast(new IotIdleStateHandler());
                   }
               });
+      bind(serverBootstrap, PORT);
     }
 
     private static void bind(final ServerBootstrap serverBootstrap, final int port) {
