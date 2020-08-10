@@ -6,7 +6,13 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import iot.technology.custom.codec.PacketCodecHandler;
+import iot.technology.custom.codec.Spliter;
 import iot.technology.custom.handler.IotIdleStateHandler;
+import iot.technology.custom.server.handler.AuthHandler;
+import iot.technology.custom.server.handler.CustomProtocolHandler;
+import iot.technology.custom.server.handler.HeartBeatRequestHandler;
+import iot.technology.custom.server.handler.LoginRequestHandler;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
@@ -35,6 +41,12 @@ public class CustomProtocolServer {
                   @Override
                   protected void initChannel(NioSocketChannel ch) throws Exception {
                       ch.pipeline().addLast(new IotIdleStateHandler());
+                      ch.pipeline().addLast(new Spliter());
+                      ch.pipeline().addLast(PacketCodecHandler.INSTANCE);
+                      ch.pipeline().addLast(LoginRequestHandler.INSTANCE);
+                      ch.pipeline().addLast(HeartBeatRequestHandler.INSTANCE);
+                      ch.pipeline().addLast(AuthHandler.INSTANCE);
+                      ch.pipeline().addLast(CustomProtocolHandler.INSTANCE);
                   }
               });
       bind(serverBootstrap, PORT);

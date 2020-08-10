@@ -22,15 +22,15 @@ import static iot.technology.custom.protocol.command.Command.*;
  *<pre>
  * **********************************************************************************
  *                                   protocol
- * +---------+---------+---------+----------+-----------+----------------+-----------+
- * |         |         |         |          |           |                |           |
- * |   2     |   1     |    1    |     1    |     2     |       N        |     1     |
- * |         |         |         |          |           |                |           |
- * +---------------------------------------------------------------------------------+
- * |         |         |         |          |           |                |           |
- * |   STR   |   CMD   |  SWV    |   ENM    |   LEN     |      DAT       |    VER    |
- * |         |         |         |          |           |                |           |
- * +---------+---------+---------+----------+-----------+----------------+-----------+
+ * +---------+---------+---------+----------+-----------+----------------+
+ * |         |         |         |          |           |                |
+ * |   2     |   1     |    1    |     1    |     2     |       N        |
+ * |         |         |         |          |           |                |
+ * +----------------------------------------------------------------------
+ * |         |         |         |          |           |                |
+ * |   STR   |   CMD   |  SWV    |   ENM    |   LEN     |      DAT       |
+ * |         |         |         |          |           |                |
+ * +---------+---------+---------+----------+-----------+----------------+
  *
  * 消息头7个字节定长
  * = 2 // 起始符,STR: ASCII码 "##", 用0x23,0x23表示
@@ -44,10 +44,7 @@ import static iot.technology.custom.protocol.command.Command.*;
  */
 public class PacketCodec {
 
-    public static final byte MAGIC_NUMBER1 = (byte) 0x23;
-    public static final byte MAGIC_NUMBER2 = (byte) 0x23;
-    public static final byte VER = (byte) 0x01;
-
+    public static final short MAGIC_NUMBER = 0x2323;
     public static final PacketCodec INSTANCE = new PacketCodec();
     private final Map<Byte, Class<? extends Packet>> packetTypeMap;
     private final Map<Byte, Encryption> serializerMap;
@@ -70,25 +67,33 @@ public class PacketCodec {
     }
 
     public void encode(ByteBuf byteBuf, Packet packet) {
+        // 1. 序列化 java对象
         byte[] bytes = Encryption.DEFAULT.encrypt(packet);
 
-        byteBuf.writeByte(MAGIC_NUMBER1);
-        byteBuf.writeByte(MAGIC_NUMBER2);
+        // 2. 实际编码过程
+        byteBuf.writeShort(MAGIC_NUMBER);
         byteBuf.writeByte(packet.getCommand());
         byteBuf.writeByte(packet.getSwv());
         byteBuf.writeByte(Encryption.DEFAULT.getEncryptionAlgorithm());
         byteBuf.writeShort(bytes.length);
         byteBuf.writeBytes(bytes);
-        byteBuf.writeByte(VER);
 
     }
 
     public Packet decode(ByteBuf byteBuf) {
+        // 跳过 magic number
         byteBuf.skipBytes(2);
+
+        // 指令
         byte command = byteBuf.readByte();
 
+        // 版本号
         byte swv = byteBuf.readByte();
+
+        // 数据加密方式
         byte enm = byteBuf.readByte();
+
+        // 数据包长度
         short length = byteBuf.readShort();
 
         byte[] bytes = new byte[length];
