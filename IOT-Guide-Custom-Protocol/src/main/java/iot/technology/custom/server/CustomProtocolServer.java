@@ -13,7 +13,6 @@ import iot.technology.custom.server.handler.AuthHandler;
 import iot.technology.custom.server.handler.CustomProtocolHandler;
 import iot.technology.custom.server.handler.HeartBeatRequestHandler;
 import iot.technology.custom.server.handler.LoginRequestHandler;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
 
@@ -21,7 +20,6 @@ import java.util.Date;
  * @author james mu
  * @date 2020/5/26 22:56
  */
-@Slf4j
 public class CustomProtocolServer {
 
     private static final int PORT = 8000;
@@ -55,9 +53,9 @@ public class CustomProtocolServer {
     private static void bind(final ServerBootstrap serverBootstrap, final int port) {
         serverBootstrap.bind(port).addListener(future -> {
             if (future.isSuccess()) {
-                log.info("{} 端口:{}, 绑定成功!",new Date(), port);
+                System.out.println(new Date() + ": 端口[" + port + "]绑定成功!");
             } else {
-                log.error("端口:{}, 绑定失败!");
+                System.err.println("端口[" + port + "]绑定失败!");
             }
         });
     }

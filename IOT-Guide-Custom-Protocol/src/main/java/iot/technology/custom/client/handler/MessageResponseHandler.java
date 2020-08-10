@@ -9,12 +9,11 @@ import lombok.extern.slf4j.Slf4j;
  * @author james mu
  * @date 2020/8/10 17:21
  */
-@Slf4j
 public class MessageResponseHandler extends SimpleChannelInboundHandler<MessageResponsePacket> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageResponsePacket messageResponsePacket) throws Exception {
         String fromClientId = messageResponsePacket.getFromClientId();
-        log.info(fromClientId + " -> " + messageResponsePacket.getMessage());
+        System.out.println(fromClientId + " -> " + messageResponsePacket.getMessage());
     }
 }

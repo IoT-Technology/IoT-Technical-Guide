@@ -4,7 +4,6 @@ package iot.technology.custom.util;
 import io.netty.channel.Channel;
 import iot.technology.custom.attribute.Attributes;
 import iot.technology.custom.session.Session;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,7 +12,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author james mu
  * @date 2020/8/10 15:11
  */
-@Slf4j
 public class SessionUtil {
 
     private static final Map<String, Channel> clientIdChannelMap = new ConcurrentHashMap<>();
@@ -28,7 +26,7 @@ public class SessionUtil {
             Session session = getSession(channel);
             clientIdChannelMap.remove(session.getClientId());
             channel.attr(Attributes.SESSION).set(null);
-            log.info(session + " 退出登录!");
+            System.out.println(session + " 退出登录!");
         }
     }
 

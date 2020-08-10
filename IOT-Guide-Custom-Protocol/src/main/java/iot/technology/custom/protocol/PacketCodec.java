@@ -98,7 +98,6 @@ public class PacketCodec {
 
         byte[] bytes = new byte[length];
         byteBuf.readBytes(bytes);
-        byte ver = byteBuf.readByte();
 
         Class<? extends Packet> requestType = getRequestType(command);
         Encryption encryption = getEncryption(enm);

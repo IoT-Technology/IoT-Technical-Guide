@@ -16,7 +16,6 @@ import java.util.Date;
  * @date 2020/8/10 15:42
  */
 @ChannelHandler.Sharable
-@Slf4j
 public class LoginRequestHandler extends SimpleChannelInboundHandler<LoginRequestPacket> {
 
     public static final LoginRequestHandler INSTANCE = new LoginRequestHandler();
@@ -36,12 +35,12 @@ public class LoginRequestHandler extends SimpleChannelInboundHandler<LoginReques
             loginResponsePacket.setSuccess(true);
             String clientId = loginRequestPacket.getClientId();
             loginResponsePacket.setClientId(clientId);
-            log.info("[" + loginRequestPacket.getClientId() + "]登录成功");
+            System.out.println("[" + loginRequestPacket.getClientId() + "]登录成功");
             SessionUtil.bindSession(new Session(clientId), ctx.channel());
         } else {
             loginResponsePacket.setReason("账号密码校验失败");
             loginResponsePacket.setSuccess(false);
-            log.error(new Date() + ": 登录失败!");
+            System.out.println(new Date() + ": 登录失败!");
         }
         //登录响应
         ctx.writeAndFlush(loginResponsePacket);

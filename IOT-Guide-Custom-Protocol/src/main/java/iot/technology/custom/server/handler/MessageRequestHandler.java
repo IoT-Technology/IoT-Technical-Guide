@@ -15,7 +15,6 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2020/8/10 16:16
  */
 @ChannelHandler.Sharable
-@Slf4j
 public class MessageRequestHandler extends SimpleChannelInboundHandler<MessageRequestPacket> {
     public static final MessageRequestHandler INSTANCE = new MessageRequestHandler();
 
@@ -31,7 +30,8 @@ public class MessageRequestHandler extends SimpleChannelInboundHandler<MessageRe
         Session session = SessionUtil.getSession(ctx.channel());
 
         MessageResponsePacket messageResponsePacket = new MessageResponsePacket();
-        messageResponsePacket.setMessage(session.getClientId());
+        messageResponsePacket.setFromClientId(messageRequestPacket.getToClientId());
+        messageResponsePacket.setMessage(messageRequestPacket.getMessage());
 
         if (messageRequestPacket.getCoordination()) {
             Channel toClientChannel = SessionUtil.getChannel(messageRequestPacket.getToClientId());
@@ -42,8 +42,10 @@ public class MessageRequestHandler extends SimpleChannelInboundHandler<MessageRe
                     }
                 });
             } else {
-                log.error("[" + session.getClientId() + "] 不在线，发送失败!");
+                System.out.println("[" + session.getClientId() + "] 不在线，发送失败!");
             }
+        } else {
+            System.out.println(session.getClientId() + ":" + messageRequestPacket.getMessage());
         }
     }
 }

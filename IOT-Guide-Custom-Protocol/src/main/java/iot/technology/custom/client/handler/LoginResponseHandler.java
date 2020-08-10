@@ -5,13 +5,12 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import iot.technology.custom.protocol.response.LoginResponsePacket;
 import iot.technology.custom.session.Session;
 import iot.technology.custom.util.SessionUtil;
-import lombok.extern.slf4j.Slf4j;
+
 
 /**
  * @author james mu
  * @date 2020/8/10 17:24
  */
-@Slf4j
 public class LoginResponseHandler extends SimpleChannelInboundHandler<LoginResponsePacket> {
 
     @Override
@@ -19,15 +18,15 @@ public class LoginResponseHandler extends SimpleChannelInboundHandler<LoginRespo
         String clientId = loginResponsePacket.getClientId();
 
         if (loginResponsePacket.getSuccess()) {
-            log.info("[" + clientId + "]登录成功, clientId 为: " + clientId);
+            System.out.println("[" + clientId + "]登录成功, clientId 为: " + clientId);
             SessionUtil.bindSession(new Session(clientId), ctx.channel());
         } else {
-            log.error("[" + clientId + "]登录失败,原因:" + loginResponsePacket.getReason());
+            System.out.println("[" + clientId + "]登录失败,原因:" + loginResponsePacket.getReason());
         }
     }
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-        log.info("客户端连接被关闭!");
+        System.out.println("客户端连接被关闭!");
     }
 }
