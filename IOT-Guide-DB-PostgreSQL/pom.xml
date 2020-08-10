@@ -27,6 +27,7 @@
 
     <groupId>iot.technology</groupId>
     <artifactId>IOT-Guide-DB-PostgreSQL</artifactId>
+    <name>IOT Technology Guide :: DB PostgreSQL</name>
 
 
 </project>

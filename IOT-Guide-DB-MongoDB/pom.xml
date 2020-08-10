@@ -27,6 +27,7 @@
 
     <groupId>iot.technology</groupId>
     <artifactId>IOT-Guide-DB-MongoDB</artifactId>
+    <name>IOT Technology Guide :: DB MongoDB</name>
 
 
 </project>
