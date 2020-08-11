@@ -16,6 +16,7 @@ public class HeartBeatTimerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        scheduleSendHeartBeat(ctx);
         super.channelActive(ctx);
     }
 
