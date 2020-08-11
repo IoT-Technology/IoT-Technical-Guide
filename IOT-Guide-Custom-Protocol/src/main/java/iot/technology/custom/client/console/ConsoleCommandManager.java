@@ -17,7 +17,7 @@ public class ConsoleCommandManager implements ConsoleCommand {
 
     public ConsoleCommandManager() {
         consoleCommandMap = new HashMap<>();
-        consoleCommandMap.put("sendToUser", new SendToUserConsoleCommand());
+        consoleCommandMap.put("sendToClient", new SendToUserConsoleCommand());
         consoleCommandMap.put("logout", new LogoutConsoleCommand());
         consoleCommandMap.put("sendToServer", new SendToServerConsoleCommand());
     }
