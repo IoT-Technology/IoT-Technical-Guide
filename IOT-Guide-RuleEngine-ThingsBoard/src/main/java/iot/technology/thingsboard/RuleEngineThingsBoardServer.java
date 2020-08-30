@@ -1,10 +1,10 @@
-package com.sanshengshui.ruleengine;
+package iot.technology.thingsboard;
 
 /**
  * @author james mu
- * @date 2020/5/20 16:41
+ * @date 2020/8/30 23:47
  */
-public class RuleEngineServer {
+public class RuleEngineThingsBoardServer {
 
     public static void main(String[] args) {
         System.out.println("waiting update......!");

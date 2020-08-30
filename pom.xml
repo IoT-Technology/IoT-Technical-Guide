@@ -70,6 +70,7 @@
         <module>IOT-Guide-DB-MongoDB</module>
         <module>IOT-Guide-DB-PostgreSQL</module>
         <module>IOT-Guide-RealTime-Fontend</module>
+        <module>IOT-Guide-RuleEngine-ThingsBoard</module>
     </modules>
 
     <url>https://iot.mushuwei.cn/</url>
