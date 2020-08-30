@@ -25,8 +25,8 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <name>IOT Technology Guide :: Rule Engine</name>
-    <artifactId>IOT-Guide-RuleEngine</artifactId>
+    <name>IOT Technology Guide :: Rule Engine :: EasyRules</name>
+    <artifactId>IOT-Guide-RuleEngine-EasyRules</artifactId>
     <packaging>jar</packaging>
 
     <url>https://iot.mushuwei.cn/</url>

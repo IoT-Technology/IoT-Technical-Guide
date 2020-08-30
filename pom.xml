@@ -46,7 +46,7 @@
 
         <!--EN Internet of Things universal function -->
         <!--CN 物联网通用功能-->
-        <module>IOT-Guide-RuleEngine</module>
+        <module>IOT-Guide-RuleEngine-EasyRules</module>
         <module>IOT-Guide-DB</module>
         <module>IOT-Guide-RealTime-Backend</module>
 
