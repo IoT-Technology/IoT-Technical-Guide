@@ -14,6 +14,7 @@ import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.UnpooledByteBufAllocator;
 import io.netty.handler.codec.mqtt.MqttMessage;
 import io.netty.handler.codec.mqtt.MqttPublishMessage;
+import lombok.extern.slf4j.Slf4j;
 
 import java.nio.charset.Charset;
 import java.util.*;
@@ -22,6 +23,7 @@ import java.util.*;
  * @author james mu
  * @date 2019/4/4 21:54
  */
+@Slf4j
 public class JsonMqttAdaptor {
 
     private static final Gson GSON = new Gson();
@@ -37,7 +39,7 @@ public class JsonMqttAdaptor {
                 convertToUpdateAttributesRequest((MqttPublishMessage) inbound);
                 break;
             case SUBSCRIBE_ATTRIBUTES_REQUEST:
-                System.out.println("{\"key1\":\"value1\"}");
+                log.info("{\"key1\":\"value1\"}");
                 break;
             case GET_ATTRIBUTES_REQUEST:
                 convertToGetAttributesRequest((MqttPublishMessage) inbound);
@@ -50,9 +52,9 @@ public class JsonMqttAdaptor {
         try {
             Map<Long, List<KvEntry>> telemetryMaps = JsonConverter.convertToTelemetry(new JsonParser().parse(payload), inbound.variableHeader().messageId()).getData();
             for (Map.Entry<Long,List<KvEntry>> entry : telemetryMaps.entrySet()) {
-                System.out.println("key= " + entry.getKey());
+               log.info("key: {}",entry.getKey());
                 for (KvEntry kvEntry: entry.getValue()) {
-                    System.out.println("属性名="+kvEntry.getKey()+ " 属性值="+kvEntry.getValueAsString());
+                    log.info("属性名: {}. 属性值: {}", kvEntry.getKey(), kvEntry.getValueAsString());
                 }
             }
         } catch (IllegalStateException | JsonSyntaxException ex) {
@@ -65,7 +67,7 @@ public class JsonMqttAdaptor {
         try {
             Set<AttributeKvEntry> attributeKvEntrySet =  JsonConverter.convertToAttributes(new JsonParser().parse(payload), inbound.variableHeader().messageId()).getAttributes();
             for (AttributeKvEntry attributeKvEntry : attributeKvEntrySet){
-                System.out.println("属性名="+attributeKvEntry.getKey()+" 属性值="+attributeKvEntry.getValueAsString());
+                log.info("属性名: {}. 属性值: {}",attributeKvEntry.getKey(), attributeKvEntry.getValueAsString());
             }
         } catch (IllegalStateException | JsonSyntaxException ex) {
             throw new AdaptorException(ex);
@@ -81,10 +83,10 @@ public class JsonMqttAdaptor {
             if (clientKeys == null && sharedKeys == null) {
             } else {
                 for (String clientKey : clientKeys) {
-                    System.out.print("客户端属性:" + clientKey +" ");
+                    log.info("客户端属性: {} ", clientKey);
                 }
                 for (String sharedKey : sharedKeys) {
-                    System.out.print("共享设备属性:" + sharedKey + " ");
+                    log.info("共享设备属性: {} ", sharedKey);
                 }
             }
         }catch (RuntimeException e) {
