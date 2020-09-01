@@ -44,7 +44,7 @@
 >
 > 物联网平台是物联网架构中的核心部分，它连接现实世界和虚拟世界，以实现对象之间的通信，管理数据流，支持应用程序开发并为连接的物联网设备提供基本分析
 
- :dog::dog::dog: --->  [博文地址]( https://iot.mushuwei.cn/#/iot-platform)
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
@@ -55,7 +55,7 @@
 >
 > 聊到PaaS、SaaS，就不得不谈到多租户。
 
-:rabbit::rabbit::rabbit: --->  [博文地址]( https://iot.mushuwei.cn/#/saas)
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
@@ -67,7 +67,7 @@
 >
 > 同样也是物联网场景下使用最多的协议，是事实上的物联网“标准”协议
 
-:tiger::tiger::tiger: --->  [博文地址](https://iot.mushuwei.cn/#/mqtt-basic)
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
@@ -77,9 +77,7 @@
 >
 > 那么通过学习本文，你将能实现百万并发MQTT服务端。
 
-:pig::pig::pig: --->  [博文地址](https://iot.mushuwei.cn/#/high-performance-mqtt-server)
-
-:bouquet::bouquet::bouquet: --->  [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-MQTT) 
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
@@ -89,7 +87,7 @@
 >
 > 该协议旨在用于机器对机器（M2M）应用，例如智能能源和楼宇自动化。
 
-:boar: :boar::boar: ---> [博文地址](https://iot.mushuwei.cn/#/coap-basic)
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
@@ -99,8 +97,7 @@
 >
 > 接下来，我将通过100行代码为大家搭建一个功能完备的CoAP服务器。
 
-:horse::horse::horse: ---> [博文地址](https://iot.mushuwei.cn/#/100-lines-of-code-realize-coap-service)
-:cherry_blossom::cherry_blossom::cherry_blossom: --> [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Coap)
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
@@ -108,8 +105,7 @@
 
 > HTTP是可用于IoT应用程序的通用网络协议。您可以在此处找到有关HTTP的更多信息。
 
-:sheep::sheep::sheep: ---> [博文地址](https://iot.mushuwei.cn/#/rethinking-http)
-:tulip::tulip::tulip: ---> [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-HTTP)
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
@@ -119,8 +115,7 @@
 >
 > 通过本文和工程的学习后，你将轻松应付一切！
 
-:snake::snake::snake: ---> [博文地址](https://iot.mushuwei.cn/#/decoder-encoder-equipment-protocol)
-:four_leaf_clover::four_leaf_clover::four_leaf_clover: ---> [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Custom-Protocol)
+．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
 
 
 
