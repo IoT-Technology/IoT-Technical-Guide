@@ -40,17 +40,73 @@
 
 -  [《新基建和5G风口下的物联网平台》](https://iot.mushuwei.cn/#/iot-platform)<br>
 
+> 物联网正处于元年，赶紧学习起来吧！
+>
+> 物联网平台是物联网架构中的核心部分，它连接现实世界和虚拟世界，以实现对象之间的通信，管理数据流，支持应用程序开发并为连接的物联网设备提供基本分析
+
+ :dog::dog::dog: --->  [博文地址]( https://iot.mushuwei.cn/#/iot-platform)
+
+
 -  [《理解SaaS多租户应用的架构和设计》](https://iot.mushuwei.cn/#/saas)<br>
+
+> SaaS和PaaS行业的需求是日益增长的！
+>
+> 聊到PaaS、SaaS，就不得不谈到多租户。
+
+:rabbit::rabbit::rabbit: --->  [博文地址]( https://iot.mushuwei.cn/#/saas)
 
 ### b.『 设备接入篇 』
 
 -  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)[《白话MQTT基础知识和入门》](https://iot.mushuwei.cn/#/mqtt-basic)<br>
+
+> MQTT(消息队列遥测传输) 是ISO标准下基于发布(Publish)/订阅(Subscribe)范式的消息协议，
+>
+> 同样也是物联网场景下使用最多的协议，是事实上的物联网“标准”协议
+
+:tiger::tiger::tiger: --->  [博文地址](https://iot.mushuwei.cn/#/mqtt-basic)
+
 -  [《实现百万并发MQTT服务端》](https://iot.mushuwei.cn/#/high-performance-mqtt-server)<br>
+
+> 大家普遍对如何实现或者正在寻找一款适合自己业务和技术的MQTT 服务端。
+>
+> 那么通过学习本文，你将能实现百万并发MQTT服务端。
+
+:pig::pig::pig: --->  [博文地址](https://iot.mushuwei.cn/#/high-performance-mqtt-server)
+
+:bouquet::bouquet::bouquet: --->  [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-MQTT) 
+
 -  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)[《初识CoAP并抓住它的"心"》](https://iot.mushuwei.cn/#/coap-basic)<br>
+
+> 节点通常具有带少量ROM和RAM的8位微控制器，而诸如低功耗无线个人局域网 （6LoWPAN）上的IPv6之类的受限网络通常具有较高的分组错误率，典型吞吐量为10 kbps 。
+>
+> 该协议旨在用于机器对机器（M2M）应用，例如智能能源和楼宇自动化。
+
+:boar: :boar::boar: ---> 博文地址
+
 -  [《100行代码快速搭建功能完备的CoAP服务》](https://iot.mushuwei.cn/#/100-lines-of-code-realize-coap-service)<br>
 
+> CoAP协议是在UDP堆栈的顶部实现的，可用于资源受限的应用程序。
+>
+> 接下来，我将通过100行代码为大家搭建一个功能完备的CoAP服务器。
+
+:horse::horse::horse: ---> [博文地址](https://iot.mushuwei.cn/#/100-lines-of-code-realize-coap-service)
+:cherry_blossom::cherry_blossom::cherry_blossom: --> [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Coap)
+
 -  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)[《重新认识HTTP协议并管理设备》](https://iot.mushuwei.cn/#/rethinking-http)<br>
+
+> HTTP是可用于IoT应用程序的通用网络协议。您可以在此处找到有关HTTP的更多信息。
+
+:sheep::sheep::sheep: ---> [博文地址](https://iot.mushuwei.cn/#/rethinking-http)
+:tulip::tulip::tulip: ---> [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-HTTP)
+
 -  [《实践案例: 车载终端设备的数据解析》](https://iot.mushuwei.cn/#/decoder-encoder-equipment-protocol)<br>
+
+> 再非标准设备中，自定义协议的数据解析成为必不可少的技能。
+>
+> 通过本文和工程的学习后，你将轻松应付一切！
+
+:snake::snake::snake: ---> [博文地址](https://iot.mushuwei.cn/#/decoder-encoder-equipment-protocol)
+:four_leaf_clover::four_leaf_clover::four_leaf_clover: ---> [工程地址](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Custom-Protocol)
 
 ### c.『 边缘计算篇 』
 
@@ -183,8 +239,6 @@
 加我好友: **微信号(jamesmsw)**
 
 免费的物联网技术圈：**加我好友，拉你进群！**
-
-QQ群: 726442610
 
 
 
