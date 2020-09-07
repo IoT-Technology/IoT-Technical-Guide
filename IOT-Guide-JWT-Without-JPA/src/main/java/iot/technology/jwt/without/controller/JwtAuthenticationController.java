@@ -3,7 +3,6 @@ package iot.technology.jwt.without.controller;
 import iot.technology.jwt.without.config.JwtTokenUtil;
 import iot.technology.jwt.without.model.JwtRequest;
 import iot.technology.jwt.without.model.JwtResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -22,15 +21,18 @@ import java.util.Objects;
 @RestController
 @CrossOrigin
 public class JwtAuthenticationController {
+    
+    private final AuthenticationManager authenticationManager;
+    private final JwtTokenUtil jwtTokenUtil;
+    private final UserDetailsService jwtInMemoryUserDetailsService;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
-    @Autowired
-    private JwtTokenUtil jwtTokenUtil;
-
-    @Autowired
-    private UserDetailsService jwtInMemoryUserDetailsService;
+    public JwtAuthenticationController(AuthenticationManager authenticationManager,
+                                       JwtTokenUtil jwtTokenUtil,
+                                       UserDetailsService jwtInMemoryUserDetailsService) {
+        this.authenticationManager = authenticationManager;
+        this.jwtTokenUtil = jwtTokenUtil;
+        this.jwtInMemoryUserDetailsService = jwtInMemoryUserDetailsService;
+    }
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
