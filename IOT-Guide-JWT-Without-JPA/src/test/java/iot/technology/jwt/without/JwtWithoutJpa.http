@@ -1,0 +1,13 @@
+### 获取JWT
+POST http://localhost:8080/authenticate
+Content-Type: application/json
+
+{
+  "username":"iot.technology",
+  "password":"password"
+}
+
+### 请求/hello路径地址获取数据
+GET http://localhost:8080/hello
+Authorization: Bearer ......
+
