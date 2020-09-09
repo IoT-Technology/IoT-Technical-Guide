@@ -62,17 +62,12 @@
 ### b.『 设备接入篇 』
 
 -  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)[《白话MQTT基础知识和入门》](https://iot.mushuwei.cn/#/mqtt-basic)<br>
+-  [《实现百万并发MQTT服务端》](https://iot.mushuwei.cn/#/high-performance-mqtt-server) 对于工程 [IOT-Guide-MQTT](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-MQTT)<br>
 
 > MQTT(消息队列遥测传输) 是ISO标准下基于发布(Publish)/订阅(Subscribe)范式的消息协议，
 >
-> 同样也是物联网场景下使用最多的协议，是事实上的物联网“标准”协议
-
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
-
-
-
--  [《实现百万并发MQTT服务端》](https://iot.mushuwei.cn/#/high-performance-mqtt-server)<br>
-
+> 同样也是物联网场景下使用最多的协议，是事实上的物联网“标准”协议。
+>
 > 大家普遍对如何实现或者正在寻找一款适合自己业务和技术的MQTT 服务端。
 >
 > 那么通过学习本文，你将能实现百万并发MQTT服务端。
@@ -82,18 +77,9 @@
 
 
 -  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)[《初识CoAP并抓住它的"心"》](https://iot.mushuwei.cn/#/coap-basic)<br>
+-  [《100行代码快速搭建功能完备的CoAP服务》](https://iot.mushuwei.cn/#/100-lines-of-code-realize-coap-service) 对应工程 [IOT-Guide-Coap](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Coap)<br>
 
-> 节点通常具有带少量ROM和RAM的8位微控制器，而诸如低功耗无线个人局域网 （6LoWPAN）上的IPv6之类的受限网络通常具有较高的分组错误率，典型吞吐量为10 kbps 。
->
-> 该协议旨在用于机器对机器（M2M）应用，例如智能能源和楼宇自动化。
-
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
-
-
-
--  [《100行代码快速搭建功能完备的CoAP服务》](https://iot.mushuwei.cn/#/100-lines-of-code-realize-coap-service)<br>
-
-> CoAP协议是在UDP堆栈的顶部实现的，可用于资源受限的应用程序。
+> 节点通常具有带少量ROM和RAM的8位微控制器，而诸如低功耗无线个人局域网 （6LoWPAN）上的IPv6之类的受限网络通常具有较高的分组错误率，典型吞吐量为10 kbps 。该协议旨在用于机器对机器（M2M）应用，例如智能能源和楼宇自动化。
 >
 > 接下来，我将通过100行代码为大家搭建一个功能完备的CoAP服务器。
 
@@ -101,7 +87,7 @@
 
 
 
--  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)[《重新认识HTTP协议并管理设备》](https://iot.mushuwei.cn/#/rethinking-http)<br>
+-  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)[《重新认识HTTP协议并管理设备》](https://iot.mushuwei.cn/#/rethinking-http) 对应工程[IOT-Guide-HTTP](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-HTTP)<br>
 
 > HTTP是可用于IoT应用程序的通用网络协议。您可以在此处找到有关HTTP的更多信息。
 
@@ -109,9 +95,9 @@
 
 
 
--  [《实践案例: 车载终端设备的数据解析》](https://iot.mushuwei.cn/#/decoder-encoder-equipment-protocol)<br>
+-  [《实践案例: 车载终端设备的数据解析》](https://iot.mushuwei.cn/#/decoder-encoder-equipment-protocol) 对应工程[IOT-Guide-Custom-Protocol](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Custom-Protocol)<br>
 
-> 再非标准设备中，自定义协议的数据解析成为必不可少的技能。
+> 在非标准设备中，自定义协议的数据解析成为必不可少的技能。
 >
 > 通过本文和工程的学习后，你将轻松应付一切！
 
@@ -121,7 +107,7 @@
 
 ### c.『 边缘计算篇 』
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg?imageMogr2/thumbnail/!50p)[《工业领域下的Modbus网关设备》](https://iot.mushuwei.cn/#/gateway-modbus)<br>
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg?imageMogr2/thumbnail/!50p)[《工业领域下的Modbus网关设备》](https://iot.mushuwei.cn/#/gateway-modbus) 对应工程 [IOT-Guide-Gateway-Modbus](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Gateway-Modbus)<br>
 
 > 本文通过实战用python对工业Modbus网关设备进行数据读取和写入，
 >
@@ -130,13 +116,37 @@
 
 
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)[《工业领域下的OPC-UA网关设备》](https://iot.mushuwei.cn/#/gateway-opcua)
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)[《工业领域下的OPC-UA网关设备》](https://iot.mushuwei.cn/#/gateway-opcua) 对应工程 [IOT-Guide-Gateway-OPC(UA)](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Gateway-OPC(UA))
 
 >本文通过实战用python在工业OPC-UA网关设备高效的性能和占用内存小的特点，
 >
 >并讲解OPC-UA在工业领域的野心。
 
-### d.『 实时显示篇 』
+
+
+### d.『 设备、接口认证和安全篇 』
+
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/security.png)**Spring Security能量**
+
+> 本文是通过Spring Security在接口认证运用的案例，讲解接口安全的重要性。
+>
+> 并简述Spring Security的知识点。
+
+- [x] [JWT(JSON Web Token)是什么?](https://iot.mushuwei.cn/#/what-jwt)
+- [x] [Spring Boot Security + JWT示例](https://iot.mushuwei.cn/#/spring-security-without-jpa) 对应工程 [IOT-Guide-JWT-Without-JPA](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-JWT-Without-JPA)
+- [x] [Spring Boot Security + JWT + MySQL示例](https://iot.mushuwei.cn/#/spring-security-jpa)
+
+- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png?imageMogr2/thumbnail/!50p)[《下一代安全实践 OAuth2》](https://iot.mushuwei.cn/#/oauth2)
+
+> 本文是通过OAuth2在设备认证的案例来解决设备的一个机器一个密码。
+>
+> 运用它你无需通过繁多的设置来配置设备客户端了。
+
+- [x] [OAuth2.0 最简单的指南](https://iot.mushuwei.cn/#/oauth2-guide)
+
+
+
+### e.『 实时显示篇 』
 
 - ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Websocket.png)[《WebSocket技术魔法》](https://iot.mushuwei.cn/#/websocket)
 
@@ -144,7 +154,7 @@
 >
 > 而IoT对这种需求是必须的，所以学习WebSocket就变成了必须的技能。
 
-### e.『 数据交换和序列化篇 』
+### f.『 数据交换和序列化篇 』
 
 - ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)[《设备的语言-物模型》](https://iot.mushuwei.cn/#/tsl)　
 
@@ -158,27 +168,11 @@
 >
 > 即定义一个文件，到处都可用的优点。
 
-### f.『 存储和查询篇 』
+### g.『 存储和查询篇 』
 
 - ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MongoDB-Logo.svg.png?imageMogr2/thumbnail/!40p)[《PostgreSQL碰撞IoT》](https://iot.mushuwei.cn/#/postgresql-iot)
 
 - ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/elephant.png?imageMogr2/thumbnail/!10p)[《MongoDB在IoT中的应用》](https://iot.mushuwei.cn/#/mongodb-iot)
-
-### g.『 设备、接口认证和安全篇 』
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/security.png)[《Spring Security能量》](https://iot.mushuwei.cn/#/spring-security)
-
-> 本文是通过Spring Security在接口认证运用的案例，讲解接口安全的重要性。
->
-> 并简述Spring Security的知识点。
-
-
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png?imageMogr2/thumbnail/!50p)[《下一代安全实践 OAuth2》](https://iot.mushuwei.cn/#/oauth2)
-
-> 本文是通过OAuth2在设备认证的案例来解决设备的一个机器一个密码。
->
-> 运用它你无需通过繁多的设置来配置设备客户端了。
 
 ### h.『 流处理和消息队列篇 』
 
@@ -232,7 +226,7 @@
 
 主要内容有:
 1. :loudspeaker: ThingsBoard源码解析
-高达5k+的开源物联网平台，物联网解决方案的设备管理、数据收集、处理和可视化
+高达7k+的开源物联网平台，物联网解决方案的设备管理、数据收集、处理和可视化
 2. :wind_chime: 应用于物联网应用层技术领域的技术和实践
 
 并且你还可以得到：
