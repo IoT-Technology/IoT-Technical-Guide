@@ -22,9 +22,7 @@ import org.springframework.web.bind.annotation.*;
 public class JwtAuthenticationController {
 
     private final AuthenticationManager authenticationManager;
-
     private final JwtTokenUtil jwtTokenUtil;
-
     private final JwtUserDetailsService userDetailsService;
 
     public JwtAuthenticationController(AuthenticationManager authenticationManager,

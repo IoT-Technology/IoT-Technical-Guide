@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class JwtUserDetailsService implements UserDetailsService {
 
     private final UserDao userDao;
-
     private final PasswordEncoder bcryptEncoder;
 
     public JwtUserDetailsService(UserDao userDao, PasswordEncoder bcryptEncoder) {
