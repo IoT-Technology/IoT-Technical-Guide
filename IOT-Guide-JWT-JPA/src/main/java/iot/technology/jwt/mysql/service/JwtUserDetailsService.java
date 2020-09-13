@@ -3,6 +3,7 @@ package iot.technology.jwt.mysql.service;
 import iot.technology.jwt.mysql.dao.UserDao;
 import iot.technology.jwt.mysql.model.DaoUser;
 import iot.technology.jwt.mysql.model.UserDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -18,13 +19,11 @@ import java.util.ArrayList;
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
 
-    private final UserDao userDao;
-    private final PasswordEncoder bcryptEncoder;
+    @Autowired
+    private UserDao userDao;
+    @Autowired
+    private  PasswordEncoder bcryptEncoder;
 
-    public JwtUserDetailsService(UserDao userDao, PasswordEncoder bcryptEncoder) {
-        this.userDao = userDao;
-        this.bcryptEncoder = bcryptEncoder;
-    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
