@@ -1,0 +1,23 @@
+### 1. 注册一个用户名和密码
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username":"iot.technology",
+  "password":"make-great"
+}
+
+### 2. 获取JWT
+POST http://localhost:8080/authenticate
+Content-Type: application/json
+
+{
+  "username":"iot.technology",
+  "password":"make-great"
+}
+
+### 3. 请求/hello路径地址获取数据
+GET http://localhost:8080/hello
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpb3QudGVjaG5vbG9neSIsImV4cCI6MTYwMDAwMzkzOCwiaWF0IjoxNTk5OTg1OTM4fQ.viVSHOcpzPOzX9Ht2FB0UNbMB0WzditFRTkIX3hmI8HuQ6OxaRRgNkJxb877oFawdV943F94b8pNyUgAY-imRg
+
+###
