@@ -134,7 +134,7 @@
 
 - [x] [JWT(JSON Web Token)是什么?](https://iot.mushuwei.cn/#/what-jwt)
 - [x] [Spring Boot Security + JWT示例](https://iot.mushuwei.cn/#/spring-security-without-jpa) 对应工程 [IOT-Guide-JWT-Without-JPA](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-JWT-Without-JPA)
-- [x] [Spring Boot Security + JWT + MySQL示例](https://iot.mushuwei.cn/#/spring-security-jpa)
+- [x] [Spring Boot Security + JWT + MySQL示例](https://iot.mushuwei.cn/#/spring-security-jpa) 对应工程 [IOT-Guide-JWT-JPA](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-JWT-JPA)
 
 - ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png?imageMogr2/thumbnail/!50p)[《下一代安全实践 OAuth2》](https://iot.mushuwei.cn/#/oauth2)
 
@@ -245,7 +245,7 @@
 
 免费的物联网技术圈：**加我好友，拉你进群！**
 
-
+关注微信公众号: **物联网技术指导**
 
 
 ## 版权说明
