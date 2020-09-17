@@ -196,6 +196,11 @@
 >
 > 你将可以端起你手中的咖啡。
 
+- [x] [规则引擎在IoT的重要性？](https://iot.mushuwei.cn/#/what-rule-engine)
+- [x] [Easy-Rules规则引擎在IoT的使用](https://iot.mushuwei.cn/#/rule-engine-easyrules)
+- [x] [带你走进ThingsBoard规则引擎的实现原理](https://iot.mushuwei.cn/#/rule-engine-thingsboard)
+- [x] [阿里云物联网平台规则引擎的面纱](https://iot.mushuwei.cn/#/rule-engine-aliyun)
+
 ### j.『 Docker和k8s篇 』
 
 - ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Docker.png)[《Docker在IoT技术领域的应用》](https://iot.mushuwei.cn/#/docker-iot)
