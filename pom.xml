@@ -72,6 +72,7 @@
         <module>IOT-Guide-RuleEngine-ThingsBoard</module>
         <module>IOT-Guide-JWT-Without-JPA</module>
         <module>IOT-Guide-JWT-JPA</module>
+        <module>IOT-Guide-JWT-Refresh</module>
     </modules>
 
     <url>https://iot.mushuwei.cn/</url>
