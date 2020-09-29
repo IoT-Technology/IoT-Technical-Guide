@@ -1,4 +1,4 @@
-package iot.technology.jwt.refresh.model;
+package iot.technology.jwt.refresh.dao;
 
 import lombok.Data;
 import lombok.ToString;
