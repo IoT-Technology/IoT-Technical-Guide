@@ -31,9 +31,9 @@
 
 ### a.『 准备篇 』
 
-- :unlock: [《ThingsBoard中文官网》](http://www.ithingsboard.com/)<br>
-- :unlock: [《物联网时代-Thingsboard源码分析-调试环境调试》](https://iot.mushuwei.cn/#/thingsboard/thingsboard-build)<br>
-- :unlock: [《物联网时代-Thingsboard源码分析-项目结构说明》](https://iot.mushuwei.cn/#/thingsboard/project-structure)<br>
+-  [《ThingsBoard中文官网》](http://www.ithingsboard.com/)<br>
+-  [《物联网时代-Thingsboard源码分析-调试环境调试》](https://iot.mushuwei.cn/#/thingsboard/thingsboard-build)<br>
+-  [《物联网时代-Thingsboard源码分析-项目结构说明》](https://iot.mushuwei.cn/#/thingsboard/project-structure)<br>
 
 
 
@@ -45,9 +45,9 @@
 
  技术框架 :  [Netty](https://netty.io/)
 
-  - :unlock: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part1)<br>
+  -  [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-上》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part1)<br>
 
-  - :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part2)<br>
+  -  [《物联网时代-ThingsBoard源码分析-MQTT设备连接协议-下》](https://iot.mushuwei.cn/#/thingsboard/mqtt-protocol-part2)<br>
 
 
 
@@ -57,7 +57,9 @@
 
   框架: [Californium(cf)](https://www.eclipse.org/californium/)
   
-- :closed_lock_with_key: [《物联网时代-ThingsBoard源码分析-CoAP设备连接协议》](https://iot.mushuwei.cn/#/thingsboard/coap-protocol)<br>
+-  [《初识CoAP并抓住它的"心"》](https://iot.mushuwei.cn/#/coap-basic)<br>
+  
+-  [《物联网时代-ThingsBoard源码分析-CoAP设备连接协议》](https://iot.mushuwei.cn/#/thingsboard/coap-protocol)<br>
 
 
 
@@ -67,29 +69,39 @@
   协议 :  [HTTP](https://baike.baidu.com/item/HTTP/243074)
   
   框架 :  [Spring Boot](https://spring.io/projects/spring-boot)
+  
+-  [《物联网时代-ThingsBoard源码分析-HTTP设备连接协议》](https://iot.mushuwei.cn/#/thingsboard/http-protocol)<br>
 
 
+
+### c.『网关篇 』
 
 - **Gateway** ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/gateway.png)
-  
+
   概述 : 网关
-  
+
   *常用协议*
-  
+
   - **Modbus** 
-  
+
 - :unlock: [《一文说透Modbus协议》](https://blog.mushuwei.cn/2020/05/23/%E4%B8%80%E6%96%87%E8%AE%B2%E9%80%8FModbus%E5%8D%8F%E8%AE%AE/)<br>
-  
-  
+
+
   - **OPC UA**
 
-- **WebSocket**
+  
 
-  概述：WebSocket
+### d.『存储和数据库篇 』
 
-  :zap: 待更新......
+-  [《数据模型之用户相关表结构设计》](https://iot.mushuwei.cn/#/thingsboard/user-table)<br>
+-  [《数据模型之设备相关表结构设计》](https://iot.mushuwei.cn/#/thingsboard/device-table)<br>
+-  [《数据模型之规则引擎相关表结构设计》](https://iot.mushuwei.cn/#/thingsboard/rulengine-table)<br>
+- [《功能强大且适合的PostgreSQL》](https://iot.mushuwei.cn/#/thingsboard/postgresql-iot)<br>
 
-### c.『数据交换和序列化篇 』
+  
+
+
+### e.『数据交换和序列化篇 』
 
 - **JSON**
   
@@ -112,7 +124,7 @@
 
 	
 
-### d.『设备、接口认证和安全篇 』
+### f.『设备、接口认证和安全篇 』
 
 - **Spring Security**
 
@@ -122,7 +134,7 @@
 
 :zap: 待更新......
 
-### e.『流处理和消息队列篇 』	
+### g.『流处理和消息队列篇 』	
 
 - **kafka**
 
@@ -132,13 +144,13 @@
 
 :zap: 待更新......
 
-### f.『规则引擎篇 』
+### h.『规则引擎篇 』
 
 **Rule Engine**
 
 :zap: 待更新......
 
-### g.『Docker和Kubernetes篇 』
+### i.『Docker和Kubernetes篇 』
 
 - **Docker**
 
@@ -161,7 +173,7 @@
 
 主要内容有:
 1. :loudspeaker: ThingsBoard源码解析
-高达5k+的开源物联网平台，物联网解决方案的设备管理、数据收集、处理和可视化
+高达7k+的开源物联网平台，物联网解决方案的设备管理、数据收集、处理和可视化
 2. :wind_chime: 应用于物联网应用层技术领域的技术和实践
 
 并且你还可以得到：
@@ -180,8 +192,6 @@
 
 免费的物联网技术圈：**加我好友，拉你进群！**
 
-QQ群: 726442610
-
 
 
 
@@ -197,5 +207,5 @@ QQ群: 726442610
 
 ## 为什么要做这份菜单
 
-> 在学习开源物联网平台ThingsBoard和使用阿里云物联网平台的时候，让我对物联网这个领域产生了极大的兴趣。我发现ThingsBoard的更新速度十分频繁且代码架构十分优秀，随着未来十年内将会有数十亿的设备将联网和国内对物联网领域的高热度。众多的开发人员经历过Web2.0和移动互联网的时代，但是对于未来的设备联网这块的知识十分缺乏，并且搜索引擎上大多数文章都比较的粗浅。此外，这些资料往往只涉及某些特定的话题，如果能有一份菜单将这些菜谱以特定的方式串起来，那么对于 IOT 学习者来说将会是极大的便利。尤其对于我这样热爱查阅社区资料胜过出版物的懒人:new_moon_with_face: 随着我的学习节奏还会不断有新的菜谱加入进来。
+> 在学习开源物联网平台ThingsBoard和使用阿里云物联网平台的时候，我发现ThingsBoard的更新速度十分频繁且代码架构十分优秀，随着未来十年内将会有数十亿的设备将联网和国内对物联网领域的高热度。众多的开发人员经历过Web2.0和移动互联网的时代，但是对于未来的设备联网这块的知识十分缺乏，并且搜索引擎上大多数文章都比较的粗浅。此外，这些资料往往只涉及某些特定的话题，如果能有一份菜单将这些菜谱以特定的方式串起来，那么对于 IOT 学习者来说将会是极大的便利。尤其对于我这样热爱查阅社区资料胜过出版物的懒人:new_moon_with_face: 随着我的学习节奏还会不断有新的菜谱加入进来。
 >
