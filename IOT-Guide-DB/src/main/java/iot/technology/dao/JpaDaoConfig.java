@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAutoConfiguration
 @EnableTransactionManagement
 @ComponentScan("iot.technology.dao.sql")
-@EntityScan("com.sanshengshui.dao.model")
+@EntityScan("iot.technology.dao.model")
 @EnableJpaRepositories("iot.technology.dao.sql")
 @SqlDao
 public class JpaDaoConfig {

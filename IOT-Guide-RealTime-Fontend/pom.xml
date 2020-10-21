@@ -21,7 +21,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>IOT-Guide</artifactId>
-        <groupId>com.sanshengshui</groupId>
+        <groupId>iot.technology</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
