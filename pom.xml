@@ -54,8 +54,7 @@
         <!--CN 物联网架构 -->
         <module>IOT-Guide-Msa</module>
         <!--EN Microservice security framework -->
-        <!--CN 物联网安全框架 -->
-        <module>IOT-Guide-OAuth2.0</module>
+
 
         <!--EN Internet of Things DevOps -->
         <!--CN 物联网持续集成,持续部署,持续交付-->
@@ -73,6 +72,9 @@
         <module>IOT-Guide-JWT-Without-JPA</module>
         <module>IOT-Guide-JWT-JPA</module>
         <module>IOT-Guide-JWT-Refresh</module>
+        <!--CN 物联网安全框架 -->
+        <module>IOT-Guide-OAuth2.0-Authorization Server</module>
+        <module>IOT-Guide-OAuth2.0-Resource</module>
     </modules>
 
     <url>https://iot.mushuwei.cn/</url>

@@ -18,22 +18,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>IOT-Guide</artifactId>
         <groupId>iot.technology</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
-    <name>IOT Technology Guide :: OAuth2.0</name>
-    <artifactId>IOT-Guide-OAuth2.0</artifactId>
-    <packaging>pom</packaging>
 
-    <url>https://iot.mushuwei.cn/</url>
-    <description>IOT Technical Guide - OAuth2.0 of the era of the Internet of Everything</description>
+    <name>IOT Technology Guide :: OAuth2.0 :: Authorization Server</name>
+    <groupId>iot.technology</groupId>
+    <artifactId>IOT-Guide-OAuth2.0-AuthorizationServer</artifactId>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 实现对 Spring Security OAuth2 的自动配置 -->
+        <dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
