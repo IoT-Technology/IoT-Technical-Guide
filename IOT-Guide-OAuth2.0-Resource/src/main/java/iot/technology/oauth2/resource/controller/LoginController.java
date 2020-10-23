@@ -1,5 +1,6 @@
 package iot.technology.oauth2.resource.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class LoginController {
 
+    @Autowired
     private OAuth2ClientProperties oAuth2ClientProperties;
 
     @Value("${security.oauth2.access-token-uri}")

@@ -1,0 +1,9 @@
+### 使用用户的用户名和密码进行登录
+POST localhost:9090/login
+Content-Type: application/x-www-form-urlencoded
+
+password=1024&username=iot
+
+### 带访问令牌，则请求会被通过
+GET localhost:9090/api/example/hello
+Authorization: Bearer 6411631e-ed0d-46ab-a37c-d63b676f9169

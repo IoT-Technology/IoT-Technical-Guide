@@ -1,0 +1,13 @@
+### 使用密码模式进行授权
+POST http://localhost:8080/oauth/token
+Authorization: Basic clientapp 123456
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=iot&password=1024
+
+### 校验访问令牌的有效性
+POST http://localhost:8080/oauth/check_token
+Authorization: Basic clientapp 123456
+Content-Type: application/x-www-form-urlencoded
+
+token=67480870-0ddc-43a8-9a4e-2cbc657bf6f5
