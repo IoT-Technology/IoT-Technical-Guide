@@ -96,7 +96,7 @@
 -  [《数据模型之用户相关表结构设计》](https://iot.mushuwei.cn/#/thingsboard/user-table)<br>
 -  [《数据模型之设备相关表结构设计》](https://iot.mushuwei.cn/#/thingsboard/device-table)<br>
 -  [《数据模型之规则引擎相关表结构设计》](https://iot.mushuwei.cn/#/thingsboard/rulengine-table)<br>
-- [《功能强大且适合的PostgreSQL》](https://iot.mushuwei.cn/#/thingsboard/postgresql-iot)<br>
+- [《领略Spring Data JPA在Thingsboard中的使用》](https://iot.mushuwei.cn/#/thingsboard/jpa-sql)<br>
 
   
 
