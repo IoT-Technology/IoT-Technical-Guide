@@ -1,6 +1,7 @@
 package iot.technology.jwt.refresh.config;
 
 import io.jsonwebtoken.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,6 +16,7 @@ import java.util.*;
  * @date 2020/9/29 15:59
  */
 @Service
+@Slf4j
 public class JwtUtil {
 
     private String secret;

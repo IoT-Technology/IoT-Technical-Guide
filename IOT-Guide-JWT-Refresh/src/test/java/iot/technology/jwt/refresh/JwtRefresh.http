@@ -1,0 +1,28 @@
+### 1. 注册一个用户名和密码
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username":"iot.technology",
+  "password":"make-great",
+  "role": "ROLE_ADMIN"
+}
+
+### 2. 获取JWT
+POST http://localhost:8080/authenticate
+Content-Type: application/json
+
+{
+  "username":"iot.technology",
+  "password":"make-great"
+}
+
+### 3. 请求/hello路径地址获取数据
+GET http://localhost:8080/hellouser
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpb3QudGVjaG5vbG9neSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTYwNDM5ODg4MCwiaWF0IjoxNjA0Mzk4ODgwfQ.mQDYYkk0jncA0PNwO7T_0nRUKt6p7T6ULwLLuRbsEGfjroXIw1S3AyUmI8xF7Ze_p_4YVCGD6WAMVzr42Ig7tA
+###
+
+### 3. 请求/hello路径地址获取数据
+GET http://localhost:8080/refreshtoken
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpb3QudGVjaG5vbG9neSIsImlzQWRtaW4iOnRydWUsImV4cCI6MTYwNDQwNzIxOSwiaWF0IjoxNjA0Mzk4MjE5fQ.fyad7dExh8dMpYVCkmKRnFFZDsHV1o8kLlRcy1aXSETvrcoi_YzWwwL8lCs-JA1kPoMHle3Bz12c_rzhoZwvEQ
+###

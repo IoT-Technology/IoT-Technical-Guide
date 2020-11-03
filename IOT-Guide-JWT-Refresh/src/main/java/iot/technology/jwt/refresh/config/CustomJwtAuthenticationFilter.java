@@ -30,6 +30,7 @@ public class CustomJwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws ServletException, IOException {
+
         try{
             // JWT Token is in the form "Bearer token". Remove Bearer word and
             // get  only the Token
@@ -46,7 +47,7 @@ public class CustomJwtAuthenticationFilter extends OncePerRequestFilter {
                 // Spring Security Configurations successfully.
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
             } else {
-                System.out.println("Cannot set the Security Context");
+                logger.info("Cannot set the Security Context");
             }
         }catch(ExpiredJwtException ex)
         {
@@ -55,8 +56,9 @@ public class CustomJwtAuthenticationFilter extends OncePerRequestFilter {
             // allow for Refresh Token creation if following conditions are true.
             if (isRefreshToken != null && isRefreshToken.equals("true") && requestURL.contains("refreshtoken")) {
                 allowForRefreshToken(ex, request);
-            } else
+            } else {
                 request.setAttribute("exception", ex);
+            }
         }
         catch(BadCredentialsException ex)
         {
