@@ -108,6 +108,7 @@
         <easyrule.version>4.0.0</easyrule.version>
         <websocket.version>2.0.5.RELEASE</websocket.version>
         <fastjson.version>1.2.72</fastjson.version>
+        <protobuf-java.version>3.13.0</protobuf-java.version>
     </properties>
 
     <dependencies>
@@ -323,6 +324,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf-java.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
