@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_outer_classname = "UserMsg";
+
+message User{
+  //ID
+  int32 id = 1;
+  //姓名
+  string name = 2;
+  //年龄
+  int32 age = 3;
+  //状态
+  int32 state = 4;
+}
