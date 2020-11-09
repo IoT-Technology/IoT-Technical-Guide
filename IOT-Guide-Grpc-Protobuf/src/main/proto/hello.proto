@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "iot.technology.grpc.protobuf.proto";
+
+package iot.technology.grpc.protobuf.proto;
+
+service HelloService {
+  rpc sayHello(HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string msg = 1;
+}

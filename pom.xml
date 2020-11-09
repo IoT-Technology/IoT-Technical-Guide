@@ -64,7 +64,6 @@
         <module>IOT-Guide-Flink</module>
         <module>IOT-Guide-Custom-Protocol</module>
         <module>IOT-Guide-Gateway-OPC(UA)</module>
-        <module>IOT-Guide-Protobuf</module>
         <module>IOT-Guide-DB-MongoDB</module>
         <module>IOT-Guide-DB-PostgreSQL</module>
         <module>IOT-Guide-RealTime-Fontend</module>
@@ -75,6 +74,7 @@
         <!--CN 物联网安全框架 -->
         <module>IOT-Guide-OAuth2.0-Authorization Server</module>
         <module>IOT-Guide-OAuth2.0-Resource</module>
+        <module>IOT-Guide-Grpc-Protobuf</module>
     </modules>
 
     <url>https://iot.mushuwei.cn/</url>
@@ -109,6 +109,7 @@
         <websocket.version>2.0.5.RELEASE</websocket.version>
         <fastjson.version>1.2.72</fastjson.version>
         <protobuf-java.version>3.13.0</protobuf-java.version>
+        <grpc.version>1.33.1</grpc.version>
     </properties>
 
     <dependencies>
@@ -329,6 +330,21 @@
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-java</artifactId>
                 <version>${protobuf-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty-shaded</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
