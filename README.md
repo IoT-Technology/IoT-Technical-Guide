@@ -8,7 +8,7 @@
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/IoT-Technology/IOT-Technical-Guide?style=flat"></a>
 </p>
 <p align="center">
-    <a href="https://visitor-badge.glitch.me/badge?page_id=sanshengshui.iot_technology_guide" alt="访客"></a>
+    <a href="https://visitor-badge.glitch.me/badge?page_id=sanshengshui.iot_technology_guide"><img src="https://visitor-badge.glitch.me/badge?page_id=sanshengshui.iot_technology_guide" alt="访客"></a>
     <a href="https://blog.mushuwei.cn/categories/IOT-Technical-Guide/"><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="阅读"></a>
     <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
     <a href="https://gitter.im/sanshengshui/IoT-Technology-Guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/sanshengshui/IoT-Technology-Guide.svg"></a>
