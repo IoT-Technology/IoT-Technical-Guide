@@ -1,5 +1,7 @@
 package iot.technology.postgresql.dao;
 
+import iot.technology.postgresql.dao.entity.TsKvLastestEntity;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -7,5 +9,5 @@ import org.springframework.stereotype.Repository;
  * @date 2020/11/15 2:41 下午
  */
 @Repository("timeseriesLatestDao")
-public class TimeseriesLatestDao {
+public interface TimeseriesLatestDao extends CrudRepository<TsKvLastestEntity, Integer> {
 }

@@ -1,6 +1,5 @@
 package iot.technology.postgresql.constants;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 
 /**
  * @author jamesmsw
