@@ -5,6 +5,8 @@ import iot.technology.postgresql.model.TsKvLatest;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 /**
  * @author jamesmsw
  * @date 2020/11/15 8:38 下午
@@ -17,4 +19,6 @@ public abstract class TsKvLatestMapper {
     public abstract TsKvLastestEntity tsKvLatestToEntity(TsKvLatest tsKvLatest);
 
     public abstract TsKvLatest entityToTsKv(TsKvLastestEntity tsKvLastestEntity);
+
+    public abstract List<TsKvLatest> convert(List<TsKvLastestEntity> tsKvLastestEntities);
 }
