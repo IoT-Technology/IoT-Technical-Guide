@@ -1,0 +1,20 @@
+### 1.新建设备
+POST localhost:8080/api/device/save
+Content-Type: application/json
+
+{
+    "name": "物联网设备",
+    "additionalInfo": "测试设备"
+}
+
+### 2.上传遥测数据
+POST localhost:8080/api/1/timeseries
+Content-Type: application/json
+
+{
+  "size": "中等",
+  "temperature": 35.6
+}
+
+### 3. 获取遥测设备属性
+GET localhost:8080/api/1/values/timeseries?keys=temperature,size
