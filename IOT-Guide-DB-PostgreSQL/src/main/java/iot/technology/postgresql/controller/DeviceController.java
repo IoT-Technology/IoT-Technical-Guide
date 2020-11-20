@@ -8,9 +8,7 @@ import iot.technology.postgresql.model.TsKvLatest;
 import iot.technology.postgresql.service.DeviceService;
 import iot.technology.postgresql.service.TimeseriesService;
 import iot.technology.tsl.adaptor.JsonConverter;
-import iot.technology.tsl.data.kv.BasicTsKvEntry;
-import iot.technology.tsl.data.kv.KvEntry;
-import iot.technology.tsl.data.kv.TsKvEntry;
+import iot.technology.tsl.data.kv.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -66,8 +64,9 @@ public class DeviceController {
         } else {
             tsKvLatests = timeseriesService.findLatest(deviceId, toKeysList(keysStr));
         }
+        List<TsKvEntry> tsKvEntries = coventTsKvEntry(tsKvLatests);
         final DeferredResult<ResponseEntity> result = new DeferredResult<>();
-        result.setResult(new ResponseEntity<>(tsKvLatests, HttpStatus.OK));
+        result.setResult(new ResponseEntity<>(tsKvEntries, HttpStatus.OK));
         return result;
     }
 
@@ -109,6 +108,31 @@ public class DeviceController {
             keyList = Arrays.asList(keys.split(","));
         }
         return keyList;
+    }
+
+    private List<TsKvEntry> coventTsKvEntry(List<TsKvLatest> tsKvLatests) {
+        List<TsKvEntry> tsKvEntries = new ArrayList<>();
+        tsKvLatests.forEach(tsKvLatest -> {
+            BasicKvEntry basicKvEntry = null;
+            if (tsKvLatest.getStrValue() != null) {
+                basicKvEntry = new StringDataEntry(tsKvLatest.getKey(), tsKvLatest.getStrValue());
+            }
+            if (tsKvLatest.getLongValue() != null) {
+                basicKvEntry = new BooleanDataEntry(tsKvLatest.getKey(), tsKvLatest.getBooleanValue());
+            }
+            if (tsKvLatest.getDoubleValue() != null) {
+                basicKvEntry = new DoubleDataEntry(tsKvLatest.getKey(), tsKvLatest.getDoubleValue());
+            }
+            if (tsKvLatest.getBooleanValue() != null) {
+                basicKvEntry = new BooleanDataEntry(tsKvLatest.getKey(), tsKvLatest.getBooleanValue());
+            }
+            if (tsKvLatest.getJsonValue() != null) {
+                basicKvEntry = new JsonDataEntry(tsKvLatest.getKey(), tsKvLatest.getJsonValue());
+            }
+            BasicTsKvEntry tsKvEntry = new BasicTsKvEntry(tsKvLatest.getTs(), basicKvEntry);
+            tsKvEntries.add(tsKvEntry);
+        });
+        return tsKvEntries;
     }
 
 
