@@ -75,6 +75,7 @@
         <module>IOT-Guide-OAuth2.0-Authorization Server</module>
         <module>IOT-Guide-OAuth2.0-Resource</module>
         <module>IOT-Guide-Grpc-Protobuf</module>
+        <module>IOT-Guide-RuleEngine-Introduce</module>
     </modules>
 
     <url>https://iot.mushuwei.cn/</url>
