@@ -2,7 +2,6 @@ package iot.technology.mqtt.storage;
 
 import iot.technology.mqtt.storage.msg.QueueMsg;
 import iot.technology.mqtt.storage.queue.QueueCallback;
-import iot.technology.mqtt.storage.queue.TopicPartitionInfo;
 
 /**
  * @author james mu
@@ -22,8 +21,8 @@ public class Producer<T extends QueueMsg> {
 
     }
 
-    public void send(TopicPartitionInfo tpi, T msg, QueueCallback callback) {
-        boolean result = storage.put(tpi.getFullTopicName(), msg);
+    public void send(String topicName, T msg, QueueCallback callback) {
+        boolean result = storage.put(topicName, msg);
         if (result) {
             if (callback != null) {
                 callback.onSuccess(null);
@@ -36,7 +35,6 @@ public class Producer<T extends QueueMsg> {
     }
 
     public void stop() {
-
     }
 
 }

@@ -1,0 +1,22 @@
+spring:
+  banner:
+    charset: UTF-8
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  messages:
+    encoding: UTF-8
+
+server:
+  enabled: true
+  bind_address: 0.0.0.0
+  bind_port: 9876
+  netty:
+    #不进行内存泄露的检测
+    leak_detector_level: DISABLED
+    boss_group_thread_count: 1
+    worker_group_thread_count: 12
+    #最大负载大小
+    max_payload_size: 65536

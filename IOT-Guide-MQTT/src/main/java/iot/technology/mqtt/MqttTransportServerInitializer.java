@@ -15,7 +15,7 @@ public class MqttTransportServerInitializer  extends ChannelInitializer<SocketCh
 
     private final int maxPayloadSize;
 
-    public MqttTransportServerInitializer(int maxPayloadSize){
+    public MqttTransportServerInitializer(int maxPayloadSize) {
         this.maxPayloadSize = maxPayloadSize;
     }
 

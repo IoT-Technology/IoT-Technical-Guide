@@ -1,12 +1,12 @@
 package iot.technology.mqtt;
 
-import iot.technology.mqtt.adapter.JsonMqttAdaptor;
-import iot.technology.tsl.adaptor.AdaptorException;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.mqtt.*;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
+import iot.technology.mqtt.adapter.JsonMqttAdaptor;
+import iot.technology.tsl.adaptor.AdaptorException;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.InetSocketAddress;
@@ -15,23 +15,24 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import static iot.technology.mqtt.MqttTopics.*;
 import static io.netty.handler.codec.mqtt.MqttMessageType.*;
 import static io.netty.handler.codec.mqtt.MqttQoS.*;
+import static iot.technology.mqtt.MqttTopics.*;
 import static iot.technology.tsl.session.SessionMsgType.*;
 
 /**
  * @Author: 穆书伟
- * @Date: 19-4-3 下午3:35
- * @Version 1.0
+ * @Date: 21-3-9 下午20:22
+ * @Version 2.0
  */
+@Slf4j
 public class MqttTransportHandler extends ChannelInboundHandlerAdapter implements GenericFutureListener<Future<? super Void>> {
 
     public static final MqttQoS MAX_SUPPORTED_QOS_LVL = MqttQoS.AT_LEAST_ONCE;
 
     private volatile boolean connected;
     private volatile InetSocketAddress address;
-    private final ConcurrentMap<MqttTopicMatcher,Integer> mqttQoSMap;
+    private final ConcurrentMap<MqttTopicMatcher, Integer> mqttQoSMap;
 
     public MqttTransportHandler() {
         this.mqttQoSMap = new ConcurrentHashMap<>();
@@ -40,7 +41,7 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         if (msg instanceof MqttMessage) {
-            processMqttMsg(ctx,(MqttMessage) msg);
+            processMqttMsg(ctx, (MqttMessage) msg);
         } else {
             ctx.close();
         }
@@ -68,7 +69,7 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
                 break;
             case PINGREQ:
                 if (checkConnected(ctx)) {
-                    ctx.writeAndFlush(new MqttMessage(new MqttFixedHeader(PINGRESP,false,AT_MOST_ONCE, false, 0)));
+                    ctx.writeAndFlush(new MqttMessage(new MqttFixedHeader(PINGRESP, false, AT_MOST_ONCE, false, 0)));
                 }
                 break;
             case DISCONNECT:
@@ -98,9 +99,9 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
         try {
             if (topicName.equals(MqttTopics.DEVICE_TELEMETRY_TOPIC)) {
                 System.out.println(JsonMqttAdaptor.validatePayload(mqttMsg.payload()));
-            } else if(topicName.equals(DEVICE_ATTRIBUTES_TOPIC)) {
+            } else if (topicName.equals(DEVICE_ATTRIBUTES_TOPIC)) {
                 JsonMqttAdaptor.convertToMsg(POST_ATTRIBUTES_REQUEST, mqttMsg);
-            } else if(topicName.equals(MqttTopics.DEVICE_ATTRIBUTES_REQUEST_TOPIC_PREFIX)) {
+            } else if (topicName.equals(MqttTopics.DEVICE_ATTRIBUTES_REQUEST_TOPIC_PREFIX)) {
                 JsonMqttAdaptor.convertToMsg(GET_ATTRIBUTES_REQUEST, mqttMsg);
             }
             ctx.writeAndFlush(createMqttPubAckMsg(msgId));

@@ -1,7 +1,6 @@
 package iot.technology.mqtt.storage;
 
 import iot.technology.mqtt.storage.msg.QueueMsg;
-import iot.technology.mqtt.storage.queue.TopicPartitionInfo;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Collections;
@@ -16,7 +15,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class Consumer<T extends QueueMsg> {
     private final InMemoryStorage storage = InMemoryStorage.getInstance();
-    private volatile Set<TopicPartitionInfo> partitions;
+    private volatile Set<String> topics;
     private volatile boolean stopped;
     private volatile boolean subscribed;
     private final String topic;
@@ -31,12 +30,12 @@ public class Consumer<T extends QueueMsg> {
     }
 
     public void subscribe() {
-        partitions = Collections.singleton(new TopicPartitionInfo(topic, null, true));
+        topics = Collections.singleton(topic);
         subscribed = true;
     }
 
-    public void subscribe(Set<TopicPartitionInfo>  partitions) {
-        this.partitions = partitions;
+    public void subscribe(Set<String> topics) {
+        this.topics = topics;
         subscribed = true;
     }
 
@@ -46,11 +45,9 @@ public class Consumer<T extends QueueMsg> {
 
     public List<T> poll(long durationInMillis) {
         if (subscribed) {
-            List<T> messages = partitions
+            List<T> messages = topics
                     .stream()
-                    .map(tpi -> {
-                        return storage.get(tpi.getFullTopicName());
-                    })
+                    .map(storage::get)
                     .flatMap(List::stream)
                     .map(msg -> (T) msg).collect(Collectors.toList());
 

@@ -5,7 +5,7 @@ import iot.technology.mqtt.storage.msg.QueueMsg;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
 
@@ -15,8 +15,10 @@ import java.util.concurrent.LinkedBlockingDeque;
  */
 public final class InMemoryStorage {
 
+
+    private final ConcurrentHashMap<String, BlockingQueue<QueueMsg>> storage;
+
     private static InMemoryStorage instance;
-    private final ConcurrentHashMap<String, BlockingDeque<QueueMsg>> storage;
 
     private InMemoryStorage() {
         storage = new ConcurrentHashMap<>();
