@@ -177,6 +177,9 @@
 
 ### h.『 流处理和消息队列篇 』
 
+- [《教你如何简单实现一个消息队列》](https://iot.mushuwei.cn/#/how-to-build-queque)
+
+
 - ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kafka.png)[《广受好评的Kafka》](https://iot.mushuwei.cn/#/kafka)
 
 > 本文是通过Kafka在流处理和应用解耦的特点，更好、更高效的处理数据分析。
