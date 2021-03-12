@@ -6,6 +6,8 @@ import io.netty.handler.codec.mqtt.*;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import iot.technology.mqtt.adapter.JsonMqttAdaptor;
+import iot.technology.mqtt.storage.Producer;
+import iot.technology.mqtt.storage.msg.ProtoQueueMsg;
 import iot.technology.tsl.adaptor.AdaptorException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,6 +35,7 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
     private volatile boolean connected;
     private volatile InetSocketAddress address;
     private final ConcurrentMap<MqttTopicMatcher, Integer> mqttQoSMap;
+    private final Producer<ProtoQueueMsg> msgProducer = new Producer<>(DEVICE_TELEMETRY_TOPIC);
 
     public MqttTransportHandler() {
         this.mqttQoSMap = new ConcurrentHashMap<>();
@@ -90,7 +93,7 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
         }
 
         String topicName = mqttMsg.variableHeader().topicName();
-        int msgId = mqttMsg.variableHeader().messageId();
+        int msgId = mqttMsg.variableHeader().packetId();
         processDevicePublish(ctx, mqttMsg, topicName, msgId);
 
     }
@@ -98,7 +101,8 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
     private void processDevicePublish(ChannelHandlerContext ctx, MqttPublishMessage mqttMsg, String topicName, int msgId) {
         try {
             if (topicName.equals(MqttTopics.DEVICE_TELEMETRY_TOPIC)) {
-                System.out.println(JsonMqttAdaptor.validatePayload(mqttMsg.payload()));
+                log.info(JsonMqttAdaptor.validatePayload(mqttMsg.payload()));
+                msgProducer.send(DEVICE_TELEMETRY_TOPIC, new ProtoQueueMsg("msg", JsonMqttAdaptor.validatePayload(mqttMsg.payload())));
             } else if (topicName.equals(DEVICE_ATTRIBUTES_TOPIC)) {
                 JsonMqttAdaptor.convertToMsg(POST_ATTRIBUTES_REQUEST, mqttMsg);
             } else if (topicName.equals(MqttTopics.DEVICE_ATTRIBUTES_REQUEST_TOPIC_PREFIX)) {
