@@ -108,7 +108,9 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
             } else if (topicName.equals(MqttTopics.DEVICE_ATTRIBUTES_REQUEST_TOPIC_PREFIX)) {
                 JsonMqttAdaptor.convertToMsg(GET_ATTRIBUTES_REQUEST, mqttMsg);
             }
-            ctx.writeAndFlush(createMqttPubAckMsg(msgId));
+            if (msgId > 0) {
+                ctx.writeAndFlush(createMqttPubAckMsg(msgId));
+            }
         } catch (AdaptorException e) {
             ctx.close();
         }
@@ -177,7 +179,7 @@ public class MqttTransportHandler extends ChannelInboundHandlerAdapter implement
                         break;
 
                 }
-            }catch (AdaptorException e) {
+            } catch (AdaptorException e) {
 
             }
         }
