@@ -65,4 +65,9 @@ public class DefaultTransportService {
             transportConsumer.unsubscribe();
         }
     }
+
+    protected void processToTransportMsg(byte[] value) {
+
+    }
+
 }

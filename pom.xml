@@ -85,7 +85,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <californium.version>1.0.2</californium.version>
+        <californium.version>2.6.3</californium.version>
         <spring.version>5.0.9.RELEASE</spring.version>
         <lombok.version>1.16.18</lombok.version>
         <slf4j.version>1.7.7</slf4j.version>
