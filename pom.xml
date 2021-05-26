@@ -77,6 +77,7 @@
         <module>IOT-Guide-Grpc-Protobuf</module>
         <module>IOT-Guide-RuleEngine-Introduce</module>
         <module>IOT-Guide-Lwm2m</module>
+        <module>IOT-Guide-Firmware</module>
     </modules>
 
     <url>https://iot.mushuwei.cn/</url>
