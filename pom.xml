@@ -107,7 +107,7 @@
         <flink.version>1.9.0</flink.version>
         <paho.version>1.2.4</paho.version>
         <milo.version>0.4.1</milo.version>
-        <bouncycastle.version>1.65</bouncycastle.version>
+        <bouncycastle.version>1.68</bouncycastle.version>
         <easyrule.version>4.0.0</easyrule.version>
         <websocket.version>2.0.5.RELEASE</websocket.version>
         <fastjson.version>1.2.72</fastjson.version>
