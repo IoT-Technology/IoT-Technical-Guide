@@ -1,5 +1,7 @@
 package iot.technology.actor;
 
+import iot.technology.actor.message.ActorMsg;
+
 /**
  * @author mushuwei
  */
