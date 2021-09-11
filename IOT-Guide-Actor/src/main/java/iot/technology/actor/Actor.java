@@ -1,5 +1,6 @@
 package iot.technology.actor;
 
+import iot.technology.actor.exception.ActorException;
 import iot.technology.actor.message.ActorMsg;
 
 /**
@@ -11,7 +12,7 @@ public interface Actor {
 
     ActorRef getActorRef();
 
-    default void init() throws ActorException {
+    default void init(ActorCtx ctx) throws ActorException {
     }
 
     default void destroy() throws ActorException {

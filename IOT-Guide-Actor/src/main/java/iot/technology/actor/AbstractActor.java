@@ -1,14 +1,18 @@
 package iot.technology.actor;
 
+import iot.technology.actor.exception.ActorException;
+import lombok.Getter;
+
 /**
  * @author mushuwei
  */
 public abstract class AbstractActor implements Actor {
 
+    @Getter
     protected ActorCtx ctx;
 
     @Override
-    public void init() throws ActorException {
+    public void init(ActorCtx ctx) throws ActorException {
         this.ctx = ctx;
     }
 
