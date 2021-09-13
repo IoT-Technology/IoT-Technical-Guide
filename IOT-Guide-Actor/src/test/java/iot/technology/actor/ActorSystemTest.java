@@ -12,6 +12,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -54,6 +55,28 @@ public class ActorSystemTest {
         actorSystem.createDispatcher(ROOT_DISPATCHER, Executors.newWorkStealingPool(parallelism));
         testActorsAndMessages(1, _100K, 1);
     }
+
+    @Test
+    public void testFailedInit() throws InterruptedException {
+        actorSystem.createDispatcher(ROOT_DISPATCHER, Executors.newWorkStealingPool(parallelism));
+        ActorTestCtx testCtx1 = getActorTestCtx(1);
+        ActorTestCtx testCtx2 = getActorTestCtx(1);
+
+        ActorRef actorId1 = actorSystem.createRootActor(ROOT_DISPATCHER,
+                new FailedToInitActor.FailedToInitActorCreator(
+                        new EntityActorId(UUID.randomUUID().toString()), testCtx1, 1, 3000));
+        ActorRef actorId2 = actorSystem.createRootActor(ROOT_DISPATCHER,
+                new FailedToInitActor.FailedToInitActorCreator(
+                        new EntityActorId(UUID.randomUUID().toString()), testCtx2, 2, 1));
+
+        actorId1.tell(new IntActorMsg(42));
+        actorId2.tell(new IntActorMsg(42));
+
+        Assert.assertFalse(testCtx1.getLatch().await(2, TimeUnit.SECONDS));
+        Assert.assertFalse(testCtx1.getLatch().await(1, TimeUnit.SECONDS));
+        Assert.assertFalse(testCtx1.getLatch().await(3, TimeUnit.SECONDS));
+    }
+
 
     public void testActorsAndMessages(int actorsCount, int msgNumber, int times) throws InterruptedException {
         Random random = new Random();

@@ -37,12 +37,12 @@ public class TestRootActor extends AbstractActor {
             sum += value;
             count += 1;
             if (count == testCtx.getExpectedInvocationCount()) {
+                testCtx.getActual().set(sum);
+                testCtx.getInvocationCount().addAndGet(count);
+                sum = 0;
+                count = 0;
+                testCtx.getLatch().countDown();
             }
-            testCtx.getActual().set(sum);
-            testCtx.getInvocationCount().addAndGet(count);
-            sum = 0;
-            count = 0;
-            testCtx.getLatch().countDown();
         }
         return true;
     }
