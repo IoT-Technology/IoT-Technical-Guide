@@ -2,6 +2,7 @@ package iot.technology.actor;
 
 import iot.technology.actor.exception.ActorNotRegisteredException;
 import iot.technology.actor.message.ActorMsg;
+import lombok.Data;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -9,6 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -17,6 +19,7 @@ import java.util.stream.Collectors;
  * @author mushuwei
  */
 @Slf4j
+@Data
 public class DefaultActorSystem implements ActorSystem {
 
     private final ConcurrentMap<String, Dispatcher> dispatchers = new ConcurrentHashMap<>();
@@ -63,12 +66,55 @@ public class DefaultActorSystem implements ActorSystem {
 
     @Override
     public ActorRef createRootActor(String dispatcherId, ActorCreator creator) {
-        return null;
+        return createActor(dispatcherId, creator, null);
     }
 
     @Override
-    public ActorRef createChildActor(String dispatcherId, ActorCreator creator, ActorId actorId) {
-        return null;
+    public ActorRef createChildActor(String dispatcherId, ActorCreator creator, ActorId parent) {
+        return createActor(dispatcherId, creator, parent);
+    }
+
+    private ActorRef createActor(String dispatcherId, ActorCreator creator, ActorId parent) {
+        Dispatcher dispatcher = dispatchers.get(dispatcherId);
+        if (dispatcher == null) {
+            log.warn("Dispatcher with id [{}] is not registered!", dispatcherId);
+            throw new RuntimeException("Dispatcher with id [" + dispatcherId + "] is not registered!");
+        }
+        ActorId actorId = creator.createActorId();
+        ActorMailbox actorMailbox = actors.get(actorId);
+        if (actorMailbox != null) {
+            log.debug("Actor with id [{}] is already registered!", actorId);
+        } else {
+            Lock actorCreationLock = actorCreationLocks.computeIfAbsent(actorId, id -> new ReentrantLock());
+            actorCreationLock.lock();
+            try {
+                actorMailbox = actors.get(actorId);
+                if (actorMailbox == null) {
+                    log.debug("Creating actor with id [{}]!", actorId);
+                    Actor actor = creator.createActor();
+                    ActorRef parentRef = null;
+                    if (parent != null) {
+                        parentRef = getActor(parent);
+                        if (parentRef == null) {
+                            throw new ActorNotRegisteredException(parent, "Parent Actor with id [" + parent + "] is not registered!");
+                        }
+                    }
+                    ActorMailbox mailbox = new ActorMailbox(this, settings, actorId, parentRef, actor, dispatcher);
+                    actors.put(actorId, mailbox);
+                    mailbox.initActor();
+                    actorMailbox = mailbox;
+                    if (parent != null) {
+                        parentChildMap.computeIfAbsent(parent, id -> ConcurrentHashMap.newKeySet()).add(actorId);
+                    }
+                } else {
+                    log.debug("Actor with id [{}] is already registered!", actorId);
+                }
+            } finally {
+                actorCreationLock.unlock();
+                actorCreationLocks.remove(actorId);
+            }
+        }
+        return actorMailbox;
     }
 
     @Override
@@ -90,7 +136,7 @@ public class DefaultActorSystem implements ActorSystem {
 
     @Override
     public void tellWithHighPriority(ActorId target, ActorMsg actorMsg) {
-        
+        tell(target, actorMsg, true);
     }
 
     @Override

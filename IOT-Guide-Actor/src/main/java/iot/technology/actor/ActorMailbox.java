@@ -19,6 +19,8 @@ import java.util.function.Supplier;
 @Slf4j
 @Data
 public final class ActorMailbox implements ActorCtx {
+    public static final boolean HIGH_PRIORITY = true;
+    public static final boolean NORMAL_PRIORITY = false;
 
     public static final boolean FREE = false;
     public static final boolean BUSY = true;
@@ -29,6 +31,7 @@ public final class ActorMailbox implements ActorCtx {
     private final ActorSystem system;
     private final ActorSystemSettings settings;
     private final ActorId selfId;
+    private final ActorRef parentRef;
     private final Actor actor;
     private final Dispatcher dispatcher;
     private final ConcurrentLinkedQueue<ActorMsg> highPriorityMsgs = new ConcurrentLinkedQueue<>();
@@ -159,56 +162,57 @@ public final class ActorMailbox implements ActorCtx {
 
     @Override
     public ActorId getSelf() {
-        return null;
+        return selfId;
     }
-
-    @Override
-    public ActorRef getParentRef() {
-        return null;
-    }
+    
 
     @Override
     public void tell(ActorId target, ActorMsg msg) {
-
+        system.tell(target, msg);
     }
 
     @Override
     public void stop(ActorId target) {
-
+        system.stop(target);
     }
 
     @Override
     public ActorRef getOrCreateChildActor(ActorId actorId, Supplier<String> dispatcher, Supplier<ActorCreator> creator) {
-        return null;
+        ActorRef actorRef = system.getActor(actorId);
+        if (actorRef == null) {
+            return system.createChildActor(dispatcher.get(), creator.get(), selfId);
+        } else {
+            return actorRef;
+        }
     }
 
     @Override
     public void broadcastToChildren(ActorMsg msg) {
-
+        system.broadcastToChildren(selfId, msg);
     }
 
     @Override
     public void broadcastToChildren(ActorMsg msg, Predicate<ActorId> childFilter) {
-
+        system.broadcastToChildren(selfId, childFilter, msg);
     }
 
     @Override
     public List<ActorId> filterChildren(Predicate<ActorId> childFilter) {
-        return null;
+        return system.filterChildren(selfId, childFilter);
     }
 
     @Override
     public ActorId getActorId() {
-        return null;
+        return selfId;
     }
 
     @Override
     public void tell(ActorMsg actorMsg) {
-
+        enqueue(actorMsg, NORMAL_PRIORITY);
     }
 
     @Override
     public void tellWithHighPriority(ActorMsg actorMsg) {
-
+        enqueue(actorMsg, HIGH_PRIORITY);
     }
 }
