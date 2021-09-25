@@ -12,7 +12,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -28,7 +27,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ActorSystemTest {
 
     public static final String ROOT_DISPATCHER = "root-dispatcher";
-    private static final int _100K = 10;
+    private static final int _100K = 1000;
     public static final int TIMEOUT_AWAIT_MAX_SEC = 100;
 
     private volatile ActorSystem actorSystem;
@@ -57,6 +56,56 @@ public class ActorSystemTest {
     }
 
     @Test
+    public void test10actorsAnd100KMessages() throws InterruptedException {
+        actorSystem.createDispatcher(ROOT_DISPATCHER, Executors.newWorkStealingPool(parallelism));
+        testActorsAndMessages(10, _100K, 1);
+    }
+
+    @Test
+    public void testNoMessagesAfterDestroy() throws InterruptedException {
+        actorSystem.createDispatcher(ROOT_DISPATCHER, Executors.newWorkStealingPool(parallelism));
+        ActorTestCtx testCtx1 = getActorTestCtx(1);
+        ActorTestCtx testCtx2 = getActorTestCtx(1);
+
+        ActorRef actorId1 = actorSystem.createRootActor(ROOT_DISPATCHER, new SlowInitActor.SlowInitActorCreator(
+                new EntityActorId("test-entity-1"), testCtx1));
+        ActorRef actorId2 = actorSystem.createRootActor(ROOT_DISPATCHER, new SlowInitActor.SlowInitActorCreator(
+                new EntityActorId("test-entity-2"), testCtx2));
+
+        actorId1.tell(new IntActorMsg(42));
+        actorId2.tell(new IntActorMsg(42));
+        actorSystem.stop(actorId1);
+
+        Assert.assertTrue(testCtx2.getLatch().await(1, TimeUnit.SECONDS));
+        Assert.assertFalse(testCtx1.getLatch().await(1, TimeUnit.SECONDS));
+    }
+
+    @Test
+    public void testOneActorCreated() throws InterruptedException {
+        actorSystem.createDispatcher(ROOT_DISPATCHER, Executors.newWorkStealingPool(parallelism));
+        ActorTestCtx testCtx1 = getActorTestCtx(1);
+        ActorTestCtx testCtx2 = getActorTestCtx(1);
+        ActorId actorId = new EntityActorId("test-entity");
+        final CountDownLatch initLatch = new CountDownLatch(1);
+        final CountDownLatch actorsReadyLatch = new CountDownLatch(2);
+        submitPool.submit(() -> {
+            actorSystem.createRootActor(ROOT_DISPATCHER, new SlowCreateActor.SlowCreateActorCreator(actorId, testCtx1, initLatch));
+            actorsReadyLatch.countDown();
+        });
+        submitPool.submit(() -> {
+            actorSystem.createRootActor(ROOT_DISPATCHER, new SlowCreateActor.SlowCreateActorCreator(actorId, testCtx2, initLatch));
+            actorsReadyLatch.countDown();
+        });
+        initLatch.countDown();
+        Assert.assertTrue(actorsReadyLatch.await(TIMEOUT_AWAIT_MAX_SEC, TimeUnit.SECONDS));
+
+        actorSystem.tell(actorId, new IntActorMsg(42));
+
+        Assert.assertTrue(testCtx1.getLatch().await(TIMEOUT_AWAIT_MAX_SEC, TimeUnit.SECONDS));
+        Assert.assertFalse(testCtx2.getLatch().await(1, TimeUnit.SECONDS));
+    }
+
+    @Test
     public void testFailedInit() throws InterruptedException {
         actorSystem.createDispatcher(ROOT_DISPATCHER, Executors.newWorkStealingPool(parallelism));
         ActorTestCtx testCtx1 = getActorTestCtx(1);
@@ -64,17 +113,17 @@ public class ActorSystemTest {
 
         ActorRef actorId1 = actorSystem.createRootActor(ROOT_DISPATCHER,
                 new FailedToInitActor.FailedToInitActorCreator(
-                        new EntityActorId(UUID.randomUUID().toString()), testCtx1, 1, 3000));
+                        new EntityActorId("test-entity-1"), testCtx1, 1, 3000));
         ActorRef actorId2 = actorSystem.createRootActor(ROOT_DISPATCHER,
                 new FailedToInitActor.FailedToInitActorCreator(
-                        new EntityActorId(UUID.randomUUID().toString()), testCtx2, 2, 1));
+                        new EntityActorId("test-entity-2"), testCtx2, 2, 1));
 
         actorId1.tell(new IntActorMsg(42));
         actorId2.tell(new IntActorMsg(42));
 
-        Assert.assertFalse(testCtx1.getLatch().await(2, TimeUnit.SECONDS));
-        Assert.assertFalse(testCtx1.getLatch().await(1, TimeUnit.SECONDS));
-        Assert.assertFalse(testCtx1.getLatch().await(3, TimeUnit.SECONDS));
+        Assert.assertTrue(testCtx1.getLatch().await(2, TimeUnit.SECONDS));
+        Assert.assertTrue(testCtx2.getLatch().await(1, TimeUnit.SECONDS));
+        Assert.assertTrue(testCtx1.getLatch().await(3, TimeUnit.SECONDS));
     }
 
 
