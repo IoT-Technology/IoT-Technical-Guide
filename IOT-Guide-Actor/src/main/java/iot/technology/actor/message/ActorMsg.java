@@ -1,5 +1,7 @@
 package iot.technology.actor.message;
 
+import iot.technology.actor.core.ActorStopReason;
+
 /**
  * @author mushuwei
  */

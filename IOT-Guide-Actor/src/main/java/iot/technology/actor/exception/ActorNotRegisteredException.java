@@ -1,6 +1,6 @@
 package iot.technology.actor.exception;
 
-import iot.technology.actor.ActorId;
+import iot.technology.actor.message.ActorId;
 import lombok.Getter;
 
 /**

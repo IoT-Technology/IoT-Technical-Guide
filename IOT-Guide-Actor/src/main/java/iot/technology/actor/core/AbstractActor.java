@@ -1,4 +1,4 @@
-package iot.technology.actor;
+package iot.technology.actor.core;
 
 import iot.technology.actor.exception.ActorException;
 import lombok.Getter;

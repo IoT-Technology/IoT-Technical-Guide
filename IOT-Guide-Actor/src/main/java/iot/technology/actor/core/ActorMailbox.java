@@ -1,7 +1,11 @@
-package iot.technology.actor;
+package iot.technology.actor.core;
 
+import iot.technology.actor.ActorCreator;
+import iot.technology.actor.ActorSystem;
+import iot.technology.actor.common.ActorSystemSettings;
+import iot.technology.actor.common.Dispatcher;
+import iot.technology.actor.message.ActorId;
 import iot.technology.actor.message.ActorMsg;
-import iot.technology.actor.message.ActorStopReason;
 import iot.technology.actor.message.MsgType;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

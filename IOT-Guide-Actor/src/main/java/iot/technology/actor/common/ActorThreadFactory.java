@@ -1,4 +1,4 @@
-package iot.technology.actor;
+package iot.technology.actor.common;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;

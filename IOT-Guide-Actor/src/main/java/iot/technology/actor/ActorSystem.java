@@ -1,5 +1,7 @@
 package iot.technology.actor;
 
+import iot.technology.actor.core.ActorRef;
+import iot.technology.actor.message.ActorId;
 import iot.technology.actor.message.ActorMsg;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package iot.technology.actor;
+package iot.technology.actor.common;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package iot.technology.actor.message;
+package iot.technology.actor.core;
 
 /**
  * @author mushuwei
