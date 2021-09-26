@@ -31,7 +31,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ActorSystemTest {
 
     public static final String ROOT_DISPATCHER = "root-dispatcher";
-    private static final int _100K = 1000;
+    private static final int _100K = 100 * 1000;
     public static final int TIMEOUT_AWAIT_MAX_SEC = 100;
 
     private volatile ActorSystem actorSystem;
@@ -140,11 +140,9 @@ public class ActorSystemTest {
             randomIntegers[i] = tmp;
             sumTmp += tmp;
         }
-
         long expected = sumTmp;
 
         List<ActorTestCtx> testCtxes = new ArrayList<>();
-
         List<ActorRef> actorRefs = new ArrayList<>();
         for (int actorIdx = 0; actorIdx < actorsCount; actorIdx++) {
             ActorTestCtx testCtx = getActorTestCtx(msgNumber);
