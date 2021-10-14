@@ -1,6 +1,7 @@
 ### 1.计算长方形面积
 POST localhost:8080/api/v1/area/rectangle
 Content-Type: application/json
+X-api-key: FX001-99999
 
 {
   "length": "10",
