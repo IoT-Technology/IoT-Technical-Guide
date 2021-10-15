@@ -1,4 +1,4 @@
-package iot.technology.thingsboard;
+package iot.technology.thingsboard.ruleengine;
 
 /**
  * @author james mu
