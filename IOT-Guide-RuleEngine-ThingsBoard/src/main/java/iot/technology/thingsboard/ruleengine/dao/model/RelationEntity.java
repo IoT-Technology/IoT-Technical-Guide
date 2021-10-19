@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+
 import static iot.technology.thingsboard.ruleengine.common.ModelConstants.*;
 
 /**
