@@ -80,6 +80,7 @@
         <module>IOT-Guide-Firmware</module>
         <module>IOT-Guide-Actor</module>
         <module>IOT-Guide-RateLimiting</module>
+        <module>IOT-Guide-Bacnet</module>
     </modules>
 
     <url>https://iot.mushuwei.cn/</url>
