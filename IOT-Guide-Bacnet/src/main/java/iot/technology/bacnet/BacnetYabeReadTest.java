@@ -47,22 +47,22 @@ public class BacnetYabeReadTest {
                 public boolean progress(double progress, int deviceId,
                                         ObjectIdentifier oid, PropertyIdentifier pid,
                                         UnsignedInteger pin, Encodable value) {
-                    System.out.println("========");
-                    System.out.println("progress=" + progress);
-                    System.out.println("deviceId=" + deviceId);
-                    System.out.println("oid="+oid.toString());
-                    System.out.println("pid="+pid.toString());
-                    System.out.println("UnsignedInteger="+pin);
-                    System.out.println("value="+value.toString() + "  getClass =" +value.getClass());
+                    log.info("========");
+                    log.info("progress=" + progress);
+                    log.info("deviceId=" + deviceId);
+                    log.info("oid="+oid.toString());
+                    log.info("pid="+pid.toString());
+                    log.info("UnsignedInteger="+pin);
+                    log.info("value="+value.toString() + "  getClass =" +value.getClass());
                     return false;
                 }
 
             });
             Thread.sleep(3000);
-            System.out.println("analogInput:0 == " + pvs.get(oid, PropertyIdentifier.presentValue));
+            log.info("analogInput:0 == " + pvs.get(oid, PropertyIdentifier.presentValue));
             //获取指定的presentValue
             PropertyValues pvs2 = RequestUtils.readOidPresentValues(localDevice, remoteDevice, Arrays.asList(oid,oid1,oid2),null);
-            System.out.println("analogInput:1 == " + pvs2.get(oid1, PropertyIdentifier.presentValue));
+            log.info("analogInput:1 == " + pvs2.get(oid1, PropertyIdentifier.presentValue));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
