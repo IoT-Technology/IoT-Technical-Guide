@@ -8,7 +8,6 @@
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/IoT-Technology/IOT-Technical-Guide?style=flat"></a>
 </p>
 <p align="center">
-    <a href="https://visitor-badge.glitch.me/badge?page_id=sanshengshui.iot_technology_guide"><img src="https://visitor-badge.glitch.me/badge?page_id=sanshengshui.iot_technology_guide" alt="访客"></a>
     <a href="https://blog.mushuwei.cn/categories/IOT-Technical-Guide/"><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="阅读"></a>
     <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
     <a href="https://gitter.im/sanshengshui/IoT-Technology-Guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/sanshengshui/IoT-Technology-Guide.svg"></a>
@@ -17,257 +16,356 @@
     <a href="https://github.com/IoT-Technology/IOT-Technical-Guide/watchers" title="Watchers"><img src="https://img.shields.io/github/watchers/IoT-Technology/IOT-Technical-Guide.svg?style=social&label=Watch"></a>
 </p>
 
+# 交流群
 
- **:maple_leaf:高质量的 IOT 技术教程，代码主要源于国外开源物联网平台[ThingsBoard](https://thingsboard.io/)和对阿里云物联网平台的感悟**
+扫码如下**二维码**。回复【物联网技术指南】关键字。
 
+可以添加帅气而又风趣的我为好友，并拉你进一个~~学习交流~~**装逼群**。
 
+<p align="center">
+<img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/iot-technology-2022.jpg" alt="公众号"></p>
 
+# 物联网技术学习指南
+
+基于物联网场景和技术的入门和深度学习教程。
+
+物联网相较于电商、支付和金融等是一个全新的行业。但是物联网又是一个高速发展的行业，很多人想要从事这个行业，但是不得其法，于是诞生了此教程。
+
+市面上的物联网技术文章很少，且文章的质量都较为粗浅和不成体系。对于很多开发者来说，入门即是其对某个技术栈的最终理解，一方面是开发者“比较懒”，另一方面是文章作者把物联网技术写的太浅，又或者不够全面。
+
+- 整理了物联网学习资源和书籍，涉及计算机网络、算法和书籍结构、框架、数据存储等每个细节的知识。
+
+- 在学习基础知识的同时，我想要你了解物联网开发常见的~~**黑话**~~专业术语，例如数字孪生、设备影子、通信相关的术语名词、蓝牙、Zigbee、CoAP、MQTT协议等。
+
+- 在带你学会MQTT v3.1、v3.1.1和v5.0协议的同时，我还想告诉你当前流行和好用的MQTT 客户端工具和不同语言的MQTT Client依赖包，最后以实战的方式带你实现一个单机百万的MQTT Broker。
+
+- 学习上面的知识后，我相信你对物联网有所了解了，我允许你叉着腰**骄傲**一下，接下来我会带你学习从零搭建高性能IoT平台所需要的技术栈、包括架构设计、MQTT Broker搭建、CoAP服务搭建、消息削峰、数据模型设计和数据库选型等。
+
+- 最好我带你编译和学习当前GitHub上最流行的开源物联网平台-[Thingsboard](https://thingsboard.io/), 其在GitHub上点赞超过1w+, 学习前沿的物联网理念和知识，如果你有二次开发的需求，也可沟通联系我欧！一起探讨学习！
+
+- ...
+  
+  让我们一起愉快的挖坑，挖深坑，哇哈哈。
 
 <p align="center">
     <img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-mqtt-part2/halving_line.jpg" alt="分割线">
 </p>
-<p align="center">
 
-------
+## Part1 物联网基石和学习之路
+
+### Part1-1『 物联网学习书籍和资源 』
+
+* 计算机网络篇
+  
+  * [《TCP/IP详情 卷1: 协议》](https://iot.mushuwei.cn/#/book/tcp-ip-part1)
+  
+  * [《TCP/IP详情 卷2: 实现》](https://iot.mushuwei.cn/#/book/tcp-ip-part2)
+  
+  * [《TCP/IP详情 卷3: TCP事务协议、HTTP、NNTP和UNIX域协议》](https://iot.mushuwei.cn/#/book/tcp-ip-part3)
+  
+  * [《图解TCP/IP (第5版)》](https://iot.mushuwei.cn/#/book/tcp-ip-illustration)        
+  
+  * [《图解HTTP》](https://iot.mushuwei.cn/#/book/http-figure)
+
+* 算法和数据结构篇
+  
+  * [《我的第一本算法书》](https://iot.mushuwei.cn/#/book/first-algorithm-book)
+  
+  * [《算法导论 (第四版))》](https://iot.mushuwei.cn/#/book/algorithm-guide)
+
+* Java基础
+  
+  * [《Head First Java》](https://iot.mushuwei.cn/#/book/head-first-java)
+  
+  * [《Effective Java 中文版》](https://iot.mushuwei.cn/#/book/effective-java)
+  
+  * [《Java并发编程实战》](https://iot.mushuwei.cn/#/book/java-current)    
+
+* Spring及SpringBoot系列
+  
+  * [《Spring 实战 (第四版)》](https://iot.mushuwei.cn/#/book/spring-action)
+  
+  * [《Spring Boot揭秘》](https://iot.mushuwei.cn/#/book/spring-boot)    
+
+* 数据存储篇
+  
+  * [《MySQL必知必会》](https://iot.mushuwei.cn/#/book/mysql-know)
+  
+  * [《高性能MySQL》](https://iot.mushuwei.cn/#/book/mysql-high-performance)
+  
+  * [《MongoDB实战》](https://iot.mushuwei.cn/#/book/mongodb-action)
+  
+  * [《PostgreSQL实战》](https://iot.mushuwei.cn/#/book/postgresql-action)
+
+* 缓存篇
+  
+  * [《Redis 开发与运维》](https://iot.mushuwei.cn/#/book/redis-develop-operation)
+  
+  * [《Redis深入历险：核心原理与应用实战》](https://iot.mushuwei.cn/#/book/redis-core-and-action)
+
+* 消息队列篇
+  
+  * [《Kafka权威指南》](https://iot.mushuwei.cn/#/book/kafka-guide)
+  
+  * [《Apache Kafka源码剖析》](https://iot.mushuwei.cn/#/book/netty-learning-example)
+
+* 通讯框架篇
+  
+  * [《Netty实战》](https://iot.mushuwei.cn/#/book/netty-action)
+  
+  * [《Netty实践学习案例》](https://iot.mushuwei.cn/#/book/netty-learning-example)
+
+* Docker&Kubernetes篇
+  
+  * [《第一本Docker书》](https://iot.mushuwei.cn/#/book/first-docker-book)
+  
+  * [《深入剖析Kubernetes 52讲》](https://iot.mushuwei.cn/#/book/kubernetes-52)
+
+### Part1-2『 物联网内功和基础知识 』
+
+* 基础篇
+
+	* [《女朋友问: 你知道蓝牙耳机的原理吗？》](https://iot.mushuwei.cn/#/internal-work/bluetooth)
+	* [《直呼: 太细了!拿捏🤏Zigbee协议》](https://iot.mushuwei.cn/#/internal-work/zigbee)
+
+* 物联网概念篇
+	* [《通信相关的术语名词》](https://iot.mushuwei.cn/#/internal-work/commu-nouns)
+	* [《数字孪生&设备影子》](https://iot.mushuwei.cn/#/internal-work/digital-twins-and-device-shadow)
+
+
+* 设备配网篇
+
+	* [《WIFI设备-EZ配网》](https://iot.mushuwei.cn/#/internal-work/wifi-ez)
+	* [《WIFI设备-AP3.0配网》](https://iot.mushuwei.cn/#/internal-work/wifi-ap-3)
+	
+
+* CoAP协议
+	* [《第一章 - 简介》](https://iot.mushuwei.cn/#/internal-work/coap-part1)
+	* [《第二章 - 受限应用协议CoAP》](https://iot.mushuwei.cn/#/internal-work/coap-part2)
+	* [《第三章 - 消息格式》](https://iot.mushuwei.cn/#/internal-work/coap-part3)
+	* [《第四章 - 消息传递》](https://iot.mushuwei.cn/#/internal-work/coap-part4)
+	* [《第五章 - 请求/响应的语义》](https://iot.mushuwei.cn/#/internal-work/coap-part5)
+	* [《第六章 - CoAP URI》](https://iot.mushuwei.cn/#/internal-work/coap-part6)
+	* [《第七章 - 发现》](https://iot.mushuwei.cn/#/internal-work/coap-part7)
+	* [《第八章 - 多播CoAP》](https://iot.mushuwei.cn/#/internal-work/coap-part8)
+	* [《第九章 - 安全CoAP》](https://iot.mushuwei.cn/#/internal-work/coap-part9)
+	* [《第十章 - CoAP和HTTP的跨协议代理》](https://iot.mushuwei.cn/#/internal-work/coap-part10)
+	* [《第十章 - 发现》](https://iot.mushuwei.cn/#/internal-work/coap-part11)
+	* [《第十二章 - 互联网地址分配注意事项（IANA Considerations）》](https://iot.mushuwei.cn/#/internal-work/coap-part12)
 
-[📖 Thingsboard源码分析](README_Thingsboard.md) | 📖 从0搭建高性能IoT平台和实践
+* BACnet协议(楼宇自动化与控制网络)篇
+    * [《认识BACnet-第1部分-什么是BACnet?》](https://iot.mushuwei.cn/#/internal-work/bacnet-part1)
+    * [《认识BACnet-第2部分-设备模型》](https://iot.mushuwei.cn/#/internal-work/bacnet-part2)
+    * [《认识BACnet-第3部分-网络类型》](https://iot.mushuwei.cn/#/internal-work/bacnet-part3)
+    * [《认识BACnet-第4部分-服务》](https://iot.mushuwei.cn/#/internal-work/bacnet-part4)
+    * [《认识BACnet-第5部分-互操作领域》](https://iot.mushuwei.cn/#/internal-work/bacnet-part5)
+	* [《认识BACnet-第6部分-BIBBS》](https://iot.mushuwei.cn/#/internal-work/bacnet-part6)
 
-------
 
+## Part2.『 MQTT学习指南三重境 』
 
+### Part2-1『 一重境之求索：MQTT客户端工具和依赖包 』
+* [《MQTT客户端桌面工具:school_satchel:》](mqtt-client-introduce/toolbox "桌面工具")
+    * [《MQTT.js: JavaScript 编写，用于 node.js 和浏览器》](mqtt-client-introduce/toolbox-mqttjs "MQTT.js: JavaScript 编写，用于 node.js 和浏览器, 只支持3.1/3.1.1")
+    * [《MQTT X: 跨平台 MQTT桌面客户端》](mqtt-client-introduce/toolbox-mqttx "MQTT X: 跨平台 MQTT v3.1.1/5.0 桌面客户端")
+    * [《MQTT CLI: 有用的MQTT CLI命令行界面》](mqtt-client-introduce/toolbox-mqtt-cli "MQTT CLI: 有用的MQTT CLI命令行界面")
+    * [《MQTT fx: 基于JavaFx的MQTT客户端》](mqtt-client-introduce/toolbox-mqttfx "MQTT fx: 基于JavaFx的MQTT客户端")
 
+* [《MQTT客户端库:hammer:》](mqtt-client-introduce/client-libraries "MQTT客户端库")
+    * [《hivemq-mqtt-client: 高性能 Java 客户端库》](mqtt-client-introduce/client-lib-hivemq-client "Java hivemq-mqtt-client: MQTT 5.0 和 MQTT 3.1.1 高性能 Java 客户端库")
+    * [《paho.mqtt.java: Eclipse Java 客户端库》](mqtt-client-introduce/client-lib-paho-java-client "Java hivemq-mqtt-client: MQTT Java 客户端库")
+    * [《Paho.mqtt.golang: Eclipse Go 客户端库》](mqtt-client-introduce/client-golang "MQTT Golang客户端库") 
+    * [《MQTT.js: JavaScript 编写，用于 node.js 和浏览器》](mqtt-client-introduce/client-lib-paho-golang-client "JavaScript 编写，用于 node.js 和浏览器")
+    * [《paho.mqtt.python: Eclipse Python 客户端库》](mqtt-client-introduce/client-lib-paho-python-client "MQTT Python 客户端库")
+    * [《paho.mqtt.c: Eclipse C 客户端库》](mqtt-client-introduce/client-lib-paho-c-client "MQTT C 客户端库")     
 
-### a.『 预习篇 』
 
--  [《新基建和5G风口下的物联网平台》](https://iot.mushuwei.cn/#/iot-platform)<br>
 
-> 物联网正处于元年，赶紧学习起来吧！
->
-> 物联网平台是物联网架构中的核心部分，它连接现实世界和虚拟世界，以实现对象之间的通信，管理数据流，支持应用程序开发并为连接的物联网设备提供基本分析
+### Part2-2『 二重境之实干：自研MQTT Broker，直通百万并发客户端 』
 
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
+* 待补充
 
+### Part2-3『 三重境之感悟：MQTT v3.1/v3.1.1中文协议文档 』
+* [《第一章 - 介绍》](mqtt3/mqtt-introduce "第一章 - 介绍")
 
+* [《第二章 MQTT控制报文格式 MQTT Control Packet format》](mqtt3/mqtt-control_packet_format "第二章 MQTT控制报文格式 MQTT Control Packet format")
 
+* [《第三章 - MQTT控制报文》](mqtt3/mqtt-control_packets_03 "第三章 - MQTT控制报文")
+    * [《3.1 CONNECT - 连接服务端》](mqtt3/mqtt-connect-0301 "3.1 CONNECT - 连接服务端")
+    * [《3.2 CONNACK – 确认连接请求》](mqtt3/mqtt-connack-0302 "3.2 CONNACK – 确认连接请求")
+    * [《3.3 PUBLISH – 发布消息》](mqtt3/mqtt-publish-0303 "3.3 PUBLISH – 发布消息")
+    * [《3.4 PUBACK – 发布确认》](mqtt3/mqtt-puback-0304 "3.4 PUBACK – 发布确认")
+    * [《3.5 PUBREC – 发布收到（QoS 2，第一步）》](mqtt3/mqtt-pubrec-0305 "3.5 PUBREC – 发布收到（QoS 2，第一步）")
+    * [《3.6 PUBREL – 发布释放（QoS 2，第二步）》](mqtt3/mqtt-pubrel-0306 "3.6 PUBREL – 发布释放（QoS 2，第二步）")
+    * [《3.7 PUBCOMP – 发布完成（QoS 2，第三步）》](mqtt3/mqtt-pubcomp-0307 "3.7 PUBCOMP – 发布完成（QoS 2，第三步）")
+    * [《3.8 SUBSCRIBE - 订阅主题》](mqtt3/mqtt-subscribe-0308 "3.8 SUBSCRIBE - 订阅主题")
+    * [《3.9 SUBACK - 订阅确认》](mqtt3/mqtt-suback-0309 "3.8 SUBACK - 订阅确认")
+    * [《3.10 UNSUBSCRIBE – 取消订阅》](mqtt3/mqtt-unsubscribe-0310 "3.10 UNSUBSCRIBE – 取消订阅")
+    * [《3.11 UNSUBACK – 取消订阅确认》](mqtt3/mqtt-unsuback-0311 "3.11 UNSUBACK – 取消订阅确认")
+    * [《3.12 PINGREQ – 心跳请求》](mqtt3/mqtt-pingreq-0312 "3.12 PINGREQ – 心跳请求")
+    * [《3.13 PINGRESP – 心跳响应》](mqtt3/mqtt-pingresp-0313 "3.13 PINGRESP – 心跳响应")
+    * [《3.14 DISCONNECT –断开连接》](mqtt3/mqtt-disconnect-0314 "3.14 DISCONNECT –断开连接")
 
--  [《理解SaaS多租户应用的架构和设计》](https://iot.mushuwei.cn/#/saas)<br>
+*  [第四章 – 操作行为](mqtt3/mqtt-operational-behavior-04 "第四章 – 操作行为")
 
-> SaaS和PaaS行业的需求是日益增长的！
->
-> 聊到PaaS、SaaS，就不得不谈到多租户。
+*  [第五章 – 安全](mqtt3/mqtt-security-05 "第五章 - 安全")
 
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
+* [第六章 – 使用WebSocket](mqtt3/mqtt-websocket-06 "第六章 – 使用WebSocket")
 
+* [第七章 – 一致性目标](mqtt3/mqtt-conformance-07 "第七章 – 一致性目标")
 
+* [附录B - 强制性规范声明](mqtt3/mqtt-appendixb-08 "附录B - 强制性规范声明")
 
-### b.『 设备接入篇 』
+### Part2-4『 三重境之感悟:  MQTT v5.0中文协议文档』
 
--  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MQTT.png)[《白话MQTT基础知识和入门》](https://iot.mushuwei.cn/#/mqtt-basic)<br>
--  [《实现百万并发MQTT服务端》](https://iot.mushuwei.cn/#/high-performance-mqtt-server) 对于工程 [IOT-Guide-MQTT](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-MQTT)<br>
+* [《第一章 - 介绍》](mqtt5/mqtt-introduce "第一章 - 介绍")
 
-> MQTT(消息队列遥测传输) 是ISO标准下基于发布(Publish)/订阅(Subscribe)范式的消息协议，
->
-> 同样也是物联网场景下使用最多的协议，是事实上的物联网“标准”协议。
->
-> 大家普遍对如何实现或者正在寻找一款适合自己业务和技术的MQTT 服务端。
->
-> 那么通过学习本文，你将能实现百万并发MQTT服务端。
+* [《第二章 MQTT控制报文格式 MQTT Control Packet format》](mqtt5/mqtt-control_packet_format "第二章 MQTT控制报文格式 MQTT Control Packet format")
 
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
+* [《第三章 - MQTT控制报文》](mqtt5/mqtt-control_packets_03 "第三章 - MQTT控制报文")
+    * [《3.1 CONNECT - 连接服务端》](mqtt5/mqtt-connect-0301 "3.1 CONNECT - 连接服务端")
+    * [《3.2 CONNACK – 确认连接请求》](mqtt5/mqtt-connack-0302 "3.2 CONNACK – 确认连接请求")
+    * [《3.3 PUBLISH – 发布消息》](mqtt5/mqtt-publish-0303 "3.3 PUBLISH – 发布消息")
+    * [《3.4 PUBACK – 发布确认》](mqtt5/mqtt-puback-0304 "3.4 PUBACK – 发布确认")
+    * [《3.5 PUBREC – 发布收到（QoS 2，第一步）》](mqtt5/mqtt-pubrec-0305 "3.5 PUBREC – 发布收到（QoS 2，第一步）")
+    * [《3.6 PUBREL – 发布释放（QoS 2，第二步）》](mqtt5/mqtt-pubrel-0306 "3.6 PUBREL – 发布释放（QoS 2，第二步）")
+    * [《3.7 PUBCOMP – 发布完成（QoS 2，第三步）》](mqtt5/mqtt-pubcomp-0307 "3.7 PUBCOMP – 发布完成（QoS 2，第三步）")
+    * [《3.8 SUBSCRIBE - 订阅主题》](mqtt5/mqtt-subscribe-0308 "3.8 SUBSCRIBE - 订阅主题")
+    * [《3.9 SUBACK - 订阅确认》](mqtt5/mqtt-suback-0309 "3.8 SUBACK - 订阅确认")
+    * [《3.10 UNSUBSCRIBE – 取消订阅》](mqtt5/mqtt-unsubscribe-0310 "3.10 UNSUBSCRIBE – 取消订阅")
+    * [《3.11 UNSUBACK – 取消订阅确认》](mqtt5/mqtt-unsuback-0311 "3.11 UNSUBACK – 取消订阅确认")
+    * [《3.12 PINGREQ – 心跳请求》](mqtt5/mqtt-pingreq-0312 "3.12 PINGREQ – 心跳请求")
+    * [《3.13 PINGRESP – 心跳响应》](mqtt5/mqtt-pingresp-0313 "3.13 PINGRESP – 心跳响应")
+    * [《3.14 DISCONNECT – 断开连接》](mqtt5/mqtt-disconnect-0314 "3.14 DISCONNECT –断开连接")
+    * [《3.15 AUTH – 认证交换》](mqtt5/mqtt-auth-0315 "3.15 AUTH – 认证交换")
 
+*  [第四章 – 操作行为](mqtt5/mqtt-operational-behavior-04 "第四章 – 操作行为")
 
+*  [第五章 – 安全](mqtt5/mqtt-security-05 "第五章 - 安全")
 
--  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/coap.png)[《初识CoAP并抓住它的"心"》](https://iot.mushuwei.cn/#/coap-basic)<br>
--  [《100行代码快速搭建功能完备的CoAP服务》](https://iot.mushuwei.cn/#/100-lines-of-code-realize-coap-service) 对应工程 [IOT-Guide-Coap](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Coap)<br>
+* [第六章 – 使用WebSocket](mqtt5/mqtt-websocket-06 "第六章 – 使用WebSocket")
 
-> 节点通常具有带少量ROM和RAM的8位微控制器，而诸如低功耗无线个人局域网 （6LoWPAN）上的IPv6之类的受限网络通常具有较高的分组错误率，典型吞吐量为10 kbps 。该协议旨在用于机器对机器（M2M）应用，例如智能能源和楼宇自动化。
->
-> 接下来，我将通过100行代码为大家搭建一个功能完备的CoAP服务器。
+* [第七章 – 一致性目标](mqtt5/mqtt-conformance-07 "第七章 – 一致性目标")
 
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
+* [附录B - 强制性规范声明](mqtt5/mqtt-appendixb-08 "附录B - 强制性规范声明")
 
+* [附录C - MQTT v5.0新特性总结 (非规范)](mqtt5/mqtt-appendixc-09 "附录C - MQTT v5.0新特性总结 (非规范)")
 
+## Part3.『 从零搭建高性能IoT平台 』
+* 预习篇
 
--  ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/HTTP.png)[《重新认识HTTP协议并管理设备》](https://iot.mushuwei.cn/#/rethinking-http) 对应工程[IOT-Guide-HTTP](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-HTTP)<br>
+	* [《新基建和5G风口下的物联网平台》](iot-platform "新基建和5G风口下的物联网平台")
 
-> HTTP是可用于IoT应用程序的通用网络协议。您可以在此处找到有关HTTP的更多信息。
+	* [《理解SaaS多租户应用的架构和设计》](saas "理解SaaS多租户应用的架构和设计")
 
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
+* 设备接入篇
 
+	* [《白话MQTT基础知识和入门》](mqtt-basic "白话MQTT基础知识和入门")
 
+	* [《实现百万并发MQTT服务端》](high-performance-mqtt-server "实现百万并发MQTT服务端")
 
--  [《实践案例: 车载终端设备的数据解析》](https://iot.mushuwei.cn/#/decoder-encoder-equipment-protocol) 对应工程[IOT-Guide-Custom-Protocol](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Custom-Protocol)<br>
+	* [《初识CoAP并抓住它的"心"》](coap-basic "初识CoAP并抓住它的心")
 
-> 在非标准设备中，自定义协议的数据解析成为必不可少的技能。
->
-> 通过本文和工程的学习后，你将轻松应付一切！
+	* [《100行代码快速搭建功能完备的CoAP服务》](100-lines-of-code-realize-coap-service "100行代码快速搭建功能完备的CoAP服务")
 
-．·°∴☆．．·°．·°∴☆．．·°．·°∴☆
+	* [《重新认识HTTP协议并管理设备》](rethinking-http "重新认识HTTP协议并管理设备")
 
+	* [《实践案例: 车载终端设备的数据解析》](decoder-encoder-equipment-protocol "实践案例: 车载终端设备的数据解析")
 
+* 边缘计算篇
 
-### c.『 边缘计算篇 』
+	* [《工业领域下的Modbus网关设备》](gateway-modbus "工业领域下的Modbus网关设备")
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/modbus.jpg?imageMogr2/thumbnail/!50p)[《工业领域下的Modbus网关设备》](https://iot.mushuwei.cn/#/gateway-modbus) 对应工程 [IOT-Guide-Gateway-Modbus](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Gateway-Modbus)<br>
+	* [《工业领域下的OPC-UA网关设备》](gateway-opcua "工业领域下的OPC-UA网关设备")
 
-> 本文通过实战用python对工业Modbus网关设备进行数据读取和写入，
->
-> 并讲解pymodbus和Modbus协议的Master/Slave架构特点。
+* 设备、接口认证和安全篇
 
+	* Spring Security能量
 
+		* [《什么是JWT(JSON Web Token)?》](what-jwt "Spring Security能量")
 
+		* [《Spring Boot Security + JWT》](spring-security-without-jpa "Spring Boot Security + JWT示例")
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/gateway/opcUA-logo.jpg?imageMogr2/thumbnail/!60p)[《工业领域下的OPC-UA网关设备》](https://iot.mushuwei.cn/#/gateway-opcua) 对应工程 [IOT-Guide-Gateway-OPC(UA)](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-Gateway-OPC(UA))
+		* [《Spring Boot Security + JWT + MySQL》](spring-security-jpa "Spring Boot Security + JWT + MySQL示例")
 
->本文通过实战用python在工业OPC-UA网关设备高效的性能和占用内存小的特点，
->
->并讲解OPC-UA在工业领域的野心。
+	* 下一代安全实践OAuth2
+		
+		* [《OAuth2.0 最简单的指南》](oauth2-guide "OAuth2.0 最简单的指南")	
 
+* 实时显示篇
 
+	* [《WebSocket技术魔法》](websocket "WebSocket技术魔法")
 
-### d.『 设备、接口认证和安全篇 』
+* 数据交换和序列化篇
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/security.png)**Spring Security能量**
+	* [《设备的语言-物模型》](tsl "设备的语言-物模型")
 
-> 本文是通过Spring Security在接口认证运用的案例，讲解接口安全的重要性。
->
-> 并简述Spring Security的知识点。
+	* [《平台无关并具有扩展性的gRPC下的ProtoBuf》](grpc-protobuf "平台无关并具有扩展性的ProtoBuf")
 
-- [x] [JWT(JSON Web Token)是什么?](https://iot.mushuwei.cn/#/what-jwt)
-- [x] [Spring Boot Security + JWT示例](https://iot.mushuwei.cn/#/spring-security-without-jpa) 对应工程 [IOT-Guide-JWT-Without-JPA](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-JWT-Without-JPA)
-- [x] [Spring Boot Security + JWT + MySQL示例](https://iot.mushuwei.cn/#/spring-security-jpa) 对应工程 [IOT-Guide-JWT-JPA](https://github.com/IoT-Technology/IOT-Technical-Guide/tree/master/IOT-Guide-JWT-JPA)
+* 存储和查询篇
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/oauth-2-sm.png?imageMogr2/thumbnail/!50p)[《下一代安全实践 OAuth2》](https://iot.mushuwei.cn/#/oauth2)
+	* [《PostgreSQL碰撞IoT》](postgresql-iot "PostgreSQL碰撞IoT")
 
-> 本文是通过OAuth2在设备认证的案例来解决设备的一个机器一个密码。
->
-> 运用它你无需通过繁多的设置来配置设备客户端了。
+	* [《MongoDB在IoT中的应用》](mongodb-iot "MongoDB在IoT中的应用")
 
-- [x] [OAuth2.0 最简单的指南](https://iot.mushuwei.cn/#/oauth2-guide)
+* 流处理和消息队列篇
 
+	* [《简单实现一个消息队列》](how-to-build-queque "简单实现一个消息队列")
 
+	* [《广受好评的Kafka》](kafka "广受好评的Kafka")
 
-### e.『 实时显示篇 』
+	* [《从未缺席的RabbitMQ》](rabbitmq "从未缺席的RabbitMQ")
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Websocket.png)[《WebSocket技术魔法》](https://iot.mushuwei.cn/#/websocket)
+* 规则引擎篇
 
-> 数据在页面上的实时显示是当前大多数人的需求，WebSocket可以让梦想成真，
->
-> 而IoT对这种需求是必须的，所以学习WebSocket就变成了必须的技能。
+	* [《规则引擎在IoT的重要性》](what-rule-engine "规则引擎在IoT的重要性")
 
-### f.『 数据交换和序列化篇 』
+	* [《Easy-Rules规则引擎在IoT的使用》](rule-engine-easyrules "IoT规则引擎之Easy-Rules")
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/language.png)[《设备的语言-物模型》](https://iot.mushuwei.cn/#/tsl)　
+	* [《带你走进ThingsBoard规则引擎的实现原理》](rule-engine-thingsboard "IoT规则引擎之带你走进ThingsBoard的实现原理")
 
-> 物模型是一个Json格式的文件。它是物理空间中的实体，如传感器、车载装置、楼宇、工厂等在云端的数字化表示，你对实现这样的功能感到好奇吗？相信我，在这里，你将得到它。
+	* [《阿里云物联网平台规则引擎的面纱》](rule-engine-aliyun "IoT规则引擎之带你走进ThingsBoard的实现原理")
 
+* Docker和k8s篇
 
+	* [《Docker在IoT技术领域的应用》](docker-iot "Docker在IoT技术领域的应用")
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/buffer.png)[《平台无关并具有扩展性的ProtoBuf》](https://iot.mushuwei.cn/#/protobuf)
+	*  [《DevOps的领头羊-Kubernetes》](devops-kubernetes "DevOps的领头羊-Kubernetes")
 
-> 本文是通过ProtoBuf在IoT设备协议和数据的序列化上，去讲解Protobuf高效，不依赖语言的特点。
->
-> 即定义一个文件，到处都可用的优点。
 
-### g.『 存储和查询篇 』
+## Part4.『 Thingsboard源码解析 』
+- 准备篇
+  - [《物联网时代-Thingsboard源码分析-调试环境搭建》](thingsboard/thingsboard-build "物联网时代-Thingsboard源码分析-调试环境搭建")
+  - [《物联网时代-Thingsboard源码分析-项目结构说明》](thingsboard/project-structure "物联网时代-Thingsboard源码分析-项目结构说明")
+- 设备连接协议篇
+  - [《MQTT设备连接协议-上》](thingsboard/mqtt-protocol-part1 "物联网时代-Thingsboard源码分析-MQTT设备连接协议-上")
+  - [《MQTT设备连接协议-下》](thingsboard/mqtt-protocol-part2 "物联网时代-Thingsboard源码分析-MQTT设备连接协议-下")
+  - [《CoAP设备连接协议》](thingsboard/coap-protocol "物联网时代-Thingsboard源码分析-CoAP设备连接协议")
+  - [《HTTP设备连接协议》](thingsboard/http-protocol "物联网时代-Thingsboard源码分析-HTTP设备连接协议")
+- 存储和查询篇
+  - [《数据模型之用户相关表结构设计》](thingsboard/user-table "数据模型之用户相关表结构设计")
+  - [《数据模型之设备相关表结构设计》](thingsboard/device-table "数据模型之设备相关表结构设计")
+  - [《数据模型之规则引擎相关表结构设计》](thingsboard/rule-engine "数据模型之规则引擎相关表结构设计")  
+  - [《领略Spring Data JPA在Thingsboard的使用》](thingsboard/jpa-sql "领略Spring Data JPA在Thingsboard的使用") 
+- 网关篇
+  - [《网关之Modbus》](thingsboard/modbus "物联网时代-Thingsboard源码分析-网关之Modbus")
+  - [《网关之OPC-UA》](thingsboard/opcua "物联网时代-Thingsboard源码分析-网关之OPC-UA") 
+- 实时显示篇
+  - [《实时显示之WebSocket》](thingsboard/websocket "物联网时代-Thingsboard源码分析-实时显示之WebSocket")
+- 数据交换和序列化篇
+  - [《数据交换和序列化篇之JSON》](thingsboard/tsl "物联网时代-Thingsboard源码分析-数据交换和序列化篇之JSON")
+  - [《数据交换和序列化篇之ProtoBuf》](thingsboard/protobuf "物联网时代-Thingsboard源码分析-调试环境搭建")
+- 设备、接口认证和安全篇
+  - [《Spring Security在接口的使用》](thingsboard/spring-security "物联网时代-Thingsboard源码分析-Spring Security在接口的使用")
+  - [《紧跟安全前沿OAuth2》](thingsboard/oauth2 "物联网时代-Thingsboard源码分析-紧跟安全前沿OAuth2")
+- 流处理和消息队列篇
+  - [《流处理和消息队列篇之Kafka》](thingsboard/kafka "物联网时代-Thingsboard源码分析-流处理和消息队列篇之Kafka")
+  - [《流处理和消息队列篇之RabbitMQ》](thingsboard/rabbitmq "物联网时代-Thingsboard源码分析-流处理和消息队列篇之RabbitMQ")
+- 规则引擎篇
+  - [《Rule Engine解放你的双手》](thingsboard/rule-engine "物联网时代-Thingsboard源码分析-Rule Engine解放你的双手")
+- Docker和kubernetes篇
+  - [《Docker和IoT的碰撞》](thingsboard/docker-iot "物联网时代-Thingsboard源码分析-Docker和IoT的碰撞")
+  - [《让人惊叹的Kubernetes》](thingsboard/kubernetes "物联网时代-Thingsboard源码分析-让人惊叹的Kubernetes")
+- 设计模式篇 
+  - [《一文看尽命令模式》](thingsboard/command-design-pattern "一文看尽命令模式")
 
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/MongoDB-Logo.svg.png?imageMogr2/thumbnail/!40p)[《PostgreSQL碰撞IoT》](https://iot.mushuwei.cn/#/postgresql-iot)
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/elephant.png?imageMogr2/thumbnail/!10p)[《MongoDB在IoT中的应用》](https://iot.mushuwei.cn/#/mongodb-iot)
-
-### h.『 流处理和消息队列篇 』
-
-- [《教你如何简单实现一个消息队列》](https://iot.mushuwei.cn/#/how-to-build-queque)
-
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kafka.png)[《广受好评的Kafka》](https://iot.mushuwei.cn/#/kafka)
-
-> 本文是通过Kafka在流处理和应用解耦的特点，更好、更高效的处理数据分析。
-
-
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/RabbitMQ-logo.svg)[《从未缺席的RabbitMQ》](https://iot.mushuwei.cn/#/rabbitmq)
-
-> 本文是通过另一个消息中间件RabbitMQ在IoT设备数据的应用，
->
-> 讲解RabbitMQ在软件开发的长河还能发挥很大的作用。
-
-### i.『 规则引擎篇 』
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Ruler.png)[《解放放劳动力的Rule Engine》](https://iot.mushuwei.cn/#/rule-engine)
-
-> 你是否还在为繁多的业务而劳累，例如：当温度超过120度，就发出报警。在这章，通过学习规则引擎，
->
-> 你将可以端起你手中的咖啡。
-
-- [x] [规则引擎在IoT的重要性？](https://iot.mushuwei.cn/#/what-rule-engine)
-- [x] [Easy-Rules规则引擎在IoT的使用](https://iot.mushuwei.cn/#/rule-engine-easyrules)
-- [x] [带你走进ThingsBoard规则引擎的实现原理](https://iot.mushuwei.cn/#/rule-engine-thingsboard)
-- [x] [阿里云物联网平台规则引擎的面纱](https://iot.mushuwei.cn/#/rule-engine-aliyun)
-
-### j.『 Docker和k8s篇 』
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/Docker.png)[《Docker在IoT技术领域的应用》](https://iot.mushuwei.cn/#/docker-iot)
-
-> 容器已经成为今年来最炙手可热的技术了，通过Docker,你将无需为部署环境而烦恼，
->
-> 只需关注你的业务开发和逻辑。将极大的减少部署和运维的劳动力。
-
-
-
-- ![](https://james-1258744956.cos.ap-shanghai.myqcloud.com/IOT%20Technical%20Guide/kubernetes.png)[《DevOps的领头羊-Kubernetes》](https://iot.mushuwei.cn/#/devops-kubernetes)
-
-> 串联开发团队和IT运维团队！利用K8s让两个团队之间，建立良好的沟通和协作，
->
-> 更块更可靠的创建高质量软件！
-
-
-## IoT在线资源推荐
-
--  关于物联网框架、开源库、操作系统和平台的资源 https://phodal.github.io/awesome-iot/
-- 一个很棒的物联网项目和资源的列表  https://github.com/HQarroum/awesome-iot/
-
-
-
-## 号外
-
-  致力于打造专业的物联网技术圈，帮助朋友和同学在物联网的风口上早日起飞 🛫️
-
-主要内容有:
-1. :loudspeaker: ThingsBoard源码解析
-高达8k+的开源物联网平台，物联网解决方案的设备管理、数据收集、处理和可视化
-2. :wind_chime: 应用于物联网应用层技术领域的技术和实践
-
-并且你还可以得到：
-
-- Java通信领域Netty技术的极大提升。
-- MQTT, CoAP, Http2和网关协议的理论知识和指导。
-- 手把手教你搭建高可用及高性能IoT平台。
-
-
-
-## 寻找志同道合的朋友
-
-专业的IoT技术指导：https://t.zsxq.com/BmaYFyF
-
-加我好友: **微信号(jamesmsw)**
-
-免费的物联网技术圈：**加我好友，拉你进群！**
-
-关注微信公众号: **物联网技术指导**
-
-
-## 版权说明
-
-- ✍️ [穆书伟 (sanshengshui@github)](https://github.com/sanshengshui)
-- 除非另行注明，这个项目中的所有内容采用Apache2.0（[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)）协议共享。
-- 不少文章在原基础上翻译或演绎而来，页面上方标注了原作者、原文链接以及原文采用的协议。如有版权疑问，请在 Issue 中提出。
-- 如果引用本此项目教程代码或者文章,请注明作者和github项目地址。
-- 欢迎通过 Issue 或者 Pull Request 推荐你认为合适的资料，让这份菜单更充实一些。
-
-:four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover::four_leaf_clover:
-
-## 为什么要做这份菜单
-
-> 在学习开源物联网平台ThingsBoard和使用阿里云物联网平台的时候，我发现ThingsBoard的更新速度十分频繁且代码架构十分优秀，随着未来十年内将会有数十亿的设备将联网和国内对物联网领域的高热度。众多的开发人员经历过Web2.0和移动互联网的时代，但是对于未来的设备联网这块的知识十分缺乏，并且搜索引擎上大多数文章都比较的粗浅。此外，这些资料往往只涉及某些特定的话题，如果能有一份菜单将这些菜谱以特定的方式串起来，那么对于 IOT 学习者来说将会是极大的便利。尤其对于我这样热爱查阅社区资料胜过出版物的懒人:new_moon_with_face: 随着我的学习节奏还会不断有新的菜谱加入进来。
->
