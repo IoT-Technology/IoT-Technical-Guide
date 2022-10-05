@@ -113,7 +113,7 @@
         <easyrule.version>4.0.0</easyrule.version>
         <websocket.version>2.0.5.RELEASE</websocket.version>
         <fastjson.version>1.2.72</fastjson.version>
-        <protobuf-java.version>3.13.0</protobuf-java.version>
+        <protobuf-java.version>3.16.3</protobuf-java.version>
         <grpc.version>1.33.1</grpc.version>
         <mapstruct.version>1.3.0.Final</mapstruct.version>
         <leshan-server.version>1.3.1</leshan-server.version>
